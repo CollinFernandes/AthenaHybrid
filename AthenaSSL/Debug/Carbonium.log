@@ -1,0 +1,6 @@
+﻿  dllmain.cpp
+C:\Users\xdmxn\Downloads\Carbonium dll\dllmain.cpp(9,10): fatal  error C1083: Datei (Vorkompilierte Headerdatei) kann nicht geöffnet werden: "Debug\Carbonium.pch": No such file or directory
+  pch.cpp
+C:\Users\xdmxn\Downloads\Carbonium dll\pch.cpp(2,10): warning C4067: Unerwartete Token nach Präprozessordirektive - Zeilenvorschub erwartet.
+C:\Users\xdmxn\Downloads\Carbonium dll\pch.cpp(2,10): fatal  error C1083: Datei (Vorkompilierte Headerdatei) kann nicht geöffnet werden: "Debug\Carbonium.pch": No such file or directory
+  Code wird generiert...
