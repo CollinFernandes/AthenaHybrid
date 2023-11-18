@@ -1,0 +1,20 @@
+﻿<Application x:Class="Athena_Hybrid.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Athena_Hybrid"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             StartupUri="FrontEnd/Windows/LoadingWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ui:ThemesDictionary Theme="Dark" />
+                <ui:ControlsDictionary />
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="CustomFont" TargetType="Label" >
+                <Setter Property="TextElement.FontFamily"
+                        Value="FrontEnd/Fonts/#Mundo Sans Std Black">
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

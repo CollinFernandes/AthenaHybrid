@@ -1,0 +1,29 @@
+﻿<Page x:Class="Athena_Hybrid.FrontEnd.Pages.BackgroundsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Athena_Hybrid.FrontEnd.Pages"
+      mc:Ignorable="d" 
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" d:DesignHeight="413" d:DesignWidth="994"
+      Loaded="Page_Loaded"
+      Title="BackgroundsPage">
+    <Grid>
+        <Border Margin="754,10,10,10" Background="#FF0E0E0E" BorderBrush="#FF373738" BorderThickness="3" CornerRadius="3">
+            <Grid>
+                <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                    <WrapPanel HorizontalAlignment="Center" x:Name="publicBackgrounds"/>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+        <Grid Margin="10,10,245,10">
+            <Border BorderThickness="3" BorderBrush="#272932" Margin="10,10,159,95">
+                <Image x:Name="previewImage" Stretch="Uniform" Source="https://media.discordapp.net/attachments/896164413638332456/1172542668375588915/CH3_S3_No_Sweat_Summer_Lobby_Background.JPG?ex=6560b274"/>
+            </Border>
+            <ui:TextBox TextChanged="TextBoxPath_TextChanged" x:Name="TextBoxPath" PlaceholderText="Custom Background URL" Height="37" PlaceholderEnabled="True" Margin="10,303,159,0" VerticalAlignment="Top"/>
+            <ComboBox SelectionChanged="backgroundBox_SelectionChanged" x:Name="backgroundBox" Margin="584,10,11,0" VerticalAlignment="Top" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" Height="37"/>
+            <ui:Button x:Name="UseBackground" Click="UseBackground_Click" Height="37" Width="145" Margin="585,52,0,0" Cursor="Hand" Icon="SelectAllOn24" Content="Use Background" IconFilled="True" VerticalAlignment="Top"  Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" FontSize="11" />
+        </Grid>
+        <Grid Width="222" Height="77" x:Name="notificationContainer" Margin="762,10,10,326"></Grid>
+    </Grid>
+</Page>

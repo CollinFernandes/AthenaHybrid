@@ -1,0 +1,182 @@
+﻿<Page x:Class="Athena_Hybrid.FrontEnd.Pages.CustomizationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Athena_Hybrid.FrontEnd.Pages"
+      mc:Ignorable="d" 
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" d:DesignHeight="413" d:DesignWidth="994"
+      Loaded="Page_Loaded"
+      Title="CustomizationPage" Cursor="">
+    <Grid>
+        <Border x:Name="VBucksCustomization" Margin="10,10,809,326" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1">
+            <Grid>
+                <Label x:Name="HeaderText" Content="VBucks" FontSize="18" Foreground="White" Margin="5,3,5,40" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
+                <ui:TextBox x:Name="vbucksBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" PlaceholderEnabled="True" PlaceholderText="1000" Margin="5,31,5,0" VerticalAlignment="Top"/>
+            </Grid>
+        </Border>
+        <Border x:Name="LevelCustomization" Margin="10,92,809,244" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1">
+            <Grid>
+                <Label x:Name="LevelHeader" Content="Level" FontSize="18" Foreground="White" Margin="5,4,5,40" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
+                <ui:TextBox x:Name="levelBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" PlaceholderEnabled="True" PlaceholderText="182" Margin="5,31,5,0" VerticalAlignment="Top"/>
+            </Grid>
+        </Border>
+        <Border x:Name="BattlestarsCustomization" Margin="10,174,809,162" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1">
+            <Grid>
+                <Label x:Name="BattlestarsHeader" Content="Battlestars" FontSize="18" Foreground="White" Margin="5,3,5,40" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
+                <ui:TextBox x:Name="battlestarsBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" PlaceholderEnabled="True" PlaceholderText="182" Margin="5,31,5,0" VerticalAlignment="Top"/>
+            </Grid>
+        </Border>
+        <Border x:Name="RankBuildCustomization" Margin="190,10,629,261" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1">
+            <Grid>
+                <Label x:Name="CurrentRankHeaderBuild" Content="Current Rank (Build)" FontSize="16" Foreground="White" Margin="5,2,5,112" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
+                <ComboBox x:Name="currentRankBuildBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" Margin="5,29,5,0" VerticalAlignment="Top">
+                    <ComboBoxItem>Bronze 1</ComboBoxItem>
+                    <ComboBoxItem>Bronze 2</ComboBoxItem>
+                    <ComboBoxItem>Bronze 3</ComboBoxItem>
+                    <ComboBoxItem>Silber 1</ComboBoxItem>
+                    <ComboBoxItem>Silber 2</ComboBoxItem>
+                    <ComboBoxItem>Silber 3</ComboBoxItem>
+                    <ComboBoxItem>Gold 1</ComboBoxItem>
+                    <ComboBoxItem>Gold 2</ComboBoxItem>
+                    <ComboBoxItem>Gold 3</ComboBoxItem>
+                    <ComboBoxItem>Platin 1</ComboBoxItem>
+                    <ComboBoxItem>Platin 2</ComboBoxItem>
+                    <ComboBoxItem>Platin 3</ComboBoxItem>
+                    <ComboBoxItem>Diamond 1</ComboBoxItem>
+                    <ComboBoxItem>Diamond 2</ComboBoxItem>
+                    <ComboBoxItem>Diamond 3</ComboBoxItem>
+                    <ComboBoxItem>Elite</ComboBoxItem>
+                    <ComboBoxItem>Champion</ComboBoxItem>
+                    <ComboBoxItem>Unreal</ComboBoxItem>
+                </ComboBox>
+                <Label x:Name="HighestRankHeaderBuild" Content="Highest Rank (Build)" FontSize="16" Foreground="White" Margin="5,68,5,41" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
+                <ComboBox x:Name="highestRankBuildBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" Margin="5,95,5,0" VerticalAlignment="Top">
+                    <ComboBoxItem>Bronze 1</ComboBoxItem>
+                    <ComboBoxItem>Bronze 2</ComboBoxItem>
+                    <ComboBoxItem>Bronze 3</ComboBoxItem>
+                    <ComboBoxItem>Silber 1</ComboBoxItem>
+                    <ComboBoxItem>Silber 2</ComboBoxItem>
+                    <ComboBoxItem>Silber 3</ComboBoxItem>
+                    <ComboBoxItem>Gold 1</ComboBoxItem>
+                    <ComboBoxItem>Gold 2</ComboBoxItem>
+                    <ComboBoxItem>Gold 3</ComboBoxItem>
+                    <ComboBoxItem>Platin 1</ComboBoxItem>
+                    <ComboBoxItem>Platin 2</ComboBoxItem>
+                    <ComboBoxItem>Platin 3</ComboBoxItem>
+                    <ComboBoxItem>Diamond 1</ComboBoxItem>
+                    <ComboBoxItem>Diamond 2</ComboBoxItem>
+                    <ComboBoxItem>Diamond 3</ComboBoxItem>
+                    <ComboBoxItem>Elite</ComboBoxItem>
+                    <ComboBoxItem>Champion</ComboBoxItem>
+                    <ComboBoxItem>Unreal</ComboBoxItem>
+                </ComboBox>
+            </Grid>
+        </Border>
+        <Border x:Name="RankBuildPercentageCustomization" Margin="190,157,629,179" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1">
+            <Grid>
+                <Label x:Name="BuildPercentageHeader" Content="Rank % (Build)" FontSize="18" Foreground="White" Margin="5,3,5,40" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
+                <ui:NumberBox
+                    x:Name="BuildPercentageBox"
+                    Background="#FF0E0E0E" 
+                    BorderThickness="1" 
+                    Foreground="White" 
+                    BorderBrush="#FF373738" 
+                    PlaceholderEnabled="True" 
+                    PlaceholderText="182" 
+                    Margin="5,31,5,0" 
+                    VerticalAlignment="Top" 
+                    Cursor="IBeam"
+                    Icon="DocumentPercent24"
+                    DecimalPlaces="0"
+                    Max="100"
+                    Min="0"
+                    />
+            </Grid>
+        </Border>
+        <Border x:Name="RankNoBuildCustomization" Margin="370,10,449,261" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1">
+            <Grid>
+                <Label x:Name="CurrentRankHeaderNoBuild" Content="Current Rank (No Build)" FontSize="14" Foreground="White" Margin="5,2,5,112" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
+                <ComboBox x:Name="currentRankNoBuildBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" Margin="5,29,5,0" VerticalAlignment="Top">
+                    <ComboBoxItem>Bronze 1</ComboBoxItem>
+                    <ComboBoxItem>Bronze 2</ComboBoxItem>
+                    <ComboBoxItem>Bronze 3</ComboBoxItem>
+                    <ComboBoxItem>Silber 1</ComboBoxItem>
+                    <ComboBoxItem>Silber 2</ComboBoxItem>
+                    <ComboBoxItem>Silber 3</ComboBoxItem>
+                    <ComboBoxItem>Gold 1</ComboBoxItem>
+                    <ComboBoxItem>Gold 2</ComboBoxItem>
+                    <ComboBoxItem>Gold 3</ComboBoxItem>
+                    <ComboBoxItem>Platin 1</ComboBoxItem>
+                    <ComboBoxItem>Platin 2</ComboBoxItem>
+                    <ComboBoxItem>Platin 3</ComboBoxItem>
+                    <ComboBoxItem>Diamond 1</ComboBoxItem>
+                    <ComboBoxItem>Diamond 2</ComboBoxItem>
+                    <ComboBoxItem>Diamond 3</ComboBoxItem>
+                    <ComboBoxItem>Elite</ComboBoxItem>
+                    <ComboBoxItem>Champion</ComboBoxItem>
+                    <ComboBoxItem>Unreal</ComboBoxItem>
+                </ComboBox>
+                <Label x:Name="HighestRankHeaderNoBuild" Content="Highest Rank (No Build)" FontSize="14" Foreground="White" Margin="5,68,5,41" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
+                <ComboBox x:Name="highestRankNoBuildBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" Margin="5,95,5,0" VerticalAlignment="Top">
+                    <ComboBoxItem>Bronze 1</ComboBoxItem>
+                    <ComboBoxItem>Bronze 2</ComboBoxItem>
+                    <ComboBoxItem>Bronze 3</ComboBoxItem>
+                    <ComboBoxItem>Silber 1</ComboBoxItem>
+                    <ComboBoxItem>Silber 2</ComboBoxItem>
+                    <ComboBoxItem>Silber 3</ComboBoxItem>
+                    <ComboBoxItem>Gold 1</ComboBoxItem>
+                    <ComboBoxItem>Gold 2</ComboBoxItem>
+                    <ComboBoxItem>Gold 3</ComboBoxItem>
+                    <ComboBoxItem>Platin 1</ComboBoxItem>
+                    <ComboBoxItem>Platin 2</ComboBoxItem>
+                    <ComboBoxItem>Platin 3</ComboBoxItem>
+                    <ComboBoxItem>Diamond 1</ComboBoxItem>
+                    <ComboBoxItem>Diamond 2</ComboBoxItem>
+                    <ComboBoxItem>Diamond 3</ComboBoxItem>
+                    <ComboBoxItem>Elite</ComboBoxItem>
+                    <ComboBoxItem>Champion</ComboBoxItem>
+                    <ComboBoxItem>Unreal</ComboBoxItem>
+                </ComboBox>
+            </Grid>
+        </Border>
+        <Border x:Name="RankNoBuildPercentageCustomization" Margin="370,157,449,179" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1">
+            <Grid>
+                <Label x:Name="NoBuildPercentageHeader" Content="Rank % (No Build)" FontSize="18" Foreground="White" Margin="5,3,5,40" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
+                <ui:NumberBox
+                    x:Name="NoBuildPercentageBox"
+                    Background="#FF0E0E0E" 
+                    BorderThickness="1" 
+                    Foreground="White" 
+                    BorderBrush="#FF373738" 
+                    PlaceholderEnabled="True" 
+                    PlaceholderText="182" 
+                    Margin="5,31,5,0" 
+                    VerticalAlignment="Top" 
+                    Cursor="IBeam"
+                    Icon="DocumentPercent24"
+                    DecimalPlaces="0"
+                    Max="100"
+                    Min="0"
+                    />
+            </Grid>
+        </Border>
+        <Border x:Name="ProfileContainer" Margin="10,308,718,10" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1">
+            <Grid>
+                <Border                    Grid.Column="0"
+                    Width="60"
+                    Height="60"
+                    CornerRadius="20" Margin="10,14,190,15">
+                    <Border.Background>
+                        <ImageBrush x:Name="FortnitePicture"/>
+                    </Border.Background>
+                </Border>
+                <Label x:Name="LoggedInHeader" Content="Logged in as:" Foreground="White" Margin="75,14,49,39" FontWeight="Bold" FontSize="22" FontFamily="Segoe UI Semibold" />
+                <TextBlock x:Name="LoggedInName" Text="Epic Name lololol" TextWrapping="Wrap" Margin="75,44,10,9" Foreground="#FF908B8B" FontSize="14" />
+            </Grid>
+        </Border>
+        <ui:Button Click="Button_Click" x:Name="loginButton" Cursor="Hand" Appearance="Primary" Icon="Person24" Content="Login" Margin="837,334,0,0" VerticalAlignment="Top" Width="147"/>
+        <ui:Button Click="Button_Click_1" x:Name="saveButton" Cursor="Hand" Appearance="Primary" Icon="Save24" Content="Save" Margin="837,371,0,0" VerticalAlignment="Top" Width="147"/>
+        <Grid Width="222" Height="77" x:Name="notificationContainer" Margin="762,10,10,326"></Grid>
+    </Grid>
+</Page>

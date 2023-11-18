@@ -1,0 +1,88 @@
+﻿<ui:UiWindow x:Class="Athena_Hybrid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Athena_Hybrid"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"                         
+
+        mc:Ignorable="d" 
+        Height="514"
+        Width="1014" 
+        Background="#0f1012" 
+        Icon="https://cdn.discordapp.com/attachments/824438219176280074/1095496331570724874/ProfilePictureMaker.png" 
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize" 
+        Closed="closeWindow"
+        WindowStyle="None">
+    <Grid Background="#FF0F1012">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TabControl Margin="8,54,6,4" Grid.RowSpan="3" Background="#0f1012" SelectionChanged="switchTab" x:Name="TabControl1">
+            <TabItem x:Name="DashboardTab" Width="200" IsSelected="True" >
+                <TabItem.Content>
+                    <Frame x:Name="Dashboard" Grid.ColumnSpan="2" Height="408" />
+                </TabItem.Content>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal" Height="23">
+                        <ui:SymbolIcon Margin="0,0,6,0" Symbol="Home24" Filled="True" />
+                        <TextBlock Text="Dashboard" Height="20" />
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem x:Name="SkinTab" Width="200">
+                <TabItem.Content>
+                    <Frame x:Name="Launch"  Grid.ColumnSpan="2" Height="408" />
+                </TabItem.Content>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal" Height="23">
+                        <ui:SymbolIcon Margin="0,0,6,0" Symbol="Play24" Filled="True" />
+                        <TextBlock Text="Launch" Height="20" />
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem  Width="200">
+                <TabItem.Content>
+                    <Frame x:Name="Stats"  Grid.ColumnSpan="2" Height="408" />
+                </TabItem.Content>
+                <TabItem.Header >
+                    <StackPanel Orientation="Horizontal" Height="23">
+                        <ui:SymbolIcon Margin="0,0,6,0" Symbol="PuzzlePiece24" Filled="True" />
+                        <TextBlock Text="Customization" Height="20" />
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem  Width="200">
+                <TabItem.Content>
+                    <Frame x:Name="cBackground"  Grid.ColumnSpan="2" Height="408" />
+                </TabItem.Content>
+                <TabItem.Header >
+                    <StackPanel Orientation="Horizontal" Height="23">
+                        <ui:SymbolIcon Margin="0,0,6,0" Symbol="Wallpaper24" Filled="True" />
+                        <TextBlock Text="Custom Background" Height="20" />
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem x:Name="SettingsTab" Width="200">
+                <TabItem.Content>
+                    <Frame x:Name="Settings"  Grid.ColumnSpan="2" Height="408" />
+                </TabItem.Content>
+                <TabItem.Header  >
+                    <StackPanel Orientation="Horizontal" Height="23">
+                        <ui:SymbolIcon Margin="0,0,6,0" Symbol="Settings24" Filled="True" />
+                        <TextBlock Text="Settings" Height="20" />
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+        </TabControl>
+        <Frame x:Name="navigationFrame" Visibility="Visible" RenderTransformOrigin="0.5,0.5" Margin="10,42,10,10" Grid.Row="1"/>
+        <ui:TitleBar
+            Title="Athena Hybrid V1.0-D1"
+            Grid.Row="0"
+            Icon="https://cdn.discordapp.com/attachments/824438219176280074/1095496331570724874/ProfilePictureMaker.png" CanMaximize="False" Background="#FF18191D" Height="49">
+        </ui:TitleBar>
+    </Grid>
+</ui:UiWindow>

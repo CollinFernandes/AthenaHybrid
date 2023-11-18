@@ -1,0 +1,28 @@
+﻿<Page x:Class="Athena_Hybrid.FrontEnd.Pages.Pages.SettingsAccountPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Athena_Hybrid.FrontEnd.Pages.Pages"
+      mc:Ignorable="d" 
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" 
+      Height="403"
+      Width="732"
+      Loaded="Page_Loaded"
+      Title="SettingsAccountPage">
+    <Grid>
+        <Border
+                    Grid.Column="0"
+                    CornerRadius="20" Margin="10,10,654,326">
+            <Border.Background>
+                <ImageBrush x:Name="DiscordPicture"/>
+            </Border.Background>
+        </Border>
+        <StackPanel
+                    Margin="83,18,-71,0"
+                    VerticalAlignment="Top" Height="51">
+            <TextBlock FontWeight="Medium" FontSize="20" x:Name="DiscordName" Foreground="White" Text="WPF UI" />
+            <TextBlock Foreground="Gray" FontSize="16" x:Name="AccountStatus" Text="Fluent Design System" />
+        </StackPanel>
+    </Grid>
+</Page>

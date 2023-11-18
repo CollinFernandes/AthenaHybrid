@@ -1,0 +1,32 @@
+﻿<ui:UiWindow x:Class="Athena_Hybrid.FrontEnd.Windows.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Athena_Hybrid.FrontEnd.Windows"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"            
+        xmlns:adonisExtensions="clr-namespace:AdonisUI.Extensions;assembly=AdonisUI"
+        mc:Ignorable="d"
+        MinHeight="350"
+        MinWidth="670"
+        MaxWidth="670"        
+        MaxHeight="350"
+        WindowStartupLocation="CenterScreen"
+        Title="Key" Height="350" Width="670" Foreground="White" ResizeMode="CanMinimize" Icon="https://cdn.discordapp.com/attachments/824438219176280074/1095496331570724874/ProfilePictureMaker.png" WindowStyle="None">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush >
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#0f1012" Offset="0.433"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <ui:Button x:Name="ContinueBtn" Icon="Person24" IconFilled="True" Content="Login with EpicGames" 
+adonisExtensions:CursorSpotlightExtension.BorderBrush="White" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" Click="ContinueBtn_Click" Cursor="Hand" Width="282" HorizontalAlignment="Center"/>
+        <Label MouseDown="Label_MouseDown" Cursor="Hand" HorizontalAlignment="Center" HorizontalContentAlignment="Center"  Margin="0,196,0,0"  Content="Skip for now" VerticalAlignment="Top" Width="282" Height="30" Foreground="White" Style="{StaticResource CustomFont}" FontSize="14" Background="{x:Null}" FontFamily="Segoe UI"/>
+        <ui:TitleBar
+            Grid.Row="0"
+            Title="Athena Hybrid Login"
+            Icon="https://cdn.discordapp.com/attachments/824438219176280074/1095496331570724874/ProfilePictureMaker.png" CanMaximize="False" Grid.ColumnSpan="2" Background="#FF18191D" Height="49">
+        </ui:TitleBar>
+    </Grid>
+</ui:UiWindow>

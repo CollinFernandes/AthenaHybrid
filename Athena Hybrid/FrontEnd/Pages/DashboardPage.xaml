@@ -1,0 +1,28 @@
+﻿<Page x:Class="Athena_Hybrid.FrontEnd.Pages.DashboardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Athena_Hybrid.FrontEnd.Pages"
+      mc:Ignorable="d" 
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" 
+      d:DesignHeight="420" d:DesignWidth="1008"
+      Loaded="Load"
+      Title="DashboardPage">
+
+    <Grid>
+        <Border Height="105" Margin="10,9,10,306" CornerRadius="4,4,0,0" BorderThickness="1">
+            <Border.Background>
+                <ImageBrush x:Name="NewsPicture" ImageSource="https://cdn.discordapp.com/attachments/824438219176280074/1099106805105307760/Screenshot_2023-03-16_130049.png" Stretch="UniformToFill" />
+            </Border.Background>
+        </Border>
+
+        <TextBlock Text="Why Should I use Athena Hybrid?" Margin="24,130,774,254" Background="{x:Null}" Foreground="#FFB9B9B9" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
+        <TextBlock Text="Update Logs" Margin="24,266,774,130" Background="{x:Null}" Foreground="#FFB9B9B9" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
+
+        <WrapPanel x:Name="ReasonPanel" Margin="24,152,16,159"/>
+        <ScrollViewer x:Name="ScrollViewer" Margin="24,290,16,20">
+            <WrapPanel x:Name="updatePanel"/>
+        </ScrollViewer>
+    </Grid>
+</Page>

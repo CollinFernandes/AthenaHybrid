@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="Athena_Hybrid.FrontEnd.Controls.LongDashboardItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Athena_Hybrid.FrontEnd.Controls"
+             mc:Ignorable="d" 
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" 
+             Width="470" Height="76">
+    <UserControl.Resources>
+        <Storyboard x:Key="HoverIn">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.95">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="1.02">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.95">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="1.1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="HoverOut">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="1.0199999825">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0.95">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="1.0999999625">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0.95">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ExponentialEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid>
+        <Border MouseEnter="onHover" MouseLeave="leaveHover" x:Name="border5" Height="66" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1" Cursor="Hand" RenderTransformOrigin="0.5,0.5" Margin="5,5,5,5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+            <Grid>
+                <ui:SymbolIcon x:Name="Symbol" Symbol="Cloud48" Margin="10,0,0,0" Height="23" Width="17" HorizontalAlignment="Left"/>
+                <Label x:Name="HeaderText" Content="New API" Foreground="White" Margin="35,14,89,18" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
+                <TextBlock x:Name="SubtitleText" Text="Onizuka has a new fast API, Which will help in many things " TextWrapping="Wrap" Margin="34,31,10,10" Foreground="#FF908B8B" FontSize="9" />
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

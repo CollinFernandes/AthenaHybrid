@@ -1,0 +1,62 @@
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\bin\Debug\net6.0-windows\win-x64\Athena Hybrid.exe
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\bin\Debug\net6.0-windows\win-x64\Athena Hybrid.dll.config
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\bin\Debug\net6.0-windows\win-x64\Athena Hybrid.deps.json
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\bin\Debug\net6.0-windows\win-x64\Athena Hybrid.runtimeconfig.json
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\bin\Debug\net6.0-windows\win-x64\Athena Hybrid.dll
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\bin\Debug\net6.0-windows\win-x64\Athena Hybrid.pdb
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\bin\Debug\net6.0-windows\win-x64\AdonisUI.dll
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\bin\Debug\net6.0-windows\win-x64\Colorful.Console.dll
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\bin\Debug\net6.0-windows\win-x64\DiscordRPC.dll
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\bin\Debug\net6.0-windows\win-x64\Microsoft.Toolkit.Uwp.Notifications.dll
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\bin\Debug\net6.0-windows\win-x64\Microsoft.Win32.SystemEvents.dll
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\bin\Debug\net6.0-windows\win-x64\Newtonsoft.Json.dll
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\bin\Debug\net6.0-windows\win-x64\RestSharp.dll
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\bin\Debug\net6.0-windows\win-x64\System.Drawing.Common.dll
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\bin\Debug\net6.0-windows\win-x64\Wpf.Ui.dll
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\Athena Hybrid.csproj.AssemblyReference.cache
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Controls\BackgroundItem.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Controls\DashboardItem.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Controls\LongDashboardItem.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Controls\Notifications.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Pages\BackgroundsPage.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Pages\CustomizationPage.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Pages\DashboardPage.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Pages\LaunchPage.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Pages\Pages\SettingsAccountPage.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Pages\Pages\SettingsMainPage.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Pages\SettingsPage.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Windows\KeyWindow.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Windows\LoadingWindow.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Windows\LoginWindow.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Windows\MainWindow.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\App.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\GeneratedInternalTypeHelper.g.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\Athena Hybrid_MarkupCompile.cache
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\Athena Hybrid_MarkupCompile.lref
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\App.baml
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Controls\BackgroundItem.baml
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Controls\DashboardItem.baml
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Controls\LongDashboardItem.baml
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Controls\Notifications.baml
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Pages\BackgroundsPage.baml
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Pages\CustomizationPage.baml
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Pages\DashboardPage.baml
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Pages\LaunchPage.baml
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Pages\Pages\SettingsAccountPage.baml
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Pages\Pages\SettingsMainPage.baml
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Pages\SettingsPage.baml
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Windows\KeyWindow.baml
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Windows\LoadingWindow.baml
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Windows\LoginWindow.baml
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\FrontEnd\Windows\MainWindow.baml
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\Athena Hybrid.g.resources
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\Athena Hybrid.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\Athena Hybrid.AssemblyInfoInputs.cache
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\Athena Hybrid.AssemblyInfo.cs
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\Athena Hybrid.csproj.CoreCompileInputs.cache
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\Athena Hybrid.csproj.CopyComplete
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\Athena Hybrid.dll
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\refint\Athena Hybrid.dll
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\Athena Hybrid.pdb
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\Athena Hybrid.genruntimeconfig.cache
+C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\obj\Debug\net6.0-windows\win-x64\ref\Athena Hybrid.dll

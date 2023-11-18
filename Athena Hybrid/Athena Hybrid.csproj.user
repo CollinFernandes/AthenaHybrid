@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\Collin\source\repos\Athena Hybrid\Athena Hybrid\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="FrontEnd\Controls\BackgroundItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrontEnd\Controls\DashboardItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrontEnd\Controls\LongDashboardItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrontEnd\Controls\Notifications.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrontEnd\Pages\BackgroundsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrontEnd\Pages\CustomizationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrontEnd\Pages\DashboardPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrontEnd\Pages\LaunchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrontEnd\Pages\Pages\SettingsAccountPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrontEnd\Pages\Pages\SettingsMainPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrontEnd\Pages\SettingsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrontEnd\Windows\KeyWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrontEnd\Windows\LoadingWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FrontEnd\Windows\LoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="FrontEnd\Controls\BackgroundItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrontEnd\Controls\DashboardItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrontEnd\Controls\LongDashboardItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrontEnd\Controls\Notifications.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrontEnd\Pages\BackgroundsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrontEnd\Pages\CustomizationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrontEnd\Pages\DashboardPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrontEnd\Pages\LaunchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrontEnd\Pages\Pages\SettingsAccountPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrontEnd\Pages\Pages\SettingsMainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrontEnd\Pages\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrontEnd\Windows\KeyWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrontEnd\Windows\LoadingWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrontEnd\Windows\LoginWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FrontEnd\Windows\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
