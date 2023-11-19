@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Reflection.PortableExecutable;
@@ -16,7 +17,6 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Wpf.Ui.Appearance;
 using Wpf.Ui.Controls;
 
@@ -34,6 +34,7 @@ namespace Athena_Installer
             Task.Run(() => {
                 Dispatcher.Invoke(() => {
                     headerasdasdas.Foreground = Accent.SystemAccentBrush;
+                    symbolIcon.Foreground = Accent.SystemAccentBrush;
                 });
             });
             InitializeComponent();
@@ -136,11 +137,14 @@ namespace Athena_Installer
             return kilobytes / 1024f;
         }
 
-        private void StartDownload(object sender, RoutedEventArgs e)
+        private async void StartDownload(object sender, RoutedEventArgs e)
         {
             switch ((sender as Wpf.Ui.Controls.Button).Content)
             {
                 case "Start Installing.":
+                    string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                    string LocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+
                     (sender as Wpf.Ui.Controls.Button).IsEnabled = false;
                     WebClient webClient = new WebClient();
                     webClient.OpenRead("https://cdn.discordapp.com/attachments/1051538904840413315/1175591656674836630/Athena_Hybrid.exe");
@@ -156,13 +160,26 @@ namespace Athena_Installer
                         downloadedLabel.Content = Math.Round(currentMegabytes, 2) + "mb/" + Math.Round(megabytesTotal, 2) + "mb";
                         speedLabel.Content = string.Format("{0} mb/s", (e.BytesReceived / 1024.0 / 1024.0 / stopwatch.Elapsed.TotalSeconds).ToString("0.00"));
                     };
-                    webClient.DownloadFileAsync(new Uri("https://cdn.discordapp.com/attachments/1051538904840413315/1175591656674836630/Athena_Hybrid.exe"), "discord.exe");
+                    Directory.CreateDirectory(LocalAppData + "\\Athena Launcher");
+                    webClient.DownloadFileAsync(new Uri("https://cdn.discordapp.com/attachments/1051538904840413315/1175591656674836630/Athena_Hybrid.exe"), LocalAppData + "\\Athena Launcher\\Athena Hybrid.exe");
                     webClient.DownloadFileCompleted += async (object sender1, AsyncCompletedEventArgs e) =>
                     {
                         _ = Task.Run(async () =>
                         {
                             _ = Dispatcher.Invoke(async () =>
                             {
+                                downloadedLabel.Content = "Download Done.";
+                                string shortcutDir = AppData + "\\Microsoft\\Windows\\Start Menu\\Programs\\Athena";
+                                Directory.CreateDirectory(shortcutDir);
+                                using (StreamWriter writer = new StreamWriter(shortcutDir + "\\Athena Hybrid" + ".url"))
+                                {
+                                    string app = LocalAppData + "\\Athena Launcher\\Athena Hybrid.exe";
+                                    writer.WriteLine("[InternetShortcut]");
+                                    writer.WriteLine("URL=file:///" + app);
+                                    writer.WriteLine("IconIndex=0");
+                                    string icon = app.Replace('\\', '/');
+                                    writer.WriteLine("IconFile=" + icon);
+                                }
                                 (sender as Wpf.Ui.Controls.Button).IsEnabled = true;
                                 (sender as Wpf.Ui.Controls.Button).Content = "Next";
                             });
@@ -170,7 +187,10 @@ namespace Athena_Installer
                     };
                     break;
                 case "Next":
-
+                    Storyboard s2 = (Storyboard)TryFindResource("DownloadingOut");
+                    s2.Begin();
+                    await Task.Delay(850);
+                    downloadingGrid.Visibility = Visibility.Hidden;
                     break;
             }
         }
