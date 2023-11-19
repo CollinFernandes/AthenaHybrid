@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Collin\\source\\repos\\Athena Hybrid\\Athena Hybrid\\Athena Hybrid.csproj": {}
+    "C:\\Users\\Collin\\Documents\\GitHub\\AthenaHybrid\\Athena Hybrid\\Athena Hybrid.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Collin\\source\\repos\\Athena Hybrid\\Athena Hybrid\\Athena Hybrid.csproj": {
+    "C:\\Users\\Collin\\Documents\\GitHub\\AthenaHybrid\\Athena Hybrid\\Athena Hybrid.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Collin\\source\\repos\\Athena Hybrid\\Athena Hybrid\\Athena Hybrid.csproj",
+        "projectUniqueName": "C:\\Users\\Collin\\Documents\\GitHub\\AthenaHybrid\\Athena Hybrid\\Athena Hybrid.csproj",
         "projectName": "Athena Hybrid",
-        "projectPath": "C:\\Users\\Collin\\source\\repos\\Athena Hybrid\\Athena Hybrid\\Athena Hybrid.csproj",
+        "projectPath": "C:\\Users\\Collin\\Documents\\GitHub\\AthenaHybrid\\Athena Hybrid\\Athena Hybrid.csproj",
         "packagesPath": "C:\\Users\\Collin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Collin\\source\\repos\\Athena Hybrid\\Athena Hybrid\\obj\\",
+        "outputPath": "C:\\Users\\Collin\\Documents\\GitHub\\AthenaHybrid\\Athena Hybrid\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

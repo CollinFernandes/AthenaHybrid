@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GJS0zOHnbrkr2gBfCCIaPLKvqL2pUpThLOy/R9FjMswykaJhOeI0gs4JoULPrZVxNVc/QR83MsCW6PPwdlMsfA==",
+  "dgSpecHash": "7k0GpepzBIYkZSQF8qCc1hSbel8rwyFFD/T2Txj7fA+8uRCiPi9gkkEnJcvTdPOx2tFfKDGgmjKGTnRIBcYN0A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Collin\\source\\repos\\Athena Hybrid\\Athena Hybrid\\Athena Hybrid.csproj",
+  "projectFilePath": "C:\\Users\\Collin\\Documents\\GitHub\\AthenaHybrid\\Athena Hybrid\\Athena Hybrid.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Collin\\.nuget\\packages\\adonisui\\1.17.1\\adonisui.1.17.1.nupkg.sha512",
     "C:\\Users\\Collin\\.nuget\\packages\\colorful.console\\1.2.15\\colorful.console.1.2.15.nupkg.sha512",

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "yohfdIMQDp0sqenDxBC9fwZ9UgyHlA9wKTPtHl6HmS62ILnLNiQ04xYRdzPNShQe3Td1YCzh0YJB4fDk9mpb0g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Collin\\Documents\\GitHub\\AthenaHybrid\\Athena Installer\\Athena Installer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Collin\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\Collin\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\Collin\\.nuget\\packages\\wpf-ui\\2.0.2\\wpf-ui.2.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
