@@ -8,6 +8,9 @@
              xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" 
              Height="90" Width="238">
     <UserControl.Resources>
+        <FontFamily x:Key="MontserratBold">/Fonts/#Montserrat Bold</FontFamily>
+        <FontFamily x:Key="MontserratMedium">/Fonts/#Montserrat Medium</FontFamily>
+        <FontFamily x:Key="MontserratSemiBold">/Fonts/#Montserrat SemiBold</FontFamily>
         <Storyboard x:Key="HoverIn">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.95">
@@ -73,8 +76,8 @@
             </Border.RenderTransform>
             <Grid>
                 <ui:SymbolIcon x:Name="HeaderIcon" Symbol="ChartMultiple20" Margin="0,7,0,0" VerticalAlignment="Top" Height="23" Width="17"/>
-                <Label HorizontalContentAlignment="Center" x:Name="HeaderText" Content="Fast Loading time" Foreground="White" Margin="10,29,10,35" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
-                <TextBlock x:Name="SubtitleText" Text="Onizuka has a fast loading time, aswell with swapping!" TextWrapping="Wrap" Margin="13,49,4,0" Foreground="#FF908B8B" FontSize="9" />
+                <Label FontFamily="{StaticResource MontserratBold}" HorizontalContentAlignment="Center" x:Name="HeaderText" Content="Fast Loading time" Foreground="White" Margin="10,29,10,35" FontWeight="Bold"/>
+                <TextBlock FontFamily="{StaticResource MontserratMedium}" x:Name="SubtitleText" Text="Onizuka has a fast loading time, aswell with swapping!" TextWrapping="Wrap" Margin="13,47,4,2" Foreground="#FF908B8B" FontSize="9" />
             </Grid>
         </Border>
     </Grid>

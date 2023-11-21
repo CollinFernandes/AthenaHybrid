@@ -8,29 +8,34 @@
       xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" d:DesignHeight="413" d:DesignWidth="994"
       Loaded="Page_Loaded"
       Title="CustomizationPage" Cursor="">
+    <Page.Resources>
+        <FontFamily x:Key="MontserratBold">/Fonts/#Montserrat Bold</FontFamily>
+        <FontFamily x:Key="MontserratMedium">/Fonts/#Montserrat Medium</FontFamily>
+        <FontFamily x:Key="MontserratSemiBold">/Fonts/#Montserrat SemiBold</FontFamily>
+    </Page.Resources>
     <Grid>
         <Border x:Name="VBucksCustomization" Margin="10,10,809,326" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1">
             <Grid>
-                <Label x:Name="HeaderText" Content="VBucks" FontSize="18" Foreground="White" Margin="5,3,5,40" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
-                <ui:TextBox x:Name="vbucksBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" PlaceholderEnabled="True" PlaceholderText="1000" Margin="5,31,5,0" VerticalAlignment="Top"/>
+                <Label x:Name="HeaderText" Content="VBucks" FontSize="18" Foreground="White" Margin="5,3,5,40" FontWeight="Bold" FontFamily="{StaticResource MontserratSemiBold}" />
+                <ui:TextBox FontFamily="{StaticResource MontserratMedium}" x:Name="vbucksBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" PlaceholderEnabled="True" PlaceholderText="1000" Margin="5,31,5,0" VerticalAlignment="Top"/>
             </Grid>
         </Border>
         <Border x:Name="LevelCustomization" Margin="10,92,809,244" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1">
             <Grid>
                 <Label x:Name="LevelHeader" Content="Level" FontSize="18" Foreground="White" Margin="5,4,5,40" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
-                <ui:TextBox x:Name="levelBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" PlaceholderEnabled="True" PlaceholderText="182" Margin="5,31,5,0" VerticalAlignment="Top"/>
+                <ui:TextBox FontFamily="{StaticResource MontserratMedium}" x:Name="levelBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" PlaceholderEnabled="True" PlaceholderText="182" Margin="5,31,5,0" VerticalAlignment="Top"/>
             </Grid>
         </Border>
         <Border x:Name="BattlestarsCustomization" Margin="10,174,809,162" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1">
             <Grid>
                 <Label x:Name="BattlestarsHeader" Content="Battlestars" FontSize="18" Foreground="White" Margin="5,3,5,40" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
-                <ui:TextBox x:Name="battlestarsBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" PlaceholderEnabled="True" PlaceholderText="182" Margin="5,31,5,0" VerticalAlignment="Top"/>
+                <ui:TextBox FontFamily="{StaticResource MontserratMedium}" x:Name="battlestarsBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" PlaceholderEnabled="True" PlaceholderText="182" Margin="5,31,5,0" VerticalAlignment="Top"/>
             </Grid>
         </Border>
         <Border x:Name="RankBuildCustomization" Margin="190,10,629,261" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1">
             <Grid>
-                <Label x:Name="CurrentRankHeaderBuild" Content="Current Rank (Build)" FontSize="16" Foreground="White" Margin="5,2,5,112" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
-                <ComboBox x:Name="currentRankBuildBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" Margin="5,29,5,0" VerticalAlignment="Top">
+                <Label x:Name="CurrentRankHeaderBuild" Content="Current Rank (Build)" FontSize="14.5" Foreground="White" Margin="5,2,5,112" FontWeight="Bold" FontFamily="{StaticResource MontserratBold}" />
+                <ComboBox x:Name="currentRankBuildBox" FontFamily="{StaticResource MontserratMedium}" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" Margin="5,29,5,0" VerticalAlignment="Top">
                     <ComboBoxItem>Bronze 1</ComboBoxItem>
                     <ComboBoxItem>Bronze 2</ComboBoxItem>
                     <ComboBoxItem>Bronze 3</ComboBoxItem>
@@ -50,8 +55,8 @@
                     <ComboBoxItem>Champion</ComboBoxItem>
                     <ComboBoxItem>Unreal</ComboBoxItem>
                 </ComboBox>
-                <Label x:Name="HighestRankHeaderBuild" Content="Highest Rank (Build)" FontSize="16" Foreground="White" Margin="5,68,5,41" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
-                <ComboBox x:Name="highestRankBuildBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" Margin="5,95,5,0" VerticalAlignment="Top">
+                <Label x:Name="HighestRankHeaderBuild" Content="Highest Rank (Build)" FontSize="14.5" Foreground="White" Margin="5,68,5,41" FontWeight="Bold" FontFamily="{StaticResource MontserratBold}" />
+                <ComboBox x:Name="highestRankBuildBox" FontFamily="{StaticResource MontserratMedium}" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" Margin="5,95,5,0" VerticalAlignment="Top">
                     <ComboBoxItem>Bronze 1</ComboBoxItem>
                     <ComboBoxItem>Bronze 2</ComboBoxItem>
                     <ComboBoxItem>Bronze 3</ComboBoxItem>
@@ -75,8 +80,9 @@
         </Border>
         <Border x:Name="RankBuildPercentageCustomization" Margin="190,157,629,179" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1">
             <Grid>
-                <Label x:Name="BuildPercentageHeader" Content="Rank % (Build)" FontSize="18" Foreground="White" Margin="5,3,5,40" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
+                <Label x:Name="BuildPercentageHeader" Content="Rank % (Build)" FontSize="18" Foreground="White" Margin="5,3,5,40" FontWeight="Bold" FontFamily="{StaticResource MontserratBold}" />
                 <ui:NumberBox
+                    FontFamily="{StaticResource MontserratMedium}"
                     x:Name="BuildPercentageBox"
                     Background="#FF0E0E0E" 
                     BorderThickness="1" 
@@ -96,8 +102,8 @@
         </Border>
         <Border x:Name="RankNoBuildCustomization" Margin="370,10,449,261" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1">
             <Grid>
-                <Label x:Name="CurrentRankHeaderNoBuild" Content="Current Rank (No Build)" FontSize="14" Foreground="White" Margin="5,2,5,112" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
-                <ComboBox x:Name="currentRankNoBuildBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" Margin="5,29,5,0" VerticalAlignment="Top">
+                <Label x:Name="CurrentRankHeaderNoBuild" Content="Current Rank (No Build)" FontSize="13" Foreground="White" Margin="5,2,-6,112" FontWeight="Bold" FontFamily="{StaticResource MontserratBold}" />
+                <ComboBox x:Name="currentRankNoBuildBox" FontFamily="{StaticResource MontserratMedium}" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" Margin="5,29,5,0" VerticalAlignment="Top">
                     <ComboBoxItem>Bronze 1</ComboBoxItem>
                     <ComboBoxItem>Bronze 2</ComboBoxItem>
                     <ComboBoxItem>Bronze 3</ComboBoxItem>
@@ -117,8 +123,8 @@
                     <ComboBoxItem>Champion</ComboBoxItem>
                     <ComboBoxItem>Unreal</ComboBoxItem>
                 </ComboBox>
-                <Label x:Name="HighestRankHeaderNoBuild" Content="Highest Rank (No Build)" FontSize="14" Foreground="White" Margin="5,68,5,41" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
-                <ComboBox x:Name="highestRankNoBuildBox" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" Margin="5,95,5,0" VerticalAlignment="Top">
+                <Label x:Name="HighestRankHeaderNoBuild" Content="Highest Rank (No Build)" FontSize="12.5" Foreground="White" Margin="5,68,5,41" FontWeight="Bold" FontFamily="{StaticResource MontserratBold}" />
+                <ComboBox x:Name="highestRankNoBuildBox" FontFamily="{StaticResource MontserratMedium}" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" Margin="5,95,5,0" VerticalAlignment="Top">
                     <ComboBoxItem>Bronze 1</ComboBoxItem>
                     <ComboBoxItem>Bronze 2</ComboBoxItem>
                     <ComboBoxItem>Bronze 3</ComboBoxItem>
@@ -142,8 +148,9 @@
         </Border>
         <Border x:Name="RankNoBuildPercentageCustomization" Margin="370,157,449,179" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1">
             <Grid>
-                <Label x:Name="NoBuildPercentageHeader" Content="Rank % (No Build)" FontSize="18" Foreground="White" Margin="5,3,5,40" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
+                <Label x:Name="NoBuildPercentageHeader" Content="Rank % (No Build)" FontSize="17" Foreground="White" Margin="5,3,5,40" FontWeight="Bold" FontFamily="{StaticResource MontserratBold}" />
                 <ui:NumberBox
+                    FontFamily="{StaticResource MontserratMedium}"
                     x:Name="NoBuildPercentageBox"
                     Background="#FF0E0E0E" 
                     BorderThickness="1" 
@@ -171,12 +178,12 @@
                         <ImageBrush x:Name="FortnitePicture"/>
                     </Border.Background>
                 </Border>
-                <Label x:Name="LoggedInHeader" Content="Logged in as:" Foreground="White" Margin="75,14,49,39" FontWeight="Bold" FontSize="22" FontFamily="Segoe UI Semibold" />
-                <TextBlock x:Name="LoggedInName" Text="Epic Name lololol" TextWrapping="Wrap" Margin="75,44,10,9" Foreground="#FF908B8B" FontSize="14" />
+                <Label FontFamily="{StaticResource MontserratBold}" x:Name="LoggedInHeader" Content="Logged in as:" Foreground="White" Margin="75,14,30,39" FontWeight="Bold" FontSize="22"/>
+                <TextBlock FontFamily="{StaticResource MontserratMedium}" x:Name="LoggedInName" Text="Epic Name lololol" TextWrapping="Wrap" Margin="75,44,10,9" Foreground="#FF908B8B" FontSize="14" />
             </Grid>
         </Border>
-        <ui:Button Click="Button_Click" x:Name="loginButton" Cursor="Hand" Appearance="Primary" Icon="Person24" Content="Login" Margin="837,334,0,0" VerticalAlignment="Top" Width="147"/>
-        <ui:Button Click="Button_Click_1" x:Name="saveButton" Cursor="Hand" Appearance="Primary" Icon="Save24" Content="Save" Margin="837,371,0,0" VerticalAlignment="Top" Width="147"/>
+        <ui:Button Click="Button_Click" FontFamily="{StaticResource MontserratSemiBold}" x:Name="loginButton" Cursor="Hand" Appearance="Primary" Icon="Person24" Content="Login" Margin="837,334,0,0" VerticalAlignment="Top" Width="147"/>
+        <ui:Button Click="Button_Click_1" FontFamily="{StaticResource MontserratSemiBold}" x:Name="saveButton" Cursor="Hand" Appearance="Primary" Icon="Save24" Content="Save" Margin="837,371,0,0" VerticalAlignment="Top" Width="147"/>
         <Grid Width="222" Height="77" x:Name="notificationContainer" Margin="762,10,10,326"></Grid>
     </Grid>
 </Page>

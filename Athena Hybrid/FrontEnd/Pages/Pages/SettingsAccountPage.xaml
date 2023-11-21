@@ -10,6 +10,11 @@
       Width="732"
       Loaded="Page_Loaded"
       Title="SettingsAccountPage">
+    <Page.Resources>
+        <FontFamily x:Key="MontserratBold">/Fonts/#Montserrat Bold</FontFamily>
+        <FontFamily x:Key="MontserratMedium">/Fonts/#Montserrat Medium</FontFamily>
+        <FontFamily x:Key="MontserratSemiBold">/Fonts/#Montserrat SemiBold</FontFamily>
+    </Page.Resources>
     <Grid>
         <Border
                     Grid.Column="0"

@@ -83,20 +83,11 @@ namespace Athena_Hybrid.FrontEnd.Pages
                     string w64 = config.FortniteLocation.Replace("/", "\\") + "\\FortniteGame\\Binaries\\Win64/";
                     WebClient web = new WebClient();
                     string DllPath = temp + "SSLBypass.dll";
-                    //https://cdn.discordapp.com/attachments/1154840950158405653/1155045310972833892/SSLBypass.dll
                     string anticheat = "https://cdn.atomicfn.dev/anticheat/main";
 
-                    //string anticheat = "https://cdn.discordapp.com/attachments/1154840950158405653/1155536997373460611/EasyAntiCheat.exe";
-                    web.DownloadFile("https://cdn.atomicfn.dev/Console.dll", temp + "cns.dll");
-                    //web.DownloadFile
-                    //web.DownloadFile("https://cdn.atomicfn.dev/anticheat/Settings.json", w64 + "EasyAntiCheat/Settings.json");
-                    //web.DownloadFile("https://cdn.atomicfn.dev/ui/SplashScreen.png", w64 + "EasyAntiCheat/SplashScreen.png");
+                    web.DownloadFile(Config.UEUnlockerURL, temp + "cns.dll");
                     web.DownloadFile("https://cdn.atomicfn.dev/Suspend.dll", temp + "Suspend.dll");
 
-                    // web.DownloadFile("https://cdn.atomicfn.dev/FortniteLauncher.exe", w64+"FortniteLauncher.exe");
-                    // web.DownloadFile(anticheat, w64 + "FortniteClient-Win64-Shipping_EAC_EOS.exe");on 
-                    //web.DownloadFile(anticheat, w64 + "FortniteClient-Win64-Shipping_EAC.exe");
-                    // web.DownloadFile(anticheat, w64 + "FortniteClient-Win64-Shipping_BE.exe");
                     web.DownloadFile("https://cdn.atomicfn.dev/Injector.exe", temp + "Inject.exe");
                     web.DownloadFile(Config.SSLURL, DllPath);
                     Directory.SetCurrentDirectory(w64);
@@ -138,6 +129,17 @@ namespace Athena_Hybrid.FrontEnd.Pages
                         StartInfo = new ProcessStartInfo
                         {
                             Arguments = $"\"{EAC.Id}\" \"{Path.Combine(temp, "Suspend.dll")}\"",
+                            CreateNoWindow = true,
+                            UseShellExecute = false,
+                            FileName = $"{Path.GetTempPath()}/Injector.exe"
+                        }
+                    }.Start();
+                    await Task.Delay(30000);
+                    new Process()
+                    {
+                        StartInfo = new ProcessStartInfo
+                        {
+                            Arguments = $"\"{perow.Id}\" \"{Path.Combine(temp, "cns.dll")}\"",
                             CreateNoWindow = true,
                             UseShellExecute = false,
                             FileName = $"{Path.GetTempPath()}/Injector.exe"

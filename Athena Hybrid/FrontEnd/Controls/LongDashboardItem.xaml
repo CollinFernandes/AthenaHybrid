@@ -8,6 +8,9 @@
              xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" 
              Width="470" Height="76">
     <UserControl.Resources>
+        <FontFamily x:Key="MontserratBold">/Fonts/#Montserrat Bold</FontFamily>
+        <FontFamily x:Key="MontserratMedium">/Fonts/#Montserrat Medium</FontFamily>
+        <FontFamily x:Key="MontserratSemiBold">/Fonts/#Montserrat SemiBold</FontFamily>
         <Storyboard x:Key="HoverIn">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border5" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.95">
@@ -73,8 +76,8 @@
             </Border.RenderTransform>
             <Grid>
                 <ui:SymbolIcon x:Name="Symbol" Symbol="Cloud48" Margin="10,0,0,0" Height="23" Width="17" HorizontalAlignment="Left"/>
-                <Label x:Name="HeaderText" Content="New API" Foreground="White" Margin="35,14,89,18" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
-                <TextBlock x:Name="SubtitleText" Text="Onizuka has a new fast API, Which will help in many things " TextWrapping="Wrap" Margin="34,31,10,10" Foreground="#FF908B8B" FontSize="9" />
+                <Label FontFamily="{StaticResource MontserratBold}" x:Name="HeaderText" Content="New API" Foreground="White" Margin="35,14,89,18" FontWeight="Bold" />
+                <TextBlock FontFamily="{StaticResource MontserratSemiBold}" x:Name="SubtitleText" Text="Onizuka has a new fast API, Which will help in many things " TextWrapping="Wrap" Margin="34,31,10,5" Foreground="#FF908B8B" FontSize="9" />
             </Grid>
         </Border>
     </Grid>

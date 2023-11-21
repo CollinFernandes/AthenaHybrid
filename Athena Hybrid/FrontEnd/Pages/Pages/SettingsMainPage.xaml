@@ -10,22 +10,27 @@
       Loaded="Page_Loaded"
       Width="732"
       Title="SettingsMainPage">
+    <Page.Resources>
+        <FontFamily x:Key="MontserratBold">/Fonts/#Montserrat Bold</FontFamily>
+        <FontFamily x:Key="MontserratMedium">/Fonts/#Montserrat Medium</FontFamily>
+        <FontFamily x:Key="MontserratSemiBold">/Fonts/#Montserrat SemiBold</FontFamily>
+    </Page.Resources>
     <Grid>
-        <TextBlock Text="Fortnite Location" FontFamily="Segoe UI Semibold" Foreground="White" FontSize="18" Margin="13,10,278,368"/>
-        <TextBlock Text="Here is where you find your fortnite location!" FontFamily="Segoe UI Semibold" Foreground="#FFA49E9E" FontSize="11" Margin="14,34,487,344"/>
-        <ui:TextBox x:Name="TextBoxPath" Margin="12,58,434,0" VerticalAlignment="Top" IsReadOnly="True" />
-        <TextBlock Text="Fortnite Settings" FontFamily="Segoe UI Semibold" Foreground="White" FontSize="18" Margin="14,115,528,263"/>
-        <TextBlock Text="You can use this to remove duped paks/verify fortnite. You can also start it!" FontFamily="Segoe UI Semibold" Foreground="#FFA49E9E" FontSize="11" Margin="15,144,432,236"/>
-        <ui:Button Click="CloseFortnite_Click" x:Name="CloseFortnite" Height="30" Width="145" Margin="15,172,0,0" Cursor="Hand" Icon="ArrowExit20" Content="Close Fortnite" IconFilled="True" VerticalAlignment="Top"  Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" FontSize="11" />
-        <ui:Button Click="DeleteCache_Click" x:Name="DeleteCache" Height="30" Width="145" Margin="15,212,0,0" Cursor="Hand" Icon="Delete24" Content="Delete Cache" IconFilled="True" VerticalAlignment="Top"  Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" FontSize="11" />
-        <ui:Button Click="VerifyFortnite_Click" x:Name="VerifyFortnite" Height="30" Width="145" Margin="178,172,0,0" Cursor="Hand" Icon="ArrowCircleUp28" Content="Verify Fortnite" IconFilled="True" VerticalAlignment="Top"  Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" FontSize="11" />
-        <CheckBox Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Content="Dev Inventory" Margin="13,247,0,0" VerticalAlignment="Top"></CheckBox>
-        <CheckBox Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Content="Full Anticheat Bypass" Margin="178,247,0,0" VerticalAlignment="Top" Width="164"/>
-        <ui:SymbolIcon MouseDown="SymbolIcon_MouseDown" Cursor="Hand" Symbol="Question24" HorizontalAlignment="Left" Margin="343,250,0,0" VerticalAlignment="Top" Height="18"></ui:SymbolIcon>
-        <TextBlock Text="Account Settings" FontFamily="Segoe UI Semibold" Foreground="White" FontSize="18" Margin="14,305,528,73"/>
-        <TextBlock Text="Switch or Logout from your Account!" FontFamily="Segoe UI Semibold" Foreground="#FFA49E9E" FontSize="11" Margin="15,331,432,49"/>
-        <ui:Button Click="SwitchAccount_Click" x:Name="SwitchAccount" Height="30" Width="180" Margin="15,358,0,0" Cursor="Hand" Icon="CameraSwitch24" Content="Switch Account" IconFilled="True" VerticalAlignment="Top"  Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" FontSize="11" />
-        <ui:Button Click="LogOutAccount_Click" x:Name="LogOutAccount" Height="30" Width="180" Margin="200,358,0,0" Cursor="Hand" Icon="Delete24" Content="Log Out" IconFilled="True" VerticalAlignment="Top"  Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" FontSize="11" />
+        <TextBlock FontFamily="{StaticResource MontserratBold}" Text="Fortnite Location" Foreground="White" FontSize="18" Margin="13,10,278,368"/>
+        <TextBlock FontFamily="{StaticResource MontserratSemiBold}" Text="Here is where you find your fortnite location!" Foreground="#FFA49E9E" FontSize="11" Margin="14,34,487,344"/>
+        <ui:TextBox FontFamily="{StaticResource MontserratMedium}" x:Name="TextBoxPath" Margin="12,58,434,0" VerticalAlignment="Top" IsReadOnly="True" />
+        <TextBlock FontFamily="{StaticResource MontserratBold}" Text="Fortnite Settings" Foreground="White" FontSize="18" Margin="14,115,528,263"/>
+        <TextBlock FontFamily="{StaticResource MontserratSemiBold}" Text="You can use this to remove duped paks/verify fortnite. You can also start it!" Foreground="#FFA49E9E" FontSize="11" Margin="15,144,432,236"/>
+        <ui:Button FontFamily="{StaticResource MontserratMedium}" Click="CloseFortnite_Click" x:Name="CloseFortnite" Height="30" Width="145" Margin="15,172,0,0" Cursor="Hand" Icon="ArrowExit20" Content="Close Fortnite" IconFilled="True" VerticalAlignment="Top"  Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" FontSize="11" />
+        <ui:Button FontFamily="{StaticResource MontserratMedium}" Click="DeleteCache_Click" x:Name="DeleteCache" Height="30" Width="145" Margin="15,212,0,0" Cursor="Hand" Icon="Delete24" Content="Delete Cache" IconFilled="True" VerticalAlignment="Top"  Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" FontSize="11" />
+        <ui:Button FontFamily="{StaticResource MontserratMedium}" Click="VerifyFortnite_Click" x:Name="VerifyFortnite" Height="30" Width="145" Margin="178,172,0,0" Cursor="Hand" Icon="ArrowCircleUp28" Content="Verify Fortnite" IconFilled="True" VerticalAlignment="Top"  Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" FontSize="11" />
+        <CheckBox FontFamily="{StaticResource MontserratMedium}" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Content="Dev Inventory" Margin="13,247,0,0" VerticalAlignment="Top"></CheckBox>
+        <CheckBox FontFamily="{StaticResource MontserratMedium}" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Content="Full Anticheat Bypass" Margin="178,247,0,0" VerticalAlignment="Top" Width="188"/>
+        <ui:SymbolIcon MouseDown="SymbolIcon_MouseDown" Cursor="Hand" Symbol="Question24" Margin="371,248,0,0" VerticalAlignment="Top" Height="18" HorizontalAlignment="Left"/>
+        <TextBlock FontFamily="{StaticResource MontserratBold}" Text="Account Settings" Foreground="White" FontSize="18" Margin="14,305,528,73"/>
+        <TextBlock FontFamily="{StaticResource MontserratSemiBold}" Text="Switch or Logout from your Account!" Foreground="#FFA49E9E" FontSize="11" Margin="15,331,432,49"/>
+        <ui:Button FontFamily="{StaticResource MontserratMedium}" Click="SwitchAccount_Click" x:Name="SwitchAccount" Height="30" Width="180" Margin="15,358,0,0" Cursor="Hand" Icon="CameraSwitch24" Content="Switch Account" IconFilled="True" VerticalAlignment="Top"  Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" FontSize="11" />
+        <ui:Button FontFamily="{StaticResource MontserratMedium}" Click="LogOutAccount_Click" x:Name="LogOutAccount" Height="30" Width="180" Margin="200,358,0,0" Cursor="Hand" Icon="Delete24" Content="Log Out" IconFilled="True" VerticalAlignment="Top"  Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" FontSize="11" />
         <Grid Width="222" Height="77" x:Name="notificationContainer" Margin="500,10,10,316"></Grid>
     </Grid>
 </Page>

@@ -9,7 +9,11 @@
       d:DesignHeight="420" d:DesignWidth="1008"
       Loaded="Load"
       Title="DashboardPage">
-
+    <Page.Resources>
+        <FontFamily x:Key="MontserratBold">/Fonts/#Montserrat Bold</FontFamily>
+        <FontFamily x:Key="MontserratMedium">/Fonts/#Montserrat Medium</FontFamily>
+        <FontFamily x:Key="MontserratSemiBold">/Fonts/#Montserrat SemiBold</FontFamily>
+    </Page.Resources>
     <Grid>
         <Border Height="105" Margin="10,9,10,306" CornerRadius="4,4,0,0" BorderThickness="1">
             <Border.Background>
@@ -17,8 +21,8 @@
             </Border.Background>
         </Border>
 
-        <TextBlock Text="Why Should I use Athena Hybrid?" Margin="24,130,774,254" Background="{x:Null}" Foreground="#FFB9B9B9" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
-        <TextBlock Text="Update Logs" Margin="24,266,774,130" Background="{x:Null}" Foreground="#FFB9B9B9" FontWeight="Bold" FontFamily="Segoe UI Semibold" />
+        <TextBlock Text="Why Should I use Athena Hybrid?" Margin="24,130,696,254" Background="{x:Null}" Foreground="#FFB9B9B9" FontWeight="Bold" FontFamily="{StaticResource MontserratSemiBold}" />
+        <TextBlock Text="Update Logs" Margin="24,266,774,130" Background="{x:Null}" Foreground="#FFB9B9B9" FontWeight="Bold" FontFamily="{StaticResource MontserratSemiBold}" />
 
         <WrapPanel x:Name="ReasonPanel" Margin="24,152,16,159"/>
         <ScrollViewer x:Name="ScrollViewer" Margin="24,290,16,20">

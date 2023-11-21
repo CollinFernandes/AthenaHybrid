@@ -8,10 +8,15 @@
       Loaded="Page_Loaded"
       xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml" d:DesignHeight="413" d:DesignWidth="994"
       Title="LaunchPage">
+    <Page.Resources>
+        <FontFamily x:Key="MontserratBold">/Fonts/#Montserrat Bold</FontFamily>
+        <FontFamily x:Key="MontserratMedium">/Fonts/#Montserrat Medium</FontFamily>
+        <FontFamily x:Key="MontserratSemiBold">/Fonts/#Montserrat SemiBold</FontFamily>
+    </Page.Resources>
     <Grid>
-        <Label Content="best Hybrid Server" FontSize="22" FontFamily="Segoe UI" Margin="392,99,420,280"/>
-        <Label Content="Athena Hybrid" Foreground="White" FontSize="38" FontFamily="Segoe UI Bold" Margin="392,123,342,234"/>
-        <ui:Button Width="250" Click="PrimaryButton_Click" Height="31" Cursor="Hand" Appearance="Primary" Content="Login" Icon="People24" x:Name="PrimaryButton" Margin="392,265,0,0" VerticalAlignment="Top"/>
+        <Label FontFamily="{StaticResource MontserratSemiBold}" Content="best Hybrid Server" FontSize="22" Margin="392,99,387,280"/>
+        <Label FontFamily="{StaticResource MontserratBold}" Content="Athena Hybrid" Foreground="White" FontSize="38" Margin="392,123,311,234"/>
+        <ui:Button FontFamily="{StaticResource MontserratMedium}" Width="250" Click="PrimaryButton_Click" Height="31" Cursor="Hand" Appearance="Primary" Content="Login" Icon="People24" x:Name="PrimaryButton" Margin="392,265,0,0" VerticalAlignment="Top"/>
         <Grid Width="222" Height="77" x:Name="notificationContainer" Margin="762,10,10,326"></Grid>
     </Grid>
 </Page>

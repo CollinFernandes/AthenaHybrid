@@ -15,6 +15,11 @@
         ResizeMode="CanMinimize" 
         Closed="closeWindow"
         WindowStyle="None">
+    <Window.Resources>
+        <FontFamily x:Key="MontserratBold">/Fonts/#Montserrat Bold</FontFamily>
+        <FontFamily x:Key="MontserratMedium">/Fonts/#Montserrat Medium</FontFamily>
+        <FontFamily x:Key="MontserratSemiBold">/Fonts/#Montserrat SemiBold</FontFamily>
+    </Window.Resources>
     <Grid Background="#FF0F1012">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -22,7 +27,7 @@
         </Grid.RowDefinitions>
 
         <TabControl Margin="8,54,6,4" Grid.RowSpan="3" Background="#0f1012" SelectionChanged="switchTab" x:Name="TabControl1">
-            <TabItem x:Name="DashboardTab" Width="200" IsSelected="True" >
+            <TabItem FontFamily="{StaticResource MontserratSemiBold}" x:Name="DashboardTab" Width="200" IsSelected="True" >
                 <TabItem.Content>
                     <Frame x:Name="Dashboard" Grid.ColumnSpan="2" Height="408" />
                 </TabItem.Content>
@@ -40,7 +45,7 @@
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal" Height="23">
                         <ui:SymbolIcon Margin="0,0,6,0" Symbol="Play24" Filled="True" />
-                        <TextBlock Text="Launch" Height="20" />
+                        <TextBlock FontFamily="{StaticResource MontserratSemiBold}" Text="Launch" Height="20" />
                     </StackPanel>
                 </TabItem.Header>
             </TabItem>
@@ -51,7 +56,7 @@
                 <TabItem.Header >
                     <StackPanel Orientation="Horizontal" Height="23">
                         <ui:SymbolIcon Margin="0,0,6,0" Symbol="PuzzlePiece24" Filled="True" />
-                        <TextBlock Text="Customization" Height="20" />
+                        <TextBlock FontFamily="{StaticResource MontserratSemiBold}" Text="Customization" Height="20" />
                     </StackPanel>
                 </TabItem.Header>
             </TabItem>
@@ -62,7 +67,7 @@
                 <TabItem.Header >
                     <StackPanel Orientation="Horizontal" Height="23">
                         <ui:SymbolIcon Margin="0,0,6,0" Symbol="Wallpaper24" Filled="True" />
-                        <TextBlock Text="Custom Background" Height="20" />
+                        <TextBlock FontFamily="{StaticResource MontserratSemiBold}" Text="Custom Background" Height="20" />
                     </StackPanel>
                 </TabItem.Header>
             </TabItem>
@@ -73,7 +78,7 @@
                 <TabItem.Header  >
                     <StackPanel Orientation="Horizontal" Height="23">
                         <ui:SymbolIcon Margin="0,0,6,0" Symbol="Settings24" Filled="True" />
-                        <TextBlock Text="Settings" Height="20" />
+                        <TextBlock FontFamily="{StaticResource MontserratSemiBold}" Text="Settings" Height="20" />
                     </StackPanel>
                 </TabItem.Header>
             </TabItem>

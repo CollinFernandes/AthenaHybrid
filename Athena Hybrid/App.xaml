@@ -12,7 +12,7 @@
             </ResourceDictionary.MergedDictionaries>
             <Style x:Key="CustomFont" TargetType="Label" >
                 <Setter Property="TextElement.FontFamily"
-                        Value="FrontEnd/Fonts/#Mundo Sans Std Black">
+                        Value="/Fonts/#Mundo Sans Std Black">
                 </Setter>
             </Style>
         </ResourceDictionary>

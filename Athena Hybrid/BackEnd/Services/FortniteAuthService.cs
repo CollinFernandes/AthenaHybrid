@@ -180,7 +180,6 @@ namespace Athena_Hybrid.BackEnd.Services
             }
             return EXCHANGE;
         }
-
         public static async Task<string> GenCaldera()
         {
             FortniteAuthService auth = new FortniteAuthService();

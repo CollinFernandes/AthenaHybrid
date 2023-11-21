@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -31,6 +32,10 @@ namespace Athena_Hybrid.FrontEnd.Pages.Pages
     /// </summary>
     public partial class SettingsMainPage : Page
     {
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool FreeConsole();
+
         public SettingsMainPage()
         {
             InitializeComponent();
@@ -175,6 +180,7 @@ namespace Athena_Hybrid.FrontEnd.Pages.Pages
                 case "Dev Inventory":
                     Settings.Default.bIsDevInventory = true;
                     Settings.Default.Save();
+                    FreeConsole();
                     break;
                 case "Full Anticheat Bypass":
                     Settings.Default.bFACB = true;
@@ -191,6 +197,7 @@ namespace Athena_Hybrid.FrontEnd.Pages.Pages
                 case "Ingame":
                     Settings.Default.bIsIngame = false;
                     Settings.Default.Save();
+                    LogService.AllocConsole();
                     break;
                 case "Dev Inventory":
                     Settings.Default.bIsDevInventory = false;

@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\Montserrat Bold.ttf" />
+    <None Remove="Fonts\Montserrat Medium.ttf" />
+    <None Remove="Fonts\Montserrat SemiBold.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AdonisUI" Version="1.17.1" />
     <PackageReference Include="Colorful.Console" Version="1.2.15" />
     <PackageReference Include="DiscordRichPresence" Version="1.2.1.24" />
@@ -20,6 +26,12 @@
     <PackageReference Include="System.Security.AccessControl" Version="6.0.0" />
     <PackageReference Include="System.Security.Principal.Windows" Version="5.0.0" />
     <PackageReference Include="WPF-UI" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\Montserrat Bold.ttf" />
+    <Resource Include="Fonts\Montserrat Medium.ttf" />
+    <Resource Include="Fonts\Montserrat SemiBold.ttf" />
   </ItemGroup>
 
   <ItemGroup>

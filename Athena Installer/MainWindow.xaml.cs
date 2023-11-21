@@ -35,6 +35,7 @@ namespace Athena_Installer
                 Dispatcher.Invoke(() => {
                     headerasdasdas.Foreground = Accent.SystemAccentBrush;
                     symbolIcon.Foreground = Accent.SystemAccentBrush;
+                    symbolIcon1.Foreground = Accent.SystemAccentBrush;
                 });
             });
             InitializeComponent();
@@ -55,6 +56,15 @@ namespace Athena_Installer
             Task.Run(async () => {
                 _ = Dispatcher.Invoke(async () =>
                 {
+                    if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Athena Launcher\\Athena Hybrid.exe"))
+                    {
+                        installButton.IsEnabled = false;
+                        installButton.Icon = Wpf.Ui.Common.SymbolRegular.Checkmark24;
+                        uninstallButton.Visibility = Visibility.Hidden;
+                    } else
+                    {
+                        installButton.Content = "Update Athena Hybrid";
+                    }
                     await Task.Delay(200);
                     welcomeGrid.Visibility = Visibility.Visible;
                     Storyboard s = (Storyboard)TryFindResource("WelcomeBackIn");
@@ -92,6 +102,11 @@ namespace Athena_Installer
                     installButton.Icon = Wpf.Ui.Common.SymbolRegular.Checkmark24;
                     uninstallButton.Icon = Wpf.Ui.Common.SymbolRegular.Delete24;
                     uninstallButton.IsEnabled = true;
+                    if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Athena Launcher\\Athena Hybrid.exe"))
+                    {
+                        installButton.IsEnabled = false;
+                        uninstallButton.IsEnabled = true;
+                    }
                 });
             });
 
@@ -102,29 +117,48 @@ namespace Athena_Installer
             Task.Run(async () => {
                 _ = Dispatcher.Invoke(async () =>
                 {
-
                     installButton.IsEnabled = true;
                     installButton.Icon = Wpf.Ui.Common.SymbolRegular.ArrowDownload24;
                     uninstallButton.Icon = Wpf.Ui.Common.SymbolRegular.Checkmark24;
                     uninstallButton.IsEnabled = false;
+                    if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Athena Launcher\\Athena Hybrid.exe"))
+                    {
+                        installButton.IsEnabled = false;
+                        uninstallButton.IsEnabled = true;
+                    }
                 });
             });
         }
 
         private async void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            WebClient webClient = new WebClient();
-            webClient.OpenRead("https://cdn.discordapp.com/attachments/1051538904840413315/1175591656674836630/Athena_Hybrid.exe");
-            Int64 bytes_total = Convert.ToInt64(webClient.ResponseHeaders["Content-Length"]);
-            double megabytesTotal = ConvertBytesToMegabytes(bytes_total);
-            downloadedLabel.Content = "0 mb/" + Math.Round(megabytesTotal, 2) + "mb";
-            Storyboard s2 = (Storyboard)TryFindResource("InstallOut");
-            s2.Begin();
-            await Task.Delay(850);
-            installGrid.Visibility = Visibility.Hidden;
-            downloadingGrid.Visibility = Visibility.Visible;
-            Storyboard s1 = (Storyboard)TryFindResource("DownloadingIn");
-            s1.Begin();
+            if (installButton.IsEnabled == false)
+            {
+                WebClient webClient = new WebClient();
+                webClient.OpenRead("https://cdn.discordapp.com/attachments/1051538904840413315/1175591656674836630/Athena_Hybrid.exe");
+                Int64 bytes_total = Convert.ToInt64(webClient.ResponseHeaders["Content-Length"]);
+                double megabytesTotal = ConvertBytesToMegabytes(bytes_total);
+                downloadedLabel.Content = "0 mb/" + Math.Round(megabytesTotal, 2) + "mb";
+                Storyboard s2 = (Storyboard)TryFindResource("InstallOut");
+                s2.Begin();
+                await Task.Delay(850);
+                installGrid.Visibility = Visibility.Hidden;
+                downloadingGrid.Visibility = Visibility.Visible;
+                Storyboard s1 = (Storyboard)TryFindResource("DownloadingIn");
+                s1.Begin();
+            } else if (uninstallButton.IsEnabled == false)
+            {
+                string LocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                string shortcutDir = AppData + "\\Microsoft\\Windows\\Start Menu\\Programs\\Athena";
+                File.Delete(shortcutDir + "\\Athena Hybrid" + ".url");
+                File.Delete(LocalAppData + "\\Athena Launcher\\Athena Hybrid.exe");
+                Directory.Delete(LocalAppData + "\\Athena Launcher");
+                installGrid.Visibility = Visibility.Hidden;
+                afterDeleteGrid.Visibility = Visibility.Visible;
+                Storyboard s2 = (Storyboard)TryFindResource("UninstallIn");
+                s2.Begin();
+            }
         }
 
         static double ConvertBytesToMegabytes(long bytes)
@@ -191,8 +225,24 @@ namespace Athena_Installer
                     s2.Begin();
                     await Task.Delay(850);
                     downloadingGrid.Visibility = Visibility.Hidden;
+                    afterDownloadGrid.Visibility = Visibility.Visible;
+                    Storyboard s3 = (Storyboard)TryFindResource("afterDownloadIn");
+                    s3.Begin();
                     break;
             }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private async void button2_Click(object sender, RoutedEventArgs e)
+        {
+            string LocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            Process.Start(LocalAppData + "\\Athena Launcher\\Athena Hybrid.exe");
+            await Task.Delay(1500);
+            Environment.Exit(0);
         }
     }
 }

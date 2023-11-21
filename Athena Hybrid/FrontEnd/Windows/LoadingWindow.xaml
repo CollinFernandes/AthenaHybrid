@@ -14,6 +14,11 @@
         Loaded="Window_Loaded"
         WindowStartupLocation="CenterScreen"
         Title="Key" Height="350" Width="670" Foreground="White" ResizeMode="CanMinimize" Icon="https://cdn.discordapp.com/attachments/824438219176280074/1095496331570724874/ProfilePictureMaker.png" WindowStyle="None">
+    <Window.Resources>
+        <FontFamily x:Key="MontserratBold">/Fonts/#Montserrat Bold</FontFamily>
+        <FontFamily x:Key="MontserratMedium">/Fonts/#Montserrat Medium</FontFamily>
+        <FontFamily x:Key="MontserratSemiBold">/Fonts/#Montserrat SemiBold</FontFamily>
+    </Window.Resources>
     <Grid>
         <Grid.Background>
             <LinearGradientBrush >
@@ -22,10 +27,10 @@
             </LinearGradientBrush>
         </Grid.Background>
         <ui:LoadingScreen Background="Transparent" HorizontalAlignment="Center"/>
-        <Label Cursor="Hand" HorizontalAlignment="Center" HorizontalContentAlignment="Center"  Margin="0,196,0,0"  Content="Loading..." VerticalAlignment="Top" Width="282" Height="30" Foreground="White" Style="{StaticResource CustomFont}" FontSize="14" Background="{x:Null}" FontFamily="Segoe UI"/>
+        <Label FontFamily="{StaticResource MontserratSemiBold}" Cursor="Hand" HorizontalAlignment="Center" HorizontalContentAlignment="Center"  Margin="0,203,0,0"  Content="Loading..." VerticalAlignment="Top" Width="282" Height="30" Foreground="White" Style="{StaticResource CustomFont}" FontSize="14" Background="{x:Null}"/>
         <ui:TitleBar
             Grid.Row="0"
-            Title="Athena Hybrid Loading"
+            Title="Athena Hybrid - Loading"
             Icon="https://cdn.discordapp.com/attachments/824438219176280074/1095496331570724874/ProfilePictureMaker.png" CanMaximize="False" Grid.ColumnSpan="2" Background="#FF18191D" Height="49">
         </ui:TitleBar>
     </Grid>
