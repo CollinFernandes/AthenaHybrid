@@ -1,6 +1,7 @@
 ﻿using AdonisUI.Controls;
 using Athena_Hybrid.BackEnd;
 using Athena_Hybrid.BackEnd.Services;
+using Athena_Hybrid.BackEnd.Utils;
 using Athena_Hybrid.FrontEnd.Controls;
 using Athena_Hybrid.Properties;
 using System;
@@ -139,25 +140,7 @@ namespace Athena_Hybrid.FrontEnd.Pages.Pages
 
         private void CloseFortnite_Click(object sender, RoutedEventArgs e)
         {
-            LogService.Write($"killing fortnite processes...");
-            List<string> processes = new List<string> {
-                "FortniteClient-Win64-Shipping_EAC",
-                "FortniteClient-Win64-Shipping_BE",
-                "FortniteClient-Win64-Shipping",
-                "FortniteLauncher",
-                "EpicGamesLauncher",
-                "BEservice"
-            };
-            foreach (var process in processes)
-            {
-                var processes1 = Process.GetProcessesByName(process);
-                foreach (var process1 in processes1)
-                {
-                    process1.Kill();
-                    LogService.Write($"killed process {process1.ProcessName}");
-                }
-            }
-            Process.GetProcessesByName("FortniteClient-Win64-Shipping_EAC.exe");
+            LaunchUtils.killFortnite();
         }
 
         private void VerifyFortnite_Click(object sender, RoutedEventArgs e)

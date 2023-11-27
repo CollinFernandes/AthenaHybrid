@@ -161,7 +161,7 @@ namespace Athena_Hybrid.BackEnd.Services
             }
 
         }
-        public string GetExchange(string code)
+        public async Task<string> GetExchange(string code)
         {
             string EXCHANGE = "";
             try
@@ -185,7 +185,7 @@ namespace Athena_Hybrid.BackEnd.Services
             FortniteAuthService auth = new FortniteAuthService();
             RestClient calderaClient = new RestClient("https://caldera-service-prod.ecosec.on.epicgames.com");
             RestRequest calderaRequest = new RestRequest("/caldera/api/v1/launcher/racp");
-            calderaRequest.AddJsonBody(new { account_id = Settings.Default.epicId, exchange_code = auth.GetExchange(auth.GetToken()), test_mode = false, epic_app = "fortnite", nvidia = false, luna = false });
+            calderaRequest.AddJsonBody(new { account_id = Settings.Default.epicId, exchange_code = await auth.GetExchange(auth.GetToken()), test_mode = false, epic_app = "fortnite", nvidia = false, luna = false });
 
             var response = calderaClient.Post(calderaRequest);
             var content = response.Content;

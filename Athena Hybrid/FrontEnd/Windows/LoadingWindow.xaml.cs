@@ -26,6 +26,7 @@ namespace Athena_Hybrid.FrontEnd.Windows
     {
         bool noBase = false;
         bool noLogs = false;
+        bool noTemp = false;
         public LoadingWindow()
         {
             InitializeComponent();
@@ -44,6 +45,11 @@ namespace Athena_Hybrid.FrontEnd.Windows
                 {
                     noLogs = true;
                     Directory.CreateDirectory(Config.LogsDirectory);
+                }
+                if (!Directory.Exists(Config.FilesDirectory))
+                {
+                    noTemp = true;
+                    Directory.CreateDirectory(Config.FilesDirectory);
                 }
                 LogService.Initialize();
                 await checkDirectories();
@@ -78,6 +84,11 @@ namespace Athena_Hybrid.FrontEnd.Windows
             if (noLogs)
             {
                 LogService.Write("no logs directory found.", LogLevel.Warning);
+                LogService.Write("creating a new one.", LogLevel.Warning);
+            }
+            if (noTemp)
+            {
+                LogService.Write("no temp directory found.", LogLevel.Warning);
                 LogService.Write("creating a new one.", LogLevel.Warning);
             }
         }

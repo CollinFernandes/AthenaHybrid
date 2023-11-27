@@ -59,7 +59,6 @@ namespace Athena_Locker
                     #region getCosmetics
                     string endpoint = "https://fortnite-api.com/v2/cosmetics/br";
                     string lockerEndpoint = $"http://server.basicfx.cloud:1337/api/v1/customLocker/get/{Settings.Default.epicId}";
-
                     try
                     {
                         await Task.Run(async () =>
