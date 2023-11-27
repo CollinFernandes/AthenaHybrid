@@ -1,0 +1,48 @@
+﻿<ui:UiWindow x:Class="Athena_Locker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Athena_Locker"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Background="#0f1012" 
+        ResizeMode="CanMinimize" 
+        WindowStyle="None"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        Loaded="UiWindow_Loaded"
+        Title="MainWindow" Height="450" Width="900">
+    <Window.Resources>
+        <FontFamily x:Key="MontserratBold">/Fonts/#Montserrat Bold</FontFamily>
+        <FontFamily x:Key="MontserratMedium" >/Fonts/#Montserrat Medium</FontFamily>
+        <FontFamily x:Key="MontserratSemiBold" >/Fonts/#Montserrat SemiBold</FontFamily>
+    </Window.Resources>
+    <Grid Background="#FF0F1012">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" x:Name="loadinGrid" Visibility="Visible">
+            <TextBlock x:Name="Loading_Text" Text="Loading Program" FontFamily="{StaticResource MontserratBold}" TextAlignment="Center" Foreground="White" Margin="150,227,150,35"/>
+            <ui:ProgressRing IsIndeterminate="True" Height="100" Width="100" Margin="400,100,400,201" />
+        </Grid>
+        <Grid x:Name="mainGrid" Visibility="Visible" Grid.Row="1">
+            <ui:Button x:Name="saveLockerButton" Click="saveLockerButton_Click" Cursor="Hand" IsEnabled="True" FontFamily="{StaticResource MontserratBold}" Appearance="Primary" Content="Login" Margin="5,40,0,0" VerticalAlignment="Top" Width="192" RenderTransformOrigin="0.5,0.5"/>
+            <CheckBox Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Content="Enable Custom Locker" Margin="5,8,0,0" VerticalAlignment="Top" FontFamily="{StaticResource MontserratBold}" Height="16"/>
+            <ui:TextBox x:Name="KeyBox" FontFamily="{StaticResource MontserratSemiBold}" PlaceholderEnabled="True" PlaceholderText="Search..."
+                Margin="581,24,37,0" Background="#FF09090A" Foreground="White" RenderTransformOrigin="0.5,0.5" SelectionTextBrush="{x:Null}" BorderBrush="#FF373738" BorderThickness="1" SelectionBrush="#FF313233" VerticalAlignment="Top"/>
+            <ui:SymbolIcon Cursor="Hand" Symbol="Search24" Margin="865,24,0,0" FontSize="32" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <Grid x:Name="cosmeticsGrid" Margin="5,75,5,5">
+                <ScrollViewer>
+                    <WrapPanel x:Name="allPanel"/>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+        <ui:TitleBar
+            Title="Athena Hybrid - Installer"
+            Grid.Row="0"
+            FontFamily="{StaticResource MontserratBold}"
+            CanMaximize="False" Background="#FF18191D" Height="49">
+        </ui:TitleBar>
+    </Grid>
+</ui:UiWindow>

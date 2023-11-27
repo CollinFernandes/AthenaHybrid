@@ -1,0 +1,29 @@
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\bin\Debug\net6.0-windows\Athena Locker.exe
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\bin\Debug\net6.0-windows\Athena Locker.deps.json
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\bin\Debug\net6.0-windows\Athena Locker.runtimeconfig.json
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\bin\Debug\net6.0-windows\Athena Locker.dll
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\bin\Debug\net6.0-windows\Athena Locker.pdb
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\bin\Debug\net6.0-windows\Wpf.Ui.dll
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\Athena Locker.csproj.AssemblyReference.cache
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\Athena Locker_MarkupCompile.cache
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\Athena Locker_MarkupCompile.lref
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\App.baml
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\Athena Locker.g.resources
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\Athena Locker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\Athena Locker.AssemblyInfoInputs.cache
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\Athena Locker.AssemblyInfo.cs
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\Athena Locker.csproj.CoreCompileInputs.cache
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\Athena Locker.csproj.CopyComplete
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\Athena Locker.dll
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\refint\Athena Locker.dll
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\Athena Locker.pdb
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\Athena Locker.genruntimeconfig.cache
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\ref\Athena Locker.dll
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\Controls\itemControl.g.cs
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\obj\Debug\net6.0-windows\Controls\itemControl.baml
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\bin\Debug\net6.0-windows\Athena Locker.dll.config
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Locker\bin\Debug\net6.0-windows\RestSharp.dll
