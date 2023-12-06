@@ -1,0 +1,3 @@
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Hybrid\bin\Debug\net6.0-windows\publish\win-x64\Athena Hybrid.pdb
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Hybrid\bin\Debug\net6.0-windows\publish\win-x64\Athena Hybrid.dll.config
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Hybrid\bin\Debug\net6.0-windows\publish\win-x64\Athena Hybrid.exe

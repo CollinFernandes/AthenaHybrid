@@ -15,8 +15,9 @@ namespace Athena_Hybrid.BackEnd.Services
     {
         public static class LinkEndpoints
         {
-            public static Uri Base = new Uri("http://server.basicfx.cloud:1337");
+            public static Uri Base = new Uri("http://localhost:1337");
             public static Uri publicBackgroundData() => new Uri(Base, $"/api/v1/customBackgrounds");
+            public static Uri officialBackgroundData() => new Uri(Base, $"/api/v1/officialBackgrounds");
             public static Uri DiscordData(string id) => new Uri(Base, $"/api/v1/discordData/{id}");
             public static Uri APIData() => new Uri(Base, $"/api/v1/data");
         }
@@ -44,11 +45,28 @@ namespace Athena_Hybrid.BackEnd.Services
             return JsonConvert.DeserializeObject<T>(fileContent);
         }
 
+        private static async Task<T> ReadofficialBackgrounds<T>()
+        {
+            FileInfo fi = new FileInfo(Config.officialBackgroundsFile);
+            FileStream fs = fi.Open(FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            StreamReader sr = new StreamReader(fs);
+            string fileContent = sr.ReadToEnd();
+            sr.Close();
+            fs.Close();
+            return JsonConvert.DeserializeObject<T>(fileContent);
+        }
+
         public static async Task<List<backgroundModel>> GetPublicBackgrounds()
             => await ReadpublicBackgrounds<List<backgroundModel>>();
 
+        public static async Task<List<officialBackgroundModel>> GetOfficialBackgrounds()
+            => await ReadofficialBackgrounds<List<officialBackgroundModel>>();
+
         public static async Task publicBackgrounds()
             => await DownloadData(LinkEndpoints.publicBackgroundData(), Config.publicBackgroundsFile);
+
+        public static async Task officialBackgrounds()
+            => await DownloadData(LinkEndpoints.officialBackgroundData(), Config.officialBackgroundsFile);
 
         public static async Task<DiscordModel> DiscordData(string id)
             => await GetData<DiscordModel>(LinkEndpoints.DiscordData(id));

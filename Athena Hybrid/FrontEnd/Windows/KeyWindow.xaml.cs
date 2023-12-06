@@ -12,6 +12,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Wpf.Ui.Controls;
@@ -26,6 +27,8 @@ namespace Athena_Hybrid.FrontEnd.Windows
         public KeyWindow()
         {
             InitializeComponent();
+            Storyboard s1 = (Storyboard)TryFindResource("windowIn");
+            s1.Begin();
         }
 
         private async void ContinueBtn_Click(object sender, RoutedEventArgs e)
@@ -33,6 +36,7 @@ namespace Athena_Hybrid.FrontEnd.Windows
             try
             {
                 var DiscordData = await HostingService.DiscordData(Settings.Default.DiscordId);
+
                 if (DiscordData.isPremium)
                 {
                     Notifications notification = new Notifications("Success", "You will be redirected in 2 Seconds!");

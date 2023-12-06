@@ -11,4 +11,10 @@ namespace Athena_Hybrid.BackEnd.Models
         public string Url { get; set; }
         public string Creator { get; set; }
     }
+
+    public class officialBackgroundModel
+    {
+        public string Label { get; set; }
+        public string Value { get; set; }
+    }
 }

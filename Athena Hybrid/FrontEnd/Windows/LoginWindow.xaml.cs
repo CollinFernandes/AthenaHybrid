@@ -3,7 +3,9 @@ using Athena_Hybrid.Properties;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -40,9 +42,8 @@ namespace Athena_Hybrid.FrontEnd.Windows
                 token = auth.GetToken();
                 Settings.Default.bIsLoggedIn = true;
                 Settings.Default.Save();
-                this.Hide();
-                KeyWindow keyWindow = new KeyWindow();
-                keyWindow.Show();
+                epicGamesLogin.Visibility = Visibility.Hidden;
+                discordLogin.Visibility = Visibility.Visible;
             }
             catch (Exception ex)
             {
@@ -52,6 +53,28 @@ namespace Athena_Hybrid.FrontEnd.Windows
 
         private void Label_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            this.Hide();
+            KeyWindow keyWindow = new KeyWindow();
+            keyWindow.Show();
+        }
+
+        private async void discordLoginBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("cmd.exe", "/C start \"\" \"http://localhost:8888/authorization/url\"");
+            string json;
+            while (true)
+            {
+                json = new WebClient().DownloadString("http://localhost:8888/api/discordid");
+                if (json.Contains("error") && json.Contains("not found"))
+                    await Task.Delay(1000);
+                else
+                    break;
+            }
+            string str = JObject.Parse(json)["avatar"].ToString();
+            if (str.Contains("a_"))
+                str = str.Replace(".png", ".gif");
+            if (str.Contains("?size=128"))
+                str = str.Replace("?size=128", "");
             this.Hide();
             KeyWindow keyWindow = new KeyWindow();
             keyWindow.Show();

@@ -10,7 +10,7 @@
         Height="514"
         Width="1014" 
         Background="#0f1012" 
-        Icon="https://cdn.discordapp.com/attachments/824438219176280074/1095496331570724874/ProfilePictureMaker.png" 
+        Icon="http://localhost:1337/cdn/Logo-Transparent.ico" 
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize" 
         Closed="closeWindow"
@@ -87,7 +87,8 @@
         <ui:TitleBar
             Title="Athena Hybrid V1.0-D1"
             Grid.Row="0"
-            Icon="https://cdn.discordapp.com/attachments/824438219176280074/1095496331570724874/ProfilePictureMaker.png" CanMaximize="False" Background="#FF18191D" Height="49">
+            ShowMaximize="False"
+            Icon="http://localhost:1337/cdn/Logo-Transparent.ico" CanMaximize="False" Background="#FF18191D" Height="49">
         </ui:TitleBar>
     </Grid>
 </ui:UiWindow>

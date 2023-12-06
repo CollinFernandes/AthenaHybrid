@@ -1,0 +1,166 @@
+{
+  "Character": {
+    "ID": "AthenaCharacter:Character_PizzaParty",
+    "Variants": [
+      [
+        {
+          "variants": [
+            {
+              "channel": "Parts",
+              "active": "Stage2",
+              "owned": []
+            },
+            {
+              "channel": "Mesh",
+              "active": "Mat1",
+              "owned": []
+            },
+            {
+              "channel": "Progressive",
+              "active": "Stage1",
+              "owned": []
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "Backpack": {
+    "ID": "",
+    "Variants": [
+      [
+        {
+          "variants": []
+        }
+      ]
+    ]
+  },
+  "Glider": {
+    "ID": "AthenaGlider:Glider_ID_090_Celestial",
+    "Variants": [
+      [
+        {
+          "variants": []
+        }
+      ]
+    ]
+  },
+  "Pickaxe": {
+    "ID": "AthenaPickaxe:Pickaxe_ID_116_Celestial",
+    "Variants": [
+      [
+        {
+          "variants": []
+        }
+      ]
+    ]
+  },
+  "SkyDiveContrail": {
+    "ID": "AthenaSkyDiveContrail:Trails_ID_037_Glyphs",
+    "Variants": [
+      [
+        {
+          "variants": []
+        }
+      ]
+    ]
+  },
+  "Dance": {
+    "ID": [
+      "AthenaDance:EID_IndigoApple",
+      "AthenaDance:EID_Deceiver",
+      "AthenaDance:EID_Shimmy",
+      "AthenaDance:EID_RebelClaw",
+      "AthenaDance:EID_SunMelt",
+      "AthenaDance:EID_Adoration"
+    ],
+    "Variants": [
+      [
+        {
+          "variants": []
+        }
+      ],
+      [
+        {
+          "variants": []
+        }
+      ],
+      [
+        {
+          "variants": []
+        }
+      ],
+      [
+        {
+          "variants": []
+        }
+      ],
+      [
+        {
+          "variants": []
+        }
+      ],
+      [
+        {
+          "variants": []
+        }
+      ]
+    ]
+  },
+  "ItemWrap": {
+    "ID": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Variants": [
+      {
+        "variants": []
+      },
+      {
+        "variants": []
+      },
+      {
+        "variants": []
+      },
+      {
+        "variants": []
+      },
+      {
+        "variants": []
+      }
+    ]
+  },
+  "MusicPack": {
+    "ID": null,
+    "Variants": [
+      {
+        "variants": []
+      }
+    ]
+  },
+  "LoadingScreen": {
+    "ID": null,
+    "Variants": [
+      {
+        "variants": []
+      }
+    ]
+  },
+  "BannerIconTemplate": "BRSeason01",
+  "BannerColorTemplate": null,
+  "vbucks": 10004,
+  "level": 123,
+  "rankbr": 16,
+  "highestrankbr": 17,
+  "percentagebr": 50,
+  "rankzb": 10,
+  "highestrankzb": 8,
+  "percentagezb": 30,
+  "battlestars": 21,
+  "alien_style_points": 696969,
+  "favorites": {},
+  "undefined": null
+}

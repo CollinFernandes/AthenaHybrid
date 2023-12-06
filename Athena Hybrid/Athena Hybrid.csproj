@@ -6,6 +6,7 @@
     <RootNamespace>Athena_Hybrid</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Logo-Transparent.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -20,6 +21,10 @@
     <None Remove="Fonts\Montserrat Bold.ttf" />
     <None Remove="Fonts\Montserrat Medium.ttf" />
     <None Remove="Fonts\Montserrat SemiBold.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Logo-Transparent.ico" />
   </ItemGroup>
 
   <ItemGroup>

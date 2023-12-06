@@ -12,6 +12,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -44,6 +45,8 @@ namespace Athena_Hybrid.FrontEnd.Pages
                 {
                     updatePanel.Children.Add(new LongDashboardItem(updateLog.Title, updateLog.Description, Enum.Parse<SymbolRegular>(updateLog.Icon)));
                 }
+                Storyboard s1 = (Storyboard)TryFindResource("dashboardIn");
+                s1.Begin();
             }
             catch (Exception ex)
             {

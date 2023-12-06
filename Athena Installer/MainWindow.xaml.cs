@@ -54,30 +54,51 @@ namespace Athena_Installer
         private void UiWindow_Loaded(object sender, RoutedEventArgs e)
         {
             Task.Run(async () => {
-                _ = Dispatcher.Invoke(async () =>
+                string[] args = Environment.GetCommandLineArgs();
+                if (args.Contains("/u") || args.Contains("/U"))
                 {
-                    if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Athena Launcher\\Athena Hybrid.exe"))
+                    _ = Dispatcher.Invoke(async () =>
                     {
-                        installButton.IsEnabled = false;
-                        installButton.Icon = Wpf.Ui.Common.SymbolRegular.Checkmark24;
-                        uninstallButton.Visibility = Visibility.Hidden;
-                    } else
+                        WebClient webClient = new WebClient();
+                        webClient.OpenRead("http://localhost:1337/cdn/launcher.exe");
+                        Int64 bytes_total = Convert.ToInt64(webClient.ResponseHeaders["Content-Length"]);
+                        double megabytesTotal = ConvertBytesToMegabytes(bytes_total);
+                        downloadedLabel.Content = "0 mb/" + Math.Round(megabytesTotal, 2) + "mb";
+                        downloadingGrid.Visibility = Visibility.Visible;
+                        Storyboard s1 = (Storyboard)TryFindResource("DownloadingIn");
+                        s1.Begin();
+                        label3.Content = "updating Athena Hybrid.";
+                        button1.Content = "Start Updating.";
+                        label5.Content = "Update Done.";
+                    });
+                } else
+                {
+                    _ = Dispatcher.Invoke(async () =>
                     {
-                        installButton.Content = "Update Athena Hybrid";
-                    }
-                    await Task.Delay(200);
-                    welcomeGrid.Visibility = Visibility.Visible;
-                    Storyboard s = (Storyboard)TryFindResource("WelcomeBackIn");
-                    s.Begin();
-                    await Task.Delay(850);
-                    Storyboard s1 = (Storyboard)TryFindResource("WelcomeBackOut");
-                    s1.Begin();
-                    await Task.Delay(700);
-                    welcomeGrid.Visibility = Visibility.Hidden;
-                    agreementGrid.Visibility = Visibility.Visible;
-                    Storyboard s2 = (Storyboard)TryFindResource("AgreementIn");
-                    s2.Begin();
-                });
+                        if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Athena Launcher\\Athena Hybrid.exe"))
+                        {
+                            installButton.IsEnabled = false;
+                            installButton.Icon = Wpf.Ui.Common.SymbolRegular.Checkmark24;
+                            uninstallButton.Visibility = Visibility.Hidden;
+                        }
+                        else
+                        {
+                            installButton.Content = "Update Athena Hybrid";
+                        }
+                        await Task.Delay(200);
+                        welcomeGrid.Visibility = Visibility.Visible;
+                        Storyboard s = (Storyboard)TryFindResource("WelcomeBackIn");
+                        s.Begin();
+                        await Task.Delay(850);
+                        Storyboard s1 = (Storyboard)TryFindResource("WelcomeBackOut");
+                        s1.Begin();
+                        await Task.Delay(700);
+                        welcomeGrid.Visibility = Visibility.Hidden;
+                        agreementGrid.Visibility = Visibility.Visible;
+                        Storyboard s2 = (Storyboard)TryFindResource("AgreementIn");
+                        s2.Begin();
+                    });
+                }
             });
         }
 
@@ -135,7 +156,7 @@ namespace Athena_Installer
             if (installButton.IsEnabled == false)
             {
                 WebClient webClient = new WebClient();
-                webClient.OpenRead("https://cdn.discordapp.com/attachments/1051538904840413315/1175591656674836630/Athena_Hybrid.exe");
+                webClient.OpenRead("http://localhost:1337/cdn/launcher.exe");
                 Int64 bytes_total = Convert.ToInt64(webClient.ResponseHeaders["Content-Length"]);
                 double megabytesTotal = ConvertBytesToMegabytes(bytes_total);
                 downloadedLabel.Content = "0 mb/" + Math.Round(megabytesTotal, 2) + "mb";
@@ -176,12 +197,13 @@ namespace Athena_Installer
             switch ((sender as Wpf.Ui.Controls.Button).Content)
             {
                 case "Start Installing.":
+                case "Start Updating.":
                     string AppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                     string LocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
                     (sender as Wpf.Ui.Controls.Button).IsEnabled = false;
                     WebClient webClient = new WebClient();
-                    webClient.OpenRead("https://cdn.discordapp.com/attachments/1051538904840413315/1175591656674836630/Athena_Hybrid.exe");
+                    webClient.OpenRead("http://localhost:1337/cdn/launcher.exe");
                     Int64 bytes_total = Convert.ToInt64(webClient.ResponseHeaders["Content-Length"]);
                     double megabytesTotal = ConvertBytesToMegabytes(bytes_total);
                     downloadedLabel.Content = "0 mb/" + Math.Round(megabytesTotal, 2) + "mb";
@@ -195,7 +217,7 @@ namespace Athena_Installer
                         speedLabel.Content = string.Format("{0} mb/s", (e.BytesReceived / 1024.0 / 1024.0 / stopwatch.Elapsed.TotalSeconds).ToString("0.00"));
                     };
                     Directory.CreateDirectory(LocalAppData + "\\Athena Launcher");
-                    webClient.DownloadFileAsync(new Uri("https://cdn.discordapp.com/attachments/1051538904840413315/1175591656674836630/Athena_Hybrid.exe"), LocalAppData + "\\Athena Launcher\\Athena Hybrid.exe");
+                    webClient.DownloadFileAsync(new Uri("http://localhost:1337/cdn/launcher.exe"), LocalAppData + "\\Athena Launcher\\Athena Hybrid.exe");
                     webClient.DownloadFileCompleted += async (object sender1, AsyncCompletedEventArgs e) =>
                     {
                         _ = Task.Run(async () =>

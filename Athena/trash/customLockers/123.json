@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "templateId": "AthenaCharacter:CID_A_377_Athena_Commando_F_LittleEgg_OMNB5",
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": true,
+        "rnd_sel_cnt": 0,
+        "xp": 0,
+        "variants": [
+          {
+            "channel": "Parts",
+            "active": "Stage1",
+            "owned": [
+              "Stage1",
+              "Stage2",
+              "Stage3"
+            ]
+          },
+          {
+            "channel": "Material",
+            "active": "Mat1",
+            "owned": [
+              "Mat1",
+              "Mat2",
+              "Mat3"
+            ]
+          }
+        ],
+        "favorite": false
+      },
+      "quantity": 1
+    },
+    {
+      "templateId": "AthenaCharacter:CID_247_Athena_Commando_M_GuanYu",
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": true,
+        "rnd_sel_cnt": 0,
+        "xp": 0,
+        "variants": [
+          {
+            "channel": "Parts",
+            "active": "Stage1",
+            "owned": [
+              "Stage1",
+              "Stage2"
+            ]
+          }
+        ],
+        "favorite": false
+      },
+      "quantity": 1
+    }
+  ]
+}

@@ -32,7 +32,7 @@ auto changeeasyopt(CURL* Curl, uintptr_t opt, va_list info)->CURLcode
         break;
     case CURLOPT_URL:
         std::string url = info;
-        std::regex Host(ENC("(.*).epicgames.com"));
+        std::regex Host(ENC("https:\\/\\/(.*)\\.ol\\.epicgames.com"));
         std::regex eosHost(ENC("api.epicgames.dev"));
         if (bIsHybrid)
         {
@@ -49,8 +49,11 @@ auto changeeasyopt(CURL* Curl, uintptr_t opt, va_list info)->CURLcode
             else if (std::regex_search(info, std::regex(ENC("/fortnite/api/storefront/v2/catalog")))) {
                 url = std::regex_replace(info, Host, host);
             }
-            else if (std::regex_search(info, std::regex(ENC("/api/v1/fortnite-br/surfaces/dmotd/target")))) {
-                url = std::regex_replace(info, Host, host);
+            else if (std::regex_search(info, std::regex(ENC("/api/v1/fortnite-br/surfaces/eco-motd/target")))) {
+                url = std::regex_replace(info, std::regex(ENC("https:\\/\\/(.*)\\.on\\.epicgames.com")), host);
+            }
+            else if (std::regex_search(info, std::regex(ENC("/api/v1/fortnite-br/surfaces/br-motd/target")))) {
+                url = std::regex_replace(info, std::regex(ENC("https:\\/\\/(.*)\\.on\\.epicgames.com")), host);
             }
             else if (std::regex_search(info, std::regex(ENC("/api/v1/games/fortnite/trackprogress")))) {
                 url = std::regex_replace(info, Host, host);

@@ -8,8 +8,8 @@ namespace Athena_Hybrid.BackEnd.Models
 {
     class APIModel
     {
-        string Version { get; set; }
-        bool IsEnabled { get; set; }
+        public string Version { get; set; }
+        public bool IsEnabled { get; set; }
         public List<updateLog> updateLogs { get; set; }
         public List<reasonToUse> reasonsToUse { get; set; }
         public List<Credit> Credits { get; set; }

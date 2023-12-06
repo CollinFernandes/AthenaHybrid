@@ -4676,11 +4676,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Collin\\source\\repos\\Athena Hybrid\\Athena Hybrid\\Athena Hybrid.csproj",
+      "projectUniqueName": "C:\\Users\\Collin\\Documents\\GitHub\\AthenaHybrid\\Athena Hybrid\\Athena Hybrid.csproj",
       "projectName": "Athena Hybrid",
-      "projectPath": "C:\\Users\\Collin\\source\\repos\\Athena Hybrid\\Athena Hybrid\\Athena Hybrid.csproj",
+      "projectPath": "C:\\Users\\Collin\\Documents\\GitHub\\AthenaHybrid\\Athena Hybrid\\Athena Hybrid.csproj",
       "packagesPath": "C:\\Users\\Collin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Collin\\source\\repos\\Athena Hybrid\\Athena Hybrid\\obj\\publish\\win-x64\\",
+      "outputPath": "C:\\Users\\Collin\\Documents\\GitHub\\AthenaHybrid\\Athena Hybrid\\obj\\publish\\win-x64\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4694,9 +4694,7 @@
         "net6.0-windows"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "C:\\Users\\Collin\\Documents\\nugets": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

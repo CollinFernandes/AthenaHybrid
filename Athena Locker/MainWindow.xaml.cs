@@ -58,7 +58,7 @@ namespace Athena_Locker
                     LogService.Initialize();
                     #region getCosmetics
                     string endpoint = "https://fortnite-api.com/v2/cosmetics/br";
-                    string lockerEndpoint = $"http://server.basicfx.cloud:1337/api/v1/customLocker/get/{Settings.Default.epicId}";
+                    string lockerEndpoint = $"http://localhost:1337/api/v1/customLocker/get/{Settings.Default.epicId}";
                     try
                     {
                         await Task.Run(async () =>
@@ -93,7 +93,7 @@ namespace Athena_Locker
                             var Raritys = Directory.GetFiles(Config.RarityDirectory, "*.png");
                             if (Raritys.Length < 18)
                             {
-                                new WebClient().DownloadFile("http://server.basicfx.cloud:1337/cdn/Rarity.zip", Config.IconsDirectory + "\\Rarity.zip");
+                                new WebClient().DownloadFile("http://localhost:1337/cdn/Rarity.zip", Config.IconsDirectory + "\\Rarity.zip");
                                 Directory.Delete(Config.RarityDirectory, true);
                                 ZipFile.ExtractToDirectory(Config.IconsDirectory + "\\Rarity.zip", Config.RarityDirectory);
                                 File.Delete(Config.IconsDirectory + "\\Rarity.zip");
@@ -171,12 +171,12 @@ namespace Athena_Locker
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            new WebClient().DownloadString($"http://server.basicfx.cloud:1337/api/v1/customLocker/toggle/{Settings.Default.epicId}/true");
+            new WebClient().DownloadString($"http://localhost:1337/api/v1/customLocker/toggle/{Settings.Default.epicId}/true");
         }
 
         private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
-            new WebClient().DownloadString($"http://server.basicfx.cloud:1337/api/v1/customLocker/toggle/{Settings.Default.epicId}/false");
+            new WebClient().DownloadString($"http://localhost:1337/api/v1/customLocker/toggle/{Settings.Default.epicId}/false");
         }
 
         private async void saveLockerButton_Click(object sender, RoutedEventArgs e)
@@ -195,7 +195,7 @@ namespace Athena_Locker
                     break;
                 case "Save Locker":
                     IRestClient changeClient = new RestClient();
-                    IRestRequest changeClientRequest = new RestRequest($"http://server.basicfx.cloud:1337/api/v1/customLocker/update/{Settings.Default.epicId}", Method.POST);
+                    IRestRequest changeClientRequest = new RestRequest($"http://localhost:1337/api/v1/customLocker/update/{Settings.Default.epicId}", Method.POST);
                     CosmeticData cosmeticData = new CosmeticData
                     {
                         Cosmetics = newCosmeticData

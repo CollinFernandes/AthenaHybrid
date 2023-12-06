@@ -1,0 +1,2 @@
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\bin\Debug\net6.0-windows\publish\win-x64\Athena Installer.pdb
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\bin\Debug\net6.0-windows\publish\win-x64\Athena Installer.exe

@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "AthenaCharacter:Character_CrimsonPeak": {
+        "templateId": "AthenaCharacter:Character_CrimsonPeak",
+        "attributes": {
+          "max_level_bonus": 0,
+          "level": 1,
+          "item_seen": true,
+          "rnd_sel_cnt": 0,
+          "xp": 0,
+          "variants": [
+            {
+              "channel": "Material",
+              "active": "Mat0",
+              "owned": [
+                "Mat0",
+                "Mat1"
+              ]
+            }
+          ],
+          "favorite": false
+        },
+        "quantity": 1
+      },
+      "AthenaCharacter:Character_Billy": {
+        "templateId": "AthenaCharacter:Character_Billy",
+        "attributes": {
+          "max_level_bonus": 0,
+          "level": 1,
+          "item_seen": true,
+          "rnd_sel_cnt": 0,
+          "xp": 0,
+          "variants": [],
+          "favorite": false
+        },
+        "quantity": 1
+      },
+      "AthenaCharacter:Character_HighBeam": {
+        "templateId": "AthenaCharacter:Character_HighBeam",
+        "attributes": {
+          "max_level_bonus": 0,
+          "level": 1,
+          "item_seen": true,
+          "rnd_sel_cnt": 0,
+          "xp": 0,
+          "variants": [],
+          "favorite": false
+        },
+        "quantity": 1
+      },
+      "AthenaCharacter:Character_FolkEvening": {
+        "templateId": "AthenaCharacter:Character_FolkEvening",
+        "attributes": {
+          "max_level_bonus": 0,
+          "level": 1,
+          "item_seen": true,
+          "rnd_sel_cnt": 0,
+          "xp": 0,
+          "variants": [],
+          "favorite": false
+        },
+        "quantity": 1
+      }
+    }
+  ]
+}

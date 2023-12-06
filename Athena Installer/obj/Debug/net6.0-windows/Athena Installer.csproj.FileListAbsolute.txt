@@ -24,3 +24,4 @@ C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Debug\net6.0-
 C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Debug\net6.0-windows\ref\Athena Installer.dll
 C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Debug\net6.0-windows\Athena_Installer.Properties.Resources.resources
 C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Debug\net6.0-windows\Athena Installer.csproj.GenerateResource.cache
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Debug\net6.0-windows\Athena Installer_Content.g.cs

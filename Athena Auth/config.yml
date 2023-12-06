@@ -1,0 +1,7 @@
+bot:
+  client id: "1133123472713842768"
+  client secret: "id"
+  token: "bot token"
+
+server: # to join
+  id: "1106293299708436533"

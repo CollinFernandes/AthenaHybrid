@@ -1,0 +1,24 @@
+{
+    "Version": "V1.0.0",
+    "IsEnabled": true,
+    "ReasonsToUse": [
+        {
+            "Icon": "Desktop24",
+            "Title": "Clean and Modern UI",
+            "Description": "Athena Hybrid has one of the most modern UI's."
+        },
+        {
+            "Icon": "ChatBubblesQuestion24",
+            "Title": "Fast Support",
+            "Description": "Athena's Discord has Fast Support."
+        },
+        {
+            "Icon": "DataHistogram24",
+            "Title": "Many Customization",
+            "Description": "Athena has many options for Customization."
+        }
+    ],
+    "updateLogs": [
+
+    ]
+}

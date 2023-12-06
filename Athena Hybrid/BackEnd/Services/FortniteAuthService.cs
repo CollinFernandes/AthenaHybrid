@@ -74,6 +74,7 @@ namespace Athena_Hybrid.BackEnd.Services
                     {
                         LogService.Write("[DeviceAuthorization]: fetching your token... ", LogLevel.Info);
                     }
+                    await Task.Delay(500);
                 }
             }
             catch

@@ -17,6 +17,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -32,24 +33,57 @@ namespace Athena_Hybrid.FrontEnd.Pages
         dynamic profileData;
         public CustomizationPage()
         {
-            try
-            {
-                if (Settings.Default.bIsLoggedIn)
-                {
-                    var profile = new WebClient().DownloadString("http://server.basicfx.cloud:1337/api/v1/getProfile/" + Settings.Default.epicId);
-                    profileData = JObject.Parse(profile);
-                }
-            } catch (Exception ex)
-            {
-                LogService.Write($"There was an error while initializing the page.\n{ex.Message}", LogLevel.Fatal);
-            }
             InitializeComponent();
+        }
+
+        private async void animLabel(string text)
+        {
+            Storyboard labelAnim = (Storyboard)TryFindResource("labelAnim");
+            labelAnim.Begin();
+            await Task.Delay(400);
+            loadingLabel.Text = text;
         }
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            if (Settings.Default.bIsLoggedIn)
+            {
+                loadingGrid.Visibility = Visibility.Visible;
+                mainGrid.Visibility = Visibility.Hidden;
+                Storyboard s1 = (Storyboard)TryFindResource("loadingGridIn");
+                s1.Begin();
+                await Task.Delay(600);
+            } else
+            {
+                loadingGrid.Visibility = Visibility.Hidden;
+                mainGrid.Visibility = Visibility.Visible;
+                Storyboard s1 = (Storyboard)TryFindResource("mainGridIn");
+                s1.Begin();
+                await Task.Delay(600);
+            }
             try
             {
+                if (Settings.Default.bIsLoggedIn)
+                {
+                    animLabel("getting Profile...");
+                    await Task.Delay(1000);
+                    var client = new WebClient();
+                    client.DownloadStringCompleted += (sender, e) =>
+                    {
+                        string profile = e.Result;
+                        profileData = JObject.Parse(profile);
+                    };
+                    client.DownloadStringAsync(new Uri("http://localhost:1337/api/v1/getProfile/" + Settings.Default.epicId));
+                }
+            }
+            catch (Exception ex)
+            {
+                LogService.Write($"There was an error while initializing the page.\n{ex.Message}", LogLevel.Fatal);
+            }
+            try
+            {
+                animLabel("setting Stats...");
+                await Task.Delay(1000);
                 if (Settings.Default.bIsLoggedIn)
                 {
                     loginButton.IsEnabled = false;
@@ -64,7 +98,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
                     NoBuildPercentageBox.Text = profileData.percentagebr;
                     BuildPercentageBox.Text = profileData.percentagezb;
 
-                    FortniteAuthService auth = new FortniteAuthService();
+                    /*FortniteAuthService auth = new FortniteAuthService();
                     string token = auth.GetToken();
                     WebClient webClient = new WebClient();
                     webClient.Headers.Add("Content-Type", "application/json");
@@ -73,7 +107,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
                     dynamic json = JsonConvert.DeserializeObject(t);
                     string SkinId = Convert.ToString(json[0]["avatarId"]);
                     string SkinId2 = SkinId.Replace("ATHENACHARACTER:", "");
-                    FortnitePicture.ImageSource = new BitmapImage(new System.Uri($"https://fortnite-api.com/images/cosmetics/br/{SkinId2}/icon.png"));
+                    FortnitePicture.ImageSource = new BitmapImage(new System.Uri($"https://fortnite-api.com/images/cosmetics/br/{SkinId2}/icon.png"));*/
                     LoggedInName.Text = Settings.Default.FnUsername;
                 }
                 else
@@ -86,6 +120,16 @@ namespace Athena_Hybrid.FrontEnd.Pages
             } catch (Exception ex)
             {
                 LogService.Write($"There was an error while loading the page.\n{ex.Message}", LogLevel.Fatal);
+            }
+            if (Settings.Default.bIsLoggedIn)
+            {
+                Storyboard s1 = (Storyboard)TryFindResource("loadingGridOut");
+                s1.Begin();
+                await Task.Delay(600);
+                loadingGrid.Visibility = Visibility.Hidden;
+                mainGrid.Visibility = Visibility.Visible;
+                Storyboard s2 = (Storyboard)TryFindResource("mainGridIn");
+                s2.Begin();
             }
         }
 
@@ -103,7 +147,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
                 saveButton.IsEnabled = true;
                 loginButton.IsEnabled = false;
                 await showNotification("Logged In", $"You successfully logged in as {Settings.Default.FnUsername}");
-                var profile = new WebClient().DownloadString("http://server.basicfx.cloud:1337/api/v1/getProfile/" + Settings.Default.epicId);
+                var profile = new WebClient().DownloadString("http://localhost:1337/api/v1/getProfile/" + Settings.Default.epicId);
                 profileData = JObject.Parse(profile);
                 vbucksBox.Text = profileData.vbucks;
                 levelBox.Text = profileData.level;
@@ -115,14 +159,14 @@ namespace Athena_Hybrid.FrontEnd.Pages
                 NoBuildPercentageBox.Text = profileData.percentagebr;
                 BuildPercentageBox.Text = profileData.percentagezb;
 
-                WebClient webClient = new WebClient();
+                /*WebClient webClient = new WebClient();
                 webClient.Headers.Add("Content-Type", "application/json");
                 webClient.Headers.Add("Authorization", "bearer " + token);
                 string t = webClient.DownloadString($"https://avatar-service-prod.identity.live.on.epicgames.com/v1/avatar/fortnite/ids?accountIds={Settings.Default.epicId}");
                 dynamic json = JsonConvert.DeserializeObject(t);
                 string SkinId = Convert.ToString(json[0]["avatarId"]);
                 string SkinId2 = SkinId.Replace("ATHENACHARACTER:", "");
-                FortnitePicture.ImageSource = new BitmapImage(new System.Uri($"https://fortnite-api.com/images/cosmetics/br/{SkinId2}/icon.png"));
+                FortnitePicture.ImageSource = new BitmapImage(new System.Uri($"https://fortnite-api.com/images/cosmetics/br/{SkinId2}/icon.png"));*/
                 LoggedInName.Text = Settings.Default.FnUsername;
             } catch (Exception ex)
             {
@@ -146,10 +190,20 @@ namespace Athena_Hybrid.FrontEnd.Pages
         public async Task saveStats()
         {
             try {
-                var profile = new WebClient().DownloadString("http://server.basicfx.cloud:1337/api/v1/hasProfile/" + Settings.Default.epicId);
+                Storyboard s1 = (Storyboard)TryFindResource("mainGridOut");
+                s1.Begin();
+                await Task.Delay(900);
+                mainGrid.Visibility = Visibility.Hidden;
+                loadingGrid.Visibility = Visibility.Visible;
+                Storyboard s2 = (Storyboard)TryFindResource("loadingGridIn");
+                s2.Begin();
+                await Task.Delay(600);
+                animLabel("saving your Stats...");
+                await Task.Delay(1000);
+                var profile = new WebClient().DownloadString("http://localhost:1337/api/v1/hasProfile/" + Settings.Default.epicId);
                 if (profile != "true")
                 {
-                    new WebClient().DownloadString("http://server.basicfx.cloud:1337/api/v1/createProfile/" + Settings.Default.epicId);
+                    new WebClient().DownloadString("http://localhost:1337/api/v1/createProfile/" + Settings.Default.epicId);
                 }
                 if (profileData.vbucks != vbucksBox.Text)
                 {
@@ -187,10 +241,23 @@ namespace Athena_Hybrid.FrontEnd.Pages
                 {
                     await CustomizationService.changeStat(Settings.Default.epicId, StatEnum.rank, NoBuildPercentageBox.Text, RankEnum.percentagezb);
                 }
+                var client = new WebClient();
+                client.DownloadStringCompleted += (sender, e) =>
+                {
+                    string profile = e.Result;
+                    profileData = JObject.Parse(profile);
+                };
+                client.DownloadStringAsync(new Uri("http://localhost:1337/api/v1/getProfile/" + Settings.Default.epicId));
+                Storyboard s3 = (Storyboard)TryFindResource("loadingGridOut");
+                s3.Begin();
+                await Task.Delay(600);
+                loadingGrid.Visibility = Visibility.Hidden;
+                mainGrid.Visibility = Visibility.Visible;
+                Storyboard s4 = (Storyboard)TryFindResource("mainGridIn");
+                s4.Begin();
                 await showNotification("Saved", "you successfully saved your stats!");
-                var profile1 = new WebClient().DownloadString("http://server.basicfx.cloud:1337/api/v1/getProfile/" + Settings.Default.epicId);
-                profileData = JObject.Parse(profile1);
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 LogService.Write("There was an error while saving the stats.\n" + ex.Message, LogLevel.Fatal); 
             }

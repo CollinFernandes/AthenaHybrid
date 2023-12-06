@@ -126,3 +126,4 @@ C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Hybrid\obj\Debug\net6.0-win
 C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Hybrid\obj\Debug\net6.0-windows\Athena Hybrid.pdb
 C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Hybrid\obj\Debug\net6.0-windows\Athena Hybrid.genruntimeconfig.cache
 C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Hybrid\obj\Debug\net6.0-windows\ref\Athena Hybrid.dll
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Hybrid\obj\Debug\net6.0-windows\Athena Hybrid_Content.g.cs

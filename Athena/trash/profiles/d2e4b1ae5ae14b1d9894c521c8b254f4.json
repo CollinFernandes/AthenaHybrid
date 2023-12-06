@@ -1,0 +1,161 @@
+{
+  "Character": {
+    "ID": "AthenaCharacter:Character_BraveBuild",
+    "Variants": [
+      [
+        {
+          "variants": [
+            {
+              "channel": "Parts",
+              "active": "Stage4",
+              "owned": []
+            },
+            {
+              "channel": "Material",
+              "active": "Stage1",
+              "owned": []
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "Backpack": {
+    "ID": "",
+    "Variants": [
+      [
+        {
+          "variants": []
+        }
+      ]
+    ]
+  },
+  "Glider": {
+    "ID": "AthenaGlider:Glider_ID_090_Celestial",
+    "Variants": [
+      [
+        {
+          "variants": []
+        }
+      ]
+    ]
+  },
+  "Pickaxe": {
+    "ID": "AthenaPickaxe:Pickaxe_ID_116_Celestial",
+    "Variants": [
+      [
+        {
+          "variants": []
+        }
+      ]
+    ]
+  },
+  "SkyDiveContrail": {
+    "ID": "AthenaSkyDiveContrail:Trails_ID_037_Glyphs",
+    "Variants": [
+      [
+        {
+          "variants": []
+        }
+      ]
+    ]
+  },
+  "Dance": {
+    "ID": [
+      "AthenaDance:EID_Deceiver",
+      "AthenaDance:EID_Deceiver",
+      "AthenaDance:EID_Noodles_X6R9E",
+      "AthenaDance:EID_Fishbowl",
+      "AthenaDance:EID_SunMelt",
+      "AthenaDance:EID_Adoration"
+    ],
+    "Variants": [
+      [
+        {
+          "variants": []
+        }
+      ],
+      [
+        {
+          "variants": []
+        }
+      ],
+      [
+        {
+          "variants": []
+        }
+      ],
+      [
+        {
+          "variants": []
+        }
+      ],
+      [
+        {
+          "variants": []
+        }
+      ],
+      [
+        {
+          "variants": []
+        }
+      ]
+    ]
+  },
+  "ItemWrap": {
+    "ID": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "Variants": [
+      {
+        "variants": []
+      },
+      {
+        "variants": []
+      },
+      {
+        "variants": []
+      },
+      {
+        "variants": []
+      },
+      {
+        "variants": []
+      }
+    ]
+  },
+  "MusicPack": {
+    "ID": null,
+    "Variants": [
+      {
+        "variants": []
+      }
+    ]
+  },
+  "LoadingScreen": {
+    "ID": null,
+    "Variants": [
+      {
+        "variants": []
+      }
+    ]
+  },
+  "BannerIconTemplate": "BRSeason01",
+  "BannerColorTemplate": null,
+  "vbucks": 10004,
+  "level": 123,
+  "rankbr": 17,
+  "highestrankbr": 17,
+  "percentagebr": 50,
+  "rankzb": 17,
+  "highestrankzb": 17,
+  "percentagezb": 30,
+  "battlestars": 21,
+  "alien_style_points": 696969,
+  "favorites": {},
+  "customLocker": true
+}

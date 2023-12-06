@@ -10,7 +10,7 @@ const char* ProxyHost = ENC("");
 
 //add a devname variable to the dll
 //const char* Backend = "35.172.230.220:6969";
-const char* host = "server.basicfx.cloud:1337";
+const char* host = "127.0.0.1:1337";
 const char* eos = "Backend-1.raxterxpsycho.repl.co";
 constexpr bool INGAME = true;
 

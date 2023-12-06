@@ -33,9 +33,6 @@ namespace Athena_Hybrid.FrontEnd.Pages.Pages
     /// </summary>
     public partial class SettingsMainPage : Page
     {
-        [DllImport("kernel32.dll", SetLastError = true)]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool FreeConsole();
 
         public SettingsMainPage()
         {
@@ -44,6 +41,16 @@ namespace Athena_Hybrid.FrontEnd.Pages.Pages
             {
                 Task.Run(() => {
                     Dispatcher.Invoke(() => {
+                        if (Settings.Default.bFACB)
+                            FACB.IsChecked = true; 
+                        else
+                            FACB.IsChecked = false;
+
+                        if (Settings.Default.bIsDevInventory)
+                            devInv.IsChecked = true;
+                        else
+                            devInv.IsChecked = false;
+
                         if (!Settings.Default.bIsLoggedIn)
                         {
                             SwitchAccount.IsEnabled = false;
@@ -163,7 +170,6 @@ namespace Athena_Hybrid.FrontEnd.Pages.Pages
                 case "Dev Inventory":
                     Settings.Default.bIsDevInventory = true;
                     Settings.Default.Save();
-                    FreeConsole();
                     break;
                 case "Full Anticheat Bypass":
                     Settings.Default.bFACB = true;
@@ -180,7 +186,6 @@ namespace Athena_Hybrid.FrontEnd.Pages.Pages
                 case "Ingame":
                     Settings.Default.bIsIngame = false;
                     Settings.Default.Save();
-                    LogService.AllocConsole();
                     break;
                 case "Dev Inventory":
                     Settings.Default.bIsDevInventory = false;

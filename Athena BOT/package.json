@@ -1,0 +1,20 @@
+{
+  "name": "Athena Hybrid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Wow is this a test?\" && exit 1",
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "TFAGaming",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1",
+    "fnbr": "^3.1.6",
+    "fs": "^0.0.1-security",
+    "mongoose": "^7.3.1"
+  }
+}

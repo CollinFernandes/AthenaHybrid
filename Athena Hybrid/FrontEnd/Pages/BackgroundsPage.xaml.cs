@@ -14,6 +14,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -26,7 +27,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
     /// </summary>
     public partial class BackgroundsPage : Page
     {
-        List<BackgroundItem> backgroundItems = new List<BackgroundItem>()
+        /*List<BackgroundItem> backgroundItems = new List<BackgroundItem>()
             {
                 new BackgroundItem(){Label = "Ch1 S4 Lobby Background", Value = "1"},
                 new BackgroundItem(){Label = "Ch1 S5 Lobby Background", Value = "2"},
@@ -63,33 +64,75 @@ namespace Athena_Hybrid.FrontEnd.Pages
                 new BackgroundItem(){Label = "Ch4 S3 Jujutsu Kaisen Lobby Background", Value = "33"},
                 new BackgroundItem(){Label = "Ch4 S4 Lobby Background", Value = "34"},
                 new BackgroundItem(){Label = "Ch4 S4 Time Machine Lobby Background", Value = "35"},
-            };
+                new BackgroundItem(){Label = "The Big Bang Lobby Background", Value = "36"},
+            };*/
 
         public BackgroundsPage()
         {
             InitializeComponent();
         }
 
+        private async void animLabel(string text)
+        {
+            this.Dispatcher.Invoke(() =>
+            {
+                Storyboard labelAnim = (Storyboard)TryFindResource("labelAnim");
+                labelAnim.Begin();
+            });
+            await Task.Delay(400);
+            this.Dispatcher.Invoke(() =>
+            {
+                loadingLabel.Text = text;
+            });
+        }
+
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            await Task.Run(() => {
-                Dispatcher.Invoke(() => {
-                    if (!Settings.Default.bIsLoggedIn)
+            await Task.Run(async () => {
+                this.Dispatcher.Invoke(() =>
+                {
+                    loadingGrid.Visibility = Visibility.Visible;
+                    mainGrid.Visibility = Visibility.Hidden;
+                    Storyboard s1 = (Storyboard)TryFindResource("loadingGridIn");
+                    s1.Begin();
+                });
+                await Task.Delay(1000);
+                if (!Settings.Default.bIsLoggedIn)
+                {
+                    this.Dispatcher.Invoke(() =>
                     {
                         UseBackground.IsEnabled = false;
-                    } else
+                    });
+                }
+                else
+                {
+                    this.Dispatcher.Invoke(() =>
                     {
                         UseBackground.IsEnabled = true;
-                    }
-                    foreach (BackgroundItem backgroundItem in backgroundItems)
+                    });
+                }
+                animLabel("getting official backgrounds...");
+                await Task.Delay(1000);
+                var officialBackgroundsData = HostingService.officialBackgrounds();
+                Config.officialBackgrounds = await HostingService.GetOfficialBackgrounds();
+                this.Dispatcher.Invoke(() =>
+                {
+                    backgroundBox.Items.Clear();
+                    foreach (officialBackgroundModel backgroundItem in Config.officialBackgrounds)
                     {
                         var item = backgroundBox.Items.Add(backgroundItem.Label);
                     }
                 });
+                animLabel("adding official backgrounds...");
+                await Task.Delay(1000);
             });
+            animLabel("getting community backgrounds...");
+            await Task.Delay(1000);
             var publicBackgroundsData = HostingService.publicBackgrounds();
             Config.publicBackgrounds = await HostingService.GetPublicBackgrounds();
             publicBackgrounds.Children.Clear();
+            animLabel("adding community backgrounds...");
+            await Task.Delay(1000);
             foreach (backgroundModel item in Config.publicBackgrounds)
             {
                 FrontEnd.Controls.BackgroundItem item1 = new FrontEnd.Controls.BackgroundItem(item.Url, item.Creator);
@@ -103,6 +146,16 @@ namespace Athena_Hybrid.FrontEnd.Pages
                     });
                 };
             }
+            if (Settings.Default.bIsLoggedIn)
+            {
+                Storyboard s1 = (Storyboard)TryFindResource("loadingGridOut");
+                s1.Begin();
+                await Task.Delay(600);
+                loadingGrid.Visibility = Visibility.Hidden;
+                mainGrid.Visibility = Visibility.Visible;
+                Storyboard s2 = (Storyboard)TryFindResource("mainGridIn");
+                s2.Begin();
+            }
         }
 
         private async void backgroundBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -112,7 +165,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
                 await Task.Run(() => {
                     Dispatcher.Invoke(() => {
                         previewImage.Source = new BitmapImage(
-                            new Uri($"http://server.basicfx.cloud:1337/cdn/images/{backgroundItems[backgroundBox.SelectedIndex].Label}.JPG"));
+                            new Uri($"http://localhost:1337/cdn/images/{Config.officialBackgrounds[backgroundBox.SelectedIndex].Label}.JPG"));
                     });
                 });
             } catch { }

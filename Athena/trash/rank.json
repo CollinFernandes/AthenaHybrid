@@ -1,0 +1,24 @@
+[
+    {
+        "gameId": "fortnite",
+        "trackguid": "OiK9k9",
+        "accountId": "c0bc3fb952b54079a266e1d9512e0bea",
+        "rankingType": "ranked-br",
+        "lastUpdated": "2023-11-09T18:21:30.08Z",
+        "currentDivision": 16,
+        "highestDivision": 15,
+        "promotionProgress": 0.48,
+        "currentPlayerRanking": null
+      },
+      {
+        "gameId": "fortnite",
+        "trackguid": "hEKWqj",
+        "accountId": "c0bc3fb952b54079a266e1d9512e0bea",
+        "rankingType": "ranked-zb",
+        "lastUpdated": "1970-01-01T00:00:00Z",
+        "currentDivision": 12,
+        "highestDivision": 0,
+        "promotionProgress": 0,
+        "currentPlayerRanking": null
+      }
+]

@@ -3,8 +3,10 @@ using Athena_Hybrid.BackEnd.Services;
 using Athena_Hybrid.Properties;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -16,13 +18,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Wpf.Ui.Appearance;
+using Wpf.Ui.Controls;
 
 namespace Athena_Hybrid.FrontEnd.Windows
 {
     /// <summary>
     /// Interaktionslogik für LoadingWindow.xaml
     /// </summary>
-    public partial class LoadingWindow : Window
+    public partial class LoadingWindow : UiWindow
     {
         bool noBase = false;
         bool noLogs = false;
@@ -52,6 +55,23 @@ namespace Athena_Hybrid.FrontEnd.Windows
                     Directory.CreateDirectory(Config.FilesDirectory);
                 }
                 LogService.Initialize();
+                string LocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                new WebClient().DownloadFile(new Uri("http://localhost:1337/cdn/installer.exe"), LocalAppData + "\\Athena Launcher\\Athena Installer.exe");
+                var APIData = await HostingService.APIData();
+                if (APIData.Version != Config.Version)
+                {
+                    new Process()
+                    {
+                        StartInfo = new ProcessStartInfo
+                        {
+                            Arguments = $"/u",
+                            CreateNoWindow = true,
+                            UseShellExecute = false,
+                            FileName = $"{LocalAppData}\\Athena Launcher\\Athena Installer.exe"
+                        }
+                    }.Start();
+                    Environment.Exit(0);
+                }
                 await checkDirectories();
                 Theme.GetSystemTheme();
                 Accent.ApplySystemAccent();
