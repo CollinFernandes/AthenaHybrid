@@ -1,0 +1,27 @@
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\bin\Release\net6.0-windows\Athena Installer.exe
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\bin\Release\net6.0-windows\Athena Installer.deps.json
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\bin\Release\net6.0-windows\Athena Installer.runtimeconfig.json
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\bin\Release\net6.0-windows\Athena Installer.dll
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\bin\Release\net6.0-windows\Athena Installer.pdb
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\bin\Release\net6.0-windows\Wpf.Ui.dll
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\Athena Installer.csproj.AssemblyReference.cache
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\MainWindow.g.cs
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\App.g.cs
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\Athena Installer_Content.g.cs
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\Athena Installer_MarkupCompile.cache
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\Athena Installer_MarkupCompile.lref
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\App.baml
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\MainWindow.baml
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\Athena Installer.g.resources
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\Athena_Installer.Properties.Resources.resources
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\Athena Installer.csproj.GenerateResource.cache
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\Athena Installer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\Athena Installer.AssemblyInfoInputs.cache
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\Athena Installer.AssemblyInfo.cs
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\Athena Installer.csproj.CoreCompileInputs.cache
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\Athena Installer.csproj.CopyComplete
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\Athena Installer.dll
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\refint\Athena Installer.dll
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\Athena Installer.pdb
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\Athena Installer.genruntimeconfig.cache
+C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Installer\obj\Release\net6.0-windows\ref\Athena Installer.dll

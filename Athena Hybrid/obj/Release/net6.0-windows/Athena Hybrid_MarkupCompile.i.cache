@@ -12,9 +12,9 @@ TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 C:\Users\Collin\Documents\GitHub\AthenaHybrid\Athena Hybrid\App.xaml
 151557171688
 1-1945825020
-37657280907
+381623918017
 2021292447027
 FrontEnd\Controls\BackgroundItem.xaml;FrontEnd\Controls\DashboardItem.xaml;FrontEnd\Controls\LongDashboardItem.xaml;FrontEnd\Controls\Notifications.xaml;FrontEnd\Pages\BackgroundsPage.xaml;FrontEnd\Pages\CustomizationPage.xaml;FrontEnd\Pages\DashboardPage.xaml;FrontEnd\Pages\LaunchPage.xaml;FrontEnd\Pages\Pages\SettingsAccountPage.xaml;FrontEnd\Pages\Pages\SettingsMainPage.xaml;FrontEnd\Pages\SettingsPage.xaml;FrontEnd\Windows\KeyWindow.xaml;FrontEnd\Windows\LoadingWindow.xaml;FrontEnd\Windows\LoginWindow.xaml;FrontEnd\Windows\MainWindow.xaml;
 
-False
+True
 

@@ -1,5 +1,6 @@
 ﻿using AdonisUI.Controls;
 using Athena_Hybrid.BackEnd;
+using Athena_Hybrid.BackEnd.Models;
 using Athena_Hybrid.BackEnd.Services;
 using Athena_Hybrid.BackEnd.Utils;
 using Athena_Hybrid.FrontEnd.Controls;
@@ -41,6 +42,8 @@ namespace Athena_Hybrid.FrontEnd.Pages.Pages
             {
                 Task.Run(() => {
                     Dispatcher.Invoke(() => {
+
+
                         if (Settings.Default.bFACB)
                             FACB.IsChecked = true; 
                         else
@@ -84,6 +87,28 @@ namespace Athena_Hybrid.FrontEnd.Pages.Pages
         {
             await Task.Run(() => {
                 Dispatcher.Invoke(async () => {
+                    fortniteLocation.Text = LanguageService.getTranslation("Location");
+                    forniteLocationDescription.Text = LanguageService.getTranslation("LocationDescription");
+
+                    LauncherSettings.Text = LanguageService.getTranslation("LauncherSettings");
+                    LauncherSettingsDescription.Text = LanguageService.getTranslation("LauncherSettingsDescription");
+
+                    CloseFortnite.Content = LanguageService.getTranslation("CloseFortnite");
+                    VerifyFortnite.Content = LanguageService.getTranslation("VerifyFortnite");
+
+                    DeleteCache.Content = LanguageService.getTranslation("DeleteCache");
+
+                    devInv.Content = LanguageService.getTranslation("DevInventory");
+                    FACB.Content = LanguageService.getTranslation("FullAnticheatBypass");
+
+                    AccountSettings.Text = LanguageService.getTranslation("AccountSettings");
+                    AccountSettingsDescription.Text = LanguageService.getTranslation("AccountSettingsDescription");
+                    SwitchAccount.Content = LanguageService.getTranslation("SwitchAccount");
+                    LogOutAccount.Content = LanguageService.getTranslation("LogOut");
+
+                    LanguageSettings.Text = LanguageService.getTranslation("LanguageSettings");
+                    LanguageSettingsDescription.Text = LanguageService.getTranslation("LanguageSettingsDescription");
+
                     var config = await ConfigService.GetConfig();
                     if (config.FortniteLocation != null)
                     {
@@ -100,6 +125,14 @@ namespace Athena_Hybrid.FrontEnd.Pages.Pages
                         LogOutAccount.IsEnabled = true;
                     }
                 });
+            });
+            this.Dispatcher.Invoke(() =>
+            {
+                languageBox.Items.Clear();
+                foreach (string Language in Config.languageData["SupportedLanguages"])
+                {
+                    var item = languageBox.Items.Add(Language);
+                }
             });
         }
 
@@ -208,6 +241,24 @@ namespace Athena_Hybrid.FrontEnd.Pages.Pages
             File.Delete(Config.publicBackgroundsFile);
             await Task.Delay(3000);
             Environment.Exit(0);
+        }
+
+        private async void languageBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                await Task.Run(() => {
+                    Dispatcher.Invoke(async () => {
+                        Settings.Default.Language = languageBox.Text;
+                        Settings.Default.Save();
+                        showNotification("Restart", "The Launcher will restart in 3 Seconds.");
+                        await Task.Delay(3000);
+                        Process.Start(Environment.ProcessPath);
+                        Environment.Exit(0);
+                    });
+                });
+            }
+            catch { }
         }
     }
 }

@@ -10,7 +10,7 @@
         Height="514"
         Width="1014" 
         Background="#0f1012" 
-        Icon="http://localhost:1337/cdn/Logo-Transparent.ico" 
+        Icon="https://frostchanger.de:3012/cdn/Logo-Transparent.ico" 
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize" 
         Closed="closeWindow"
@@ -34,7 +34,7 @@
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal" Height="23">
                         <ui:SymbolIcon Margin="0,0,6,0" Symbol="Home24" Filled="True" />
-                        <TextBlock Text="Dashboard" Height="20" />
+                        <TextBlock x:Name="dashboardTab" Text="Dashboard" Height="20" />
                     </StackPanel>
                 </TabItem.Header>
             </TabItem>
@@ -45,7 +45,7 @@
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal" Height="23">
                         <ui:SymbolIcon Margin="0,0,6,0" Symbol="Play24" Filled="True" />
-                        <TextBlock FontFamily="{StaticResource MontserratSemiBold}" Text="Launch" Height="20" />
+                        <TextBlock x:Name="launchTab" FontFamily="{StaticResource MontserratSemiBold}" Text="Launch" Height="20" />
                     </StackPanel>
                 </TabItem.Header>
             </TabItem>
@@ -56,7 +56,7 @@
                 <TabItem.Header >
                     <StackPanel Orientation="Horizontal" Height="23">
                         <ui:SymbolIcon Margin="0,0,6,0" Symbol="PuzzlePiece24" Filled="True" />
-                        <TextBlock FontFamily="{StaticResource MontserratSemiBold}" Text="Customization" Height="20" />
+                        <TextBlock x:Name="customizationTab" FontFamily="{StaticResource MontserratSemiBold}" Text="Customization" Height="20" />
                     </StackPanel>
                 </TabItem.Header>
             </TabItem>
@@ -67,7 +67,7 @@
                 <TabItem.Header >
                     <StackPanel Orientation="Horizontal" Height="23">
                         <ui:SymbolIcon Margin="0,0,6,0" Symbol="Wallpaper24" Filled="True" />
-                        <TextBlock FontFamily="{StaticResource MontserratSemiBold}" Text="Custom Background" Height="20" />
+                        <TextBlock x:Name="customBackgroundsTab" FontFamily="{StaticResource MontserratSemiBold}" Text="Custom Background" Height="20" />
                     </StackPanel>
                 </TabItem.Header>
             </TabItem>
@@ -78,7 +78,7 @@
                 <TabItem.Header  >
                     <StackPanel Orientation="Horizontal" Height="23">
                         <ui:SymbolIcon Margin="0,0,6,0" Symbol="Settings24" Filled="True" />
-                        <TextBlock FontFamily="{StaticResource MontserratSemiBold}" Text="Settings" Height="20" />
+                        <TextBlock x:Name="settingsTab" FontFamily="{StaticResource MontserratSemiBold}" Text="Settings" Height="20" />
                     </StackPanel>
                 </TabItem.Header>
             </TabItem>
@@ -88,7 +88,7 @@
             Title="Athena Hybrid V1.0-D1"
             Grid.Row="0"
             ShowMaximize="False"
-            Icon="http://localhost:1337/cdn/Logo-Transparent.ico" CanMaximize="False" Background="#FF18191D" Height="49">
+            Icon="https://frostchanger.de:3012/cdn/Logo-Transparent.ico" CanMaximize="False" Background="#FF18191D" Height="49">
         </ui:TitleBar>
     </Grid>
 </ui:UiWindow>

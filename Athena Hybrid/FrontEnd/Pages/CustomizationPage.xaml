@@ -733,7 +733,7 @@
         </Storyboard>
     </Page.Resources>
     <Grid>
-        <Grid x:Name="mainGrid" Visibility="Hidden">
+        <Grid x:Name="mainGrid" Visibility="Visible">
             <Border x:Name="VBucksCustomization" Margin="10,10,809,326" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1" RenderTransformOrigin="0.5,0.5">
                 <Border.RenderTransform>
                     <TransformGroup>
@@ -944,7 +944,7 @@
             />
                 </Grid>
             </Border>
-            <Border x:Name="ProfileContainer" Margin="10,329,802,10" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1" RenderTransformOrigin="0.5,0.5">
+            <Border x:Name="ProfileContainer" Margin="10,329,745,10" Background="#18191d" BorderBrush="#272932" BorderThickness="3" CornerRadius="1" RenderTransformOrigin="0.5,0.5">
                 <Border.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -963,7 +963,7 @@
                             <ImageBrush x:Name="FortnitePicture"/>
                         </Border.Background>
                     </Border>
-                    <Label FontFamily="{StaticResource MontserratBold}" x:Name="LoggedInHeader" Content="Logged in as:" Foreground="White" Margin="10,6,10,29" FontWeight="Bold" FontSize="22"/>
+                    <Label FontFamily="{StaticResource MontserratBold}" x:Name="LoggedInHeader" Content="Logged in as:" Foreground="White" Margin="10,6,5,29" FontWeight="Bold" FontSize="22"/>
                     <TextBlock FontFamily="{StaticResource MontserratMedium}" x:Name="LoggedInName" Text="Epic Name lololol" TextWrapping="Wrap" Margin="10,39,10,12" Foreground="#FF908B8B" FontSize="14" />
                 </Grid>
             </Border>
@@ -988,7 +988,7 @@
                 </ui:Button.RenderTransform>
             </ui:Button>
         </Grid>
-        <Grid x:Name="loadingGrid" Visibility="Visible">
+        <Grid x:Name="loadingGrid" Visibility="Hidden">
             <ProgressBar x:Name="progressBar" HorizontalAlignment="Center" IsIndeterminate="True" Width="350" RenderTransformOrigin="0.5,0.5">
                 <ProgressBar.RenderTransform>
                     <TransformGroup>

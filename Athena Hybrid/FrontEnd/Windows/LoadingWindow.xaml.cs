@@ -39,6 +39,9 @@ namespace Athena_Hybrid.FrontEnd.Windows
         {
             try
             {
+                LanguageService.getLanguageData();
+                await Task.Delay(1000);
+                loadingLabel.Content = Config.languageData["Translations"][Settings.Default.Language]["Loading"];
                 if (!Directory.Exists(Config.BaseDirectory))
                 {
                     noBase = true;
@@ -56,8 +59,9 @@ namespace Athena_Hybrid.FrontEnd.Windows
                 }
                 LogService.Initialize();
                 string LocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-                new WebClient().DownloadFile(new Uri("http://localhost:1337/cdn/installer.exe"), LocalAppData + "\\Athena Launcher\\Athena Installer.exe");
+                new WebClient().DownloadFileAsync(new Uri("https://frostchanger.de:3012/cdn/installer.exe"), LocalAppData + "\\Athena Launcher\\Athena Installer.exe");
                 var APIData = await HostingService.APIData();
+                await ConfigService.createConfig();
                 if (APIData.Version != Config.Version)
                 {
                     new Process()
@@ -72,26 +76,33 @@ namespace Athena_Hybrid.FrontEnd.Windows
                     }.Start();
                     Environment.Exit(0);
                 }
-                await checkDirectories();
-                Theme.GetSystemTheme();
-                Accent.ApplySystemAccent();
-                DiscordService.Start();
-                if (Settings.Default.bIsLoggedIn)
+                if (APIData.IsEnabled == false)
                 {
-                    this.Hide();
-                    KeyWindow keyWindow = new KeyWindow();
-                    keyWindow.Show();
+                    loadingLabel.Content = "we're in Downtime right now! Check our discord server to get all infos!";
                 }
                 else
                 {
-                    this.Hide();
-                    LoginWindow loginWindow = new LoginWindow();
-                    loginWindow.Show();
+                    await checkDirectories();
+                    Theme.GetSystemTheme();
+                    Accent.ApplySystemAccent();
+                    if (Settings.Default.bIsLoggedIn)
+                    {
+                        this.Hide();
+                        KeyWindow keyWindow = new KeyWindow();
+                        keyWindow.Show();
+                    }
+                    else
+                    {
+                        this.Hide();
+                        LoginWindow loginWindow = new LoginWindow();
+                        loginWindow.Show();
+                    }
                 }
             } catch (Exception ex)
             {
                 LogService.Write($"There was an error while loading the page.\n{ex.Message}", LogLevel.Fatal);
             }
+            DiscordService.Start();
         }
 
         private async Task checkDirectories()

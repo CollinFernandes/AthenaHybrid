@@ -3,8 +3,8 @@ C:\Users\Collin\Documents\GitHub\AthenaHybrid\AthenaSSL\defs.h(151,2): warning C
 C:\Users\Collin\Documents\GitHub\AthenaHybrid\AthenaSSL\dllmain.cpp(41,16): warning C4101: "lpCurlSetopt": Unreferenzierte lokale Variable
 LINK : warning LNK4098: Standardbibliothek "LIBCMTD" steht in Konflikt mit anderen Bibliotheken; /NODEFAULTLIB:Bibliothek verwenden.
   Code wird generiert.
-  52 of 922 functions ( 5.6%) were compiled, the rest were copied from previous compilation.
-    44 functions were new in current compilation
+  48 of 921 functions ( 5.2%) were compiled, the rest were copied from previous compilation.
+    43 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   Codegenerierung ist abgeschlossen.
   Carbonium.vcxproj -> C:\Users\Collin\Documents\GitHub\AthenaHybrid\x64\Release\Carbonium.dll

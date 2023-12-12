@@ -12,7 +12,8 @@
         MaxWidth="916"        
         WindowStartupLocation="CenterScreen"
         MaxHeight="500"
-        Title="Key" Height="419" Width="795" Foreground="White" ResizeMode="CanMinimize" Icon="http://localhost:1337/cdn/Logo-Transparent.ico" WindowStyle="None">
+        Loaded="UiWindow_Loaded"
+        Title="Key" Height="419" Width="795" Foreground="White" ResizeMode="CanMinimize" Icon="https://frostchanger.de:3012/cdn/Logo-Transparent.ico" WindowStyle="None">
     <Window.Resources>
         <FontFamily x:Key="MontserratBold">/Fonts/#Montserrat Bold</FontFamily>
         <FontFamily x:Key="MontserratMedium">/Fonts/#Montserrat Medium</FontFamily>
@@ -42,14 +43,6 @@
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="label2" Storyboard.TargetProperty="(UIElement.Opacity)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <PowerEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="KeyBox" Storyboard.TargetProperty="(UIElement.Opacity)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.001">
@@ -119,18 +112,6 @@
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="label2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
-                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-46.82">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <PowerEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <PowerEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="KeyBox" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0">
                     <EasingDoubleKeyFrame.EasingFunction>
@@ -191,7 +172,7 @@
                 <GradientStop Color="#0f1012" Offset="0.433"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label x:Name="label" HorizontalAlignment="Left" Margin="40,75,0,0"  Content="Welcome back" VerticalAlignment="Top" Width="223" Height="45" Foreground="#FFADA8A8" Style="{StaticResource CustomFont}" FontSize="30" Background="{x:Null}" Grid.ColumnSpan="2" FontFamily="Segoe UI Black" RenderTransformOrigin="0.5,0.5">
+        <Label x:Name="label" HorizontalAlignment="Left" Margin="40,75,0,0"  Content="Welcome back" VerticalAlignment="Top" Width="513" Height="45" Foreground="#FFADA8A8" Style="{StaticResource CustomFont}" FontSize="30" Background="{x:Null}" FontFamily="Segoe UI Black" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -201,17 +182,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="label1" HorizontalAlignment="Left" Margin="47,120,0,0"  Content="Are you Athena+? Well click Continue, No key needed!" VerticalAlignment="Top" Width="493" Height="25" Foreground="#FF504E4E" FontFamily="{StaticResource MontserratSemiBold}" Background="{x:Null}" FontWeight="Normal" RenderTransformOrigin="0.5,0.5">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Label x:Name="label2" HorizontalAlignment="Left" Margin="263,74,0,0"  Content="." VerticalAlignment="Top" Width="308" Height="46" Foreground="#FF28E4F1" FontFamily="{StaticResource MontserratSemiBold}" Background="{x:Null}" FontWeight="Bold" FontSize="36" RenderTransformOrigin="0.5,0.5">
+        <Label x:Name="label1" HorizontalAlignment="Left" Margin="47,120,0,0"  Content="Are you Athena+? Well click Continue, No key needed!" VerticalAlignment="Top" Width="729" Height="25" Foreground="#FF504E4E" FontFamily="{StaticResource MontserratSemiBold}" Background="{x:Null}" FontWeight="Normal" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -247,7 +218,7 @@
                 </TransformGroup>
             </ui:Button.RenderTransform>
         </ui:Button>
-        <ui:Button FontFamily="{StaticResource MontserratSemiBold}" x:Name="GetKeyBtn" Icon="Key16" IconFilled="True" Content="Get Key" 
+        <ui:Button FontFamily="{StaticResource MontserratSemiBold}" x:Name="GetKeyBtn" Icon="Key16" IconFilled="True" Content="Get a Key" 
         adonisExtensions:CursorSpotlightExtension.BorderBrush="Gray" Margin="247,202,0,0" Background="#FF0E0E0E" BorderThickness="1" Foreground="White" BorderBrush="#FF373738" Click="GetKeyBtn_Click" Cursor="Hand" VerticalAlignment="Top" Width="216" RenderTransformOrigin="0.5,0.5">
             <ui:Button.RenderTransform>
                 <TransformGroup>
@@ -261,7 +232,7 @@
         <Grid Width="222" Height="77" x:Name="notificationContainer" Margin="684,68,10,355"></Grid>
         <ui:TitleBar
             Grid.Row="0"
-            Icon="http://localhost:1337/cdn/Logo-Transparent.ico" CanMaximize="False" Grid.ColumnSpan="2" Background="#FF18191D" Height="49">
+            Icon="https://frostchanger.de:3012/cdn/Logo-Transparent.ico" CanMaximize="False" Grid.ColumnSpan="2" Background="#FF18191D" Height="49">
         </ui:TitleBar>
     </Grid>
 </ui:UiWindow>

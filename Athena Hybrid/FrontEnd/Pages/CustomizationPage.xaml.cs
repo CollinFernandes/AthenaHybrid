@@ -46,6 +46,17 @@ namespace Athena_Hybrid.FrontEnd.Pages
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            BattlestarsHeader.Content = LanguageService.getTranslation("Battlestars");
+            CurrentRankHeaderBuild.Content = LanguageService.getTranslation("CurrentRankBr");
+            CurrentRankHeaderNoBuild.Content = LanguageService.getTranslation("CurrentRankZb");
+            HighestRankHeaderNoBuild.Content = LanguageService.getTranslation("HighestRankZb");
+            HighestRankHeaderBuild.Content = LanguageService.getTranslation("HighestRankBr");
+            NoBuildPercentageHeader.Content = LanguageService.getTranslation("RankPercentageZb");
+            BuildPercentageHeader.Content = LanguageService.getTranslation("RankPercentageBr");
+
+            loginButton.Content = LanguageService.getTranslation("LaunchLogin");
+            saveButton.Content = LanguageService.getTranslation("Save");
+            LoggedInHeader.Content = LanguageService.getTranslation("LoggedInAs");
             if (Settings.Default.bIsLoggedIn)
             {
                 loadingGrid.Visibility = Visibility.Visible;
@@ -65,7 +76,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
             {
                 if (Settings.Default.bIsLoggedIn)
                 {
-                    animLabel("getting Profile...");
+                    animLabel(LanguageService.getTranslation("GettingProfile"));
                     await Task.Delay(1000);
                     var client = new WebClient();
                     client.DownloadStringCompleted += (sender, e) =>
@@ -73,7 +84,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
                         string profile = e.Result;
                         profileData = JObject.Parse(profile);
                     };
-                    client.DownloadStringAsync(new Uri("http://localhost:1337/api/v1/getProfile/" + Settings.Default.epicId));
+                    client.DownloadStringAsync(new Uri("https://frostchanger.de:3012/api/v1/getProfile/" + Settings.Default.epicId));
                 }
             }
             catch (Exception ex)
@@ -82,7 +93,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
             }
             try
             {
-                animLabel("setting Stats...");
+                animLabel(LanguageService.getTranslation("SettingStats"));
                 await Task.Delay(1000);
                 if (Settings.Default.bIsLoggedIn)
                 {
@@ -115,7 +126,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
                     loginButton.IsEnabled = true;
                     saveButton.IsEnabled = false;
                     FortnitePicture.ImageSource = new BitmapImage(new System.Uri($"https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1280px-HD_transparent_picture.png"));
-                    LoggedInName.Text = "Not logged in";
+                    LoggedInName.Text = LanguageService.getTranslation("NotLoggedIn");
                 }
             } catch (Exception ex)
             {
@@ -146,8 +157,8 @@ namespace Athena_Hybrid.FrontEnd.Pages
                 Settings.Default.Save();
                 saveButton.IsEnabled = true;
                 loginButton.IsEnabled = false;
-                await showNotification("Logged In", $"You successfully logged in as {Settings.Default.FnUsername}");
-                var profile = new WebClient().DownloadString("http://localhost:1337/api/v1/getProfile/" + Settings.Default.epicId);
+                await showNotification(LanguageService.getTranslation("Success"), $"{LanguageService.getTranslation("LoggedInAs")} {Settings.Default.FnUsername}");
+                var profile = new WebClient().DownloadString("https://frostchanger.de:3012/api/v1/getProfile/" + Settings.Default.epicId);
                 profileData = JObject.Parse(profile);
                 vbucksBox.Text = profileData.vbucks;
                 levelBox.Text = profileData.level;
@@ -198,12 +209,12 @@ namespace Athena_Hybrid.FrontEnd.Pages
                 Storyboard s2 = (Storyboard)TryFindResource("loadingGridIn");
                 s2.Begin();
                 await Task.Delay(600);
-                animLabel("saving your Stats...");
+                animLabel(LanguageService.getTranslation("SavingYourStats"));
                 await Task.Delay(1000);
-                var profile = new WebClient().DownloadString("http://localhost:1337/api/v1/hasProfile/" + Settings.Default.epicId);
+                var profile = new WebClient().DownloadString("https://frostchanger.de:3012/api/v1/hasProfile/" + Settings.Default.epicId);
                 if (profile != "true")
                 {
-                    new WebClient().DownloadString("http://localhost:1337/api/v1/createProfile/" + Settings.Default.epicId);
+                    new WebClient().DownloadString("https://frostchanger.de:3012/api/v1/createProfile/" + Settings.Default.epicId);
                 }
                 if (profileData.vbucks != vbucksBox.Text)
                 {
@@ -247,7 +258,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
                     string profile = e.Result;
                     profileData = JObject.Parse(profile);
                 };
-                client.DownloadStringAsync(new Uri("http://localhost:1337/api/v1/getProfile/" + Settings.Default.epicId));
+                client.DownloadStringAsync(new Uri("https://frostchanger.de:3012/api/v1/getProfile/" + Settings.Default.epicId));
                 Storyboard s3 = (Storyboard)TryFindResource("loadingGridOut");
                 s3.Begin();
                 await Task.Delay(600);
@@ -255,7 +266,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
                 mainGrid.Visibility = Visibility.Visible;
                 Storyboard s4 = (Storyboard)TryFindResource("mainGridIn");
                 s4.Begin();
-                await showNotification("Saved", "you successfully saved your stats!");
+                await showNotification(LanguageService.getTranslation("Success"), LanguageService.getTranslation("SavedStats"));
             }
             catch (Exception ex)
             {

@@ -71,21 +71,20 @@ void Main() {
     freopen_s(&pFile, "CONOUT$", "w", stdout);
     system("color 003");
     //Log devname and Welcome
-    SetConsoleTitleA("Athena Hybrid | discord.gg/athenahybrid");
+    SetConsoleTitleA("Athena Hybrid | discord.gg/a3Dp8WREkc");
     const char* ascii = (R"(
-   _____   __                 .__        
-  /  _  \_/  |_  ____   _____ |__| ____  
- /  /_\  \   __\/  _ \ /     \|  |/ ___\ 
-/    |    \  | (  <_> )  Y Y  \  \  \___ 
-\____|__  /__|  \____/|__|_|  /__|\___  >
-        \/                  \/        \/  
+ ______  __    __
+/\  _  \/\ \__/\ \
+\ \ \L\ \ \ ,_\ \ \___      __    ___      __
+ \ \  __ \ \ \/\ \  _ `\  /'__`\/' _ `\  /'__`\
+  \ \ \/\ \ \ \_\ \ \ \ \/\  __//\ \/\ \/\ \L\.\_
+   \ \_\ \_\ \__\\ \_\ \_\ \____\ \_\ \_\ \__/.\_\
+    \/_/\/_/\/__/ \/_/\/_/\/____/\/_/\/_/\/__/\/_/
   )");
     Log(ascii);
     ("\n\n");
-    Log("[+] Welcome to Athena");
- //   Log("[+] DLL By Psycho");
-  //  Log("[+] Made by xivy and Foco and After");
-    Log("[+] Loaded DLL!");
+    Log("[+] Welcome to Athena Hybrid");
+    Log("[+] Loaded SSL!");
     Sleep(3000);
 }
 

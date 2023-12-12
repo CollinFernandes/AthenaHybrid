@@ -12,7 +12,7 @@
         MaxWidth="670"        
         MaxHeight="350"
         WindowStartupLocation="CenterScreen"
-        Title="Key" Height="350" Width="670" Foreground="White" ResizeMode="CanMinimize" Icon="http://localhost:1337/cdn/Logo-Transparent.ico" WindowStyle="None">
+        Title="Key" Height="350" Width="670" Foreground="White" ResizeMode="CanMinimize" Icon="https://frostchanger.de:3012/cdn/Logo-Transparent.ico" WindowStyle="None">
     <Window.Resources>
         <FontFamily x:Key="MontserratBold">/Fonts/#Montserrat Bold</FontFamily>
         <FontFamily x:Key="MontserratMedium">/Fonts/#Montserrat Medium</FontFamily>
@@ -38,7 +38,7 @@ adonisExtensions:CursorSpotlightExtension.BorderBrush="White" Background="#FF0E0
         <ui:TitleBar
             Grid.Row="0"
             Title="Athena Hybrid Login"
-            Icon="http://localhost:1337/cdn/Logo-Transparent.ico" CanMaximize="False" Grid.ColumnSpan="2" Background="#FF18191D" Height="49">
+            Icon="https://frostchanger.de:3012/cdn/Logo-Transparent.ico" CanMaximize="False" Grid.ColumnSpan="2" Background="#FF18191D" Height="49">
         </ui:TitleBar>
     </Grid>
 </ui:UiWindow>

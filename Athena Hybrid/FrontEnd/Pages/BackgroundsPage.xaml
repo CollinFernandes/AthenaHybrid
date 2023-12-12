@@ -442,7 +442,7 @@
         </Storyboard>
     </Page.Resources>
     <Grid>
-        <Grid x:Name="mainGrid" Visibility="Hidden">
+        <Grid x:Name="mainGrid" Visibility="Visible">
             <Border x:Name="border" Margin="754,10,10,10" Background="#FF0E0E0E" BorderBrush="#FF373738" BorderThickness="3" CornerRadius="3" RenderTransformOrigin="0.5,0.5">
                 <Border.RenderTransform>
                     <TransformGroup>
@@ -503,7 +503,7 @@
             </Grid>
             <Grid Width="222" Height="77" x:Name="notificationContainer" Margin="762,10,10,326"/>
         </Grid>
-        <Grid x:Name="loadingGrid" Visibility="Visible">
+        <Grid x:Name="loadingGrid" Visibility="Hidden">
             <ProgressBar x:Name="progressBar" IsIndeterminate="True" Width="350" RenderTransformOrigin="0.5,0.5">
                 <ProgressBar.RenderTransform>
                     <TransformGroup>

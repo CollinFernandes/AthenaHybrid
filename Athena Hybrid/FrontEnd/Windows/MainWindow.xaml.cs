@@ -32,6 +32,11 @@ namespace Athena_Hybrid
         public MainWindow()
         {
             InitializeComponent();
+            dashboardTab.Text = LanguageService.getTranslation("Dashboard");
+            launchTab.Text = LanguageService.getTranslation("Launch");
+            customizationTab.Text = LanguageService.getTranslation("Customization");
+            customBackgroundsTab.Text = LanguageService.getTranslation("CustomBackground");
+            settingsTab.Text = LanguageService.getTranslation("Settings");
         }
 
         private async void switchTab(object sender, SelectionChangedEventArgs e)

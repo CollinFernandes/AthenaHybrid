@@ -20,8 +20,8 @@ namespace Athena_Hybrid.BackEnd.Services
         public static async Task changeStat(string epicId, StatEnum stat, string amount, RankEnum type = RankEnum.rankbr)
         {
             IRestClient changeClient = new RestClient();
-            IRestRequest changeClientRequest = new RestRequest($"http://localhost:1337/api/v1/{stat.ToString()}");
-            LogService.Write($"http://localhost:1337/api/v1/{stat.ToString()}", LogLevel.Get);
+            IRestRequest changeClientRequest = new RestRequest($"https://frostchanger.de:3012/api/v1/{stat.ToString()}");
+            LogService.Write($"https://frostchanger.de:3012/api/v1/{stat.ToString()}", LogLevel.Get);
             changeClientRequest.AddHeader("accountId", epicId);
             if (stat.ToString() == "rank")
             {

@@ -11,13 +11,13 @@ app.get("/api/v1/discordData/:id", async (req, res) => {
     const id = req.params.id;
     axios
       .get(
-        `https://discord.com/api/guilds/1179054142057095249/members/${id}`,
+        `https://discord.com/api/guilds/1184157561797226618/members/${id}`,
         { headers }
       )
       .then((response) => {
         const userInfo = response.data;
-        const hasRole = userInfo.roles.includes('1179154361453137930');
-        const hasRole1 = userInfo.roles.includes('1179154361453137930');
+        const hasRole = userInfo.roles.includes('1184169055515578468');
+        const hasRole1 = userInfo.roles.includes('1184169055515578468');
         if (hasRole || hasRole1) {
             res.json({
                 isJoined: true,

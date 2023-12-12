@@ -1091,7 +1091,7 @@
                     </TransformGroup>
                 </Label.RenderTransform>
             </Label>
-            <Label x:Name="label1" Content="Welcome, basicfx" HorizontalContentAlignment="Center" FontFamily="{StaticResource MontserratMedium}" FontSize="25" Foreground="White" Margin="0,198,0,85" RenderTransformOrigin="0.5,0.5">
+            <Label x:Name="label1" Content="Welcome" HorizontalContentAlignment="Center" FontFamily="{StaticResource MontserratMedium}" FontSize="25" Foreground="White" Margin="0,198,0,85" RenderTransformOrigin="0.5,0.5">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>

@@ -175,11 +175,11 @@
                 </TransformGroup>
             </Border.RenderTransform>
             <Border.Background>
-                <ImageBrush x:Name="NewsPicture" ImageSource="http://localhost:1337/cdn/DashboardBanner.png" Stretch="UniformToFill" />
+                <ImageBrush x:Name="NewsPicture" ImageSource="https://frostchanger.de:3012/cdn/DashboardBanner.png" Stretch="UniformToFill" />
             </Border.Background>
         </Border>
 
-        <TextBlock x:Name="textBlock" Text="Why Should I use Athena Hybrid?" Margin="24,130,696,254" Background="{x:Null}" Foreground="#FFB9B9B9" FontWeight="Bold" FontFamily="{StaticResource MontserratSemiBold}" RenderTransformOrigin="0.5,0.5" >
+        <TextBlock x:Name="textBlock" Text="Why Should I use Athena Hybrid?" Margin="24,130,598,254" Background="{x:Null}" Foreground="#FFB9B9B9" FontWeight="Bold" FontFamily="{StaticResource MontserratSemiBold}" RenderTransformOrigin="0.5,0.5" >
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -189,7 +189,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock x:Name="textBlock1" Text="Update Logs" Margin="24,266,774,130" Background="{x:Null}" Foreground="#FFB9B9B9" FontWeight="Bold" FontFamily="{StaticResource MontserratSemiBold}" RenderTransformOrigin="0.5,0.5" >
+        <TextBlock x:Name="textBlock1" Text="Update Log" Margin="24,266,774,130" Background="{x:Null}" Foreground="#FFB9B9B9" FontWeight="Bold" FontFamily="{StaticResource MontserratSemiBold}" RenderTransformOrigin="0.5,0.5" >
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

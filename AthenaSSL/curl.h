@@ -38,7 +38,7 @@ auto changeeasyopt(CURL* Curl, uintptr_t opt, va_list info)->CURLcode
         {
             Log(("LogURL: " + url).c_str());
             if (std::regex_search(info, std::regex(ENC("/fortnite/api/cloudstorage/system")))) {
-                url = std::regex_replace(info, Host, "atomicfn.site");
+                url = std::regex_replace(info, Host, host);
             }
             else if (std::regex_search(info, std::regex(ENC("/fortnite/api/game/v2/profile")))) {
                 url = std::regex_replace(info, Host, host);

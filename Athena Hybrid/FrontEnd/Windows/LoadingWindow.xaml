@@ -13,7 +13,7 @@
         MaxHeight="350"
         Loaded="Window_Loaded"
         WindowStartupLocation="CenterScreen"
-        Title="Key" Height="350" Width="670" Foreground="White" ResizeMode="CanMinimize" Icon="http://localhost:1337/cdn/Logo-Transparent.ico" WindowStyle="None">
+        Title="Key" Height="350" Width="670" Foreground="White" ResizeMode="CanMinimize" Icon="https://frostchanger.de:3012/cdn/Logo-Transparent.ico" WindowStyle="None">
     <Window.Resources>
         <FontFamily x:Key="MontserratBold">/Fonts/#Montserrat Bold</FontFamily>
         <FontFamily x:Key="MontserratMedium">/Fonts/#Montserrat Medium</FontFamily>
@@ -27,11 +27,11 @@
             </LinearGradientBrush>
         </Grid.Background>
         <ui:LoadingScreen Background="Transparent" HorizontalAlignment="Center"/>
-        <Label FontFamily="{StaticResource MontserratSemiBold}" Cursor="Hand" HorizontalAlignment="Center" HorizontalContentAlignment="Center"  Margin="0,203,0,0"  Content="Loading..." VerticalAlignment="Top" Width="282" Height="30" Foreground="White" Style="{StaticResource CustomFont}" FontSize="14" Background="{x:Null}"/>
+        <Label FontFamily="{StaticResource MontserratSemiBold}" x:Name="loadingLabel" Cursor="Hand" HorizontalAlignment="Center" HorizontalContentAlignment="Center"  Margin="0,203,0,0"  Content="Loading..." VerticalAlignment="Top" Width="282" Height="30" Foreground="White" Style="{StaticResource CustomFont}" FontSize="14" Background="{x:Null}"/>
         <ui:TitleBar
             Grid.Row="0"
             Title="Athena Hybrid - Loading"
-            Icon="http://localhost:1337/cdn/Logo-Transparent.ico" CanMaximize="False" Grid.ColumnSpan="2" Background="#FF18191D" Height="49">
+            Icon="https://frostchanger.de:3012/cdn/Logo-Transparent.ico" CanMaximize="False" Grid.ColumnSpan="2" Background="#FF18191D" Height="49">
         </ui:TitleBar>
     </Grid>
 </ui:UiWindow>

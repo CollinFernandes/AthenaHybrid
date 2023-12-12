@@ -60,7 +60,7 @@ namespace Athena_Installer
                     _ = Dispatcher.Invoke(async () =>
                     {
                         WebClient webClient = new WebClient();
-                        webClient.OpenRead("http://localhost:1337/cdn/launcher.exe");
+                        webClient.OpenRead("http://62.171.135.90:3012/cdn/launcher.exe");
                         Int64 bytes_total = Convert.ToInt64(webClient.ResponseHeaders["Content-Length"]);
                         double megabytesTotal = ConvertBytesToMegabytes(bytes_total);
                         downloadedLabel.Content = "0 mb/" + Math.Round(megabytesTotal, 2) + "mb";
@@ -156,7 +156,7 @@ namespace Athena_Installer
             if (installButton.IsEnabled == false)
             {
                 WebClient webClient = new WebClient();
-                webClient.OpenRead("http://localhost:1337/cdn/launcher.exe");
+                webClient.OpenRead("http://62.171.135.90:3012/cdn/launcher.exe");
                 Int64 bytes_total = Convert.ToInt64(webClient.ResponseHeaders["Content-Length"]);
                 double megabytesTotal = ConvertBytesToMegabytes(bytes_total);
                 downloadedLabel.Content = "0 mb/" + Math.Round(megabytesTotal, 2) + "mb";
@@ -203,7 +203,7 @@ namespace Athena_Installer
 
                     (sender as Wpf.Ui.Controls.Button).IsEnabled = false;
                     WebClient webClient = new WebClient();
-                    webClient.OpenRead("http://localhost:1337/cdn/launcher.exe");
+                    webClient.OpenRead("http://62.171.135.90:3012/cdn/launcher.exe");
                     Int64 bytes_total = Convert.ToInt64(webClient.ResponseHeaders["Content-Length"]);
                     double megabytesTotal = ConvertBytesToMegabytes(bytes_total);
                     downloadedLabel.Content = "0 mb/" + Math.Round(megabytesTotal, 2) + "mb";
@@ -217,7 +217,7 @@ namespace Athena_Installer
                         speedLabel.Content = string.Format("{0} mb/s", (e.BytesReceived / 1024.0 / 1024.0 / stopwatch.Elapsed.TotalSeconds).ToString("0.00"));
                     };
                     Directory.CreateDirectory(LocalAppData + "\\Athena Launcher");
-                    webClient.DownloadFileAsync(new Uri("http://localhost:1337/cdn/launcher.exe"), LocalAppData + "\\Athena Launcher\\Athena Hybrid.exe");
+                    webClient.DownloadFileAsync(new Uri("http://62.171.135.90:3012/cdn/launcher.exe"), LocalAppData + "\\Athena Launcher\\Athena Hybrid.exe");
                     webClient.DownloadFileCompleted += async (object sender1, AsyncCompletedEventArgs e) =>
                     {
                         _ = Task.Run(async () =>

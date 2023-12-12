@@ -29,7 +29,7 @@ namespace Athena_Hybrid.BackEnd.Services
         public static void Initialize()
         {
             AllocConsole();
-            Console.Title = $"Athena Hybrid V{Config.Version}";
+            Console.Title = $"Athena Hybrid {Config.Version}";
             if (File.Exists(Config.LogsFile))
             {
                 var logsDirectoryInfo = new DirectoryInfo(Config.LogsDirectory).GetFiles().OrderByDescending(x => x.LastWriteTimeUtc).ToList();

@@ -42,8 +42,11 @@ namespace Athena_Hybrid.FrontEnd.Windows
                 token = auth.GetToken();
                 Settings.Default.bIsLoggedIn = true;
                 Settings.Default.Save();
-                epicGamesLogin.Visibility = Visibility.Hidden;
-                discordLogin.Visibility = Visibility.Visible;
+                /*epicGamesLogin.Visibility = Visibility.Hidden;
+                discordLogin.Visibility = Visibility.Visible;*/
+                this.Hide();
+                KeyWindow keyWindow = new KeyWindow();
+                keyWindow.Show();
             }
             catch (Exception ex)
             {

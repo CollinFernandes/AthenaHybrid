@@ -15,7 +15,7 @@ namespace Athena_Hybrid.BackEnd.Services
     {
         public static class LinkEndpoints
         {
-            public static Uri Base = new Uri("http://localhost:1337");
+            public static Uri Base = new Uri("https://frostchanger.de:3012");
             public static Uri publicBackgroundData() => new Uri(Base, $"/api/v1/customBackgrounds");
             public static Uri officialBackgroundData() => new Uri(Base, $"/api/v1/officialBackgrounds");
             public static Uri DiscordData(string id) => new Uri(Base, $"/api/v1/discordData/{id}");

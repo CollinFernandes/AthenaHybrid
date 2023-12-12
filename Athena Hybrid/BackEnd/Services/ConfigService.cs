@@ -253,6 +253,34 @@ namespace Athena_Hybrid.BackEnd.Services
 
         }
 
+        public static async Task createConfig()
+        {
+            if (!File.Exists(BackEnd.Config.ConfigFile))
+            {
+                LogService.Write("no confg file found.", LogLevel.Warning);
+                LogService.Write("creating a new one.", LogLevel.Warning);
+                ConfigModel config = new ConfigModel
+                {
+                    FortniteLocation = EpicGamesUtil.GetPaksPath(),
+                    usingKey = bUsingKey,
+                    discordId = Id,
+                    discordName = Name,
+                    discordPicture = Picture,
+                    discordDisplayName = displayName,
+                    FortniteBuild = EpicGamesUtil.GetCurrentFortniteVersion(),
+                    isPremium = isPremium,
+                    key = key,
+                    keyCreated = keyCreated,
+                    keyExpires = keyExpires,
+                    rememberKey = rememberKey,
+                    devVersion = BackEnd.Config.Version
+                };
+                var data = JsonConvert.SerializeObject(config, Formatting.Indented);
+                await File.WriteAllTextAsync(BackEnd.Config.ConfigFile, data);
+                LogService.Write("created config", LogLevel.Success);
+            }
+        }
+
         public static async Task<ConfigModel> GetConfig()
         {
             string content = File.ReadAllText(BackEnd.Config.ConfigFile);

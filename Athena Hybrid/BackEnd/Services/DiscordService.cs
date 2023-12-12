@@ -36,7 +36,7 @@ namespace Athena_Hybrid.BackEnd.Services
 
         public static void Start()
         {
-            Client = new DiscordRpcClient("978614635034980402");
+            Client = new DiscordRpcClient("1184167206586699876");
             Client.OnReady += OnReady;
             Client.OnError += OnError;
 

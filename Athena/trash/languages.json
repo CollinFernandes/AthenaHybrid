@@ -1,0 +1,627 @@
+{
+    "SupportedLanguages": [
+        "Deutsch",
+        "English",
+        "Français",
+        "Español",
+        "Italiano",
+        "Русский"
+    ],
+    "Translations": {
+        "Deutsch": {
+            "Error": "Fehler",
+            "Loading": "Lade...",
+            "Skip": "für's erste überspringen.",
+            "Login": "Einloggen mit {0}", 
+            "Save": "Speichern", 
+            "Dashboard": "Startseite",
+            "Launch": "Starten",
+            "Customization": "Anpassung",
+            "CustomBackground": "Benutzerdefinierter Hintergrund",
+            "Settings": "Einstellungen",
+            "NavigateTo": "zu {0} navigiert.",
+            "Success": "Erfolg",
+            "Redirect": "Du wirst in 2 Sekunden weitergeleitet.",
+            "KeyUsed": "Du hast erfolgreich deinen Key benutzt.",
+            "KeyNoValid": "Der eingegebene Schlüssel ist nicht gültig.",
+            "EnterKey": "Bitte gebe einen Schlüssel an.",
+            "KeyExpired": "Dein Schlüssel ist abgelaufen. Hole dir einen neuen.",
+            "Continue": "Fortfahren",
+            "GetKey": "Schlüssel erhalten",
+            "KeyWindow": "Willkommen zurück.",
+            "KeyWindowDescription": "Sind Sie Athena+? Dann klicken Sie auf 'Weiter', kein Schlüssel erforderlich!",
+
+            "Location": "Fortnite Pfad",
+            "LocationDescription": "Hier findest du deinen Fortnite Installations Pfad!",
+            "LauncherSettings": "Fortnite Einstellungen",
+            "LauncherSettingsDescription": "Hier kannst du deinen Launcher einstellen!",
+            "CloseFortnite": "Fortnite schließen",
+            "VerifyFortnite": "Fortnite überprüfen",
+            "DeleteCache": "Zwischenspeicher löschen",
+            "DevInventory": "Entwicklungsinventar",
+            "FullAnticheatBypass": "Vollständiger Anticheat-Bypass",
+
+            "AccountSettings": "Account einstellungen",
+            "AccountSettingsDescription": "Wechseln oder Abmelden von Ihrem Konto!",
+            "SwitchAccount": "Account wechseln",
+            "LogOut": "Ausloggen",
+            "LanguageSettings": "Spracheinstellungen",
+            "LanguageSettingsDescription": "Wechseln Sie die Sprache Ihres Launcher!",
+
+            "LaunchLogin": "Einloggen",
+            "LoginSuccess": "Sie haben sich erfolgreich angemeldet als {0}",
+            "LaunchGame": "Starten sie ihr Spiel!",
+            "DownloadingAssets": "Herunterladen von Assets...",
+            "KillFortnite": "Fortnite töten...",
+            "CopyingFiles": "Kopieren von Dateien...",
+            "ReplacingDevInventory": "Ersetzen des Entwicklungsinventars...",
+            "LaunchingGame": "Ihr Spiel wird gestartet!",
+            "WaitingForGameInput": "Warten auf Spiel Input...",
+            "WaitingForClose": "Warten auf das Schließen des Spiels!",
+
+            "DashboardWhy": "Warum sollte ich Athena Hybrid verwenden?",
+            "DashboardUpdateLogs": "Update-Protokoll",
+
+            "ReasonsToUse": [
+                {
+                    "Icon": "Desktop24",
+                    "Title": "Saubere und moderne Benutzeroberfläche",
+                    "Description": "Athena Hybrid hat eine der modernsten Benutzeroberflächen."
+                },
+                {
+                    "Icon": "ChatBubblesQuestion24",
+                    "Title": "Schnelle Unterstützung",
+                    "Description": "Athenas Discord hat schnelle Unterstützung."
+                },
+                {
+                    "Icon": "DataHistogram24",
+                    "Title": "Viele Anpassungen",
+                    "Description": "Athena bietet viele Optionen zur Anpassung."
+                },
+                {
+                    "Icon": "Accessibility24",
+                    "Title": "Kosmetika",
+                    "Description": "benutze die Kosmetik im Spiel!"
+                }
+            ],
+            "updateLogs": [
+            ],
+
+            "Battlestars": "Kampfsterne",
+            "CurrentRankBr": "aktueller Rang (Bauen)",
+            "CurrentRankZb": "aktueller Rang (Null Bauen)",
+            "HighestRankBr": "höhster Rang (Bauen)",
+            "HighestRankZb": "höhster Rang (Null Bauen)",
+            "RankPercentageBr": "Rang % (Bauen)",
+            "RankPercentageZb": "Rang % (Null Bauen)",
+            "LoggedInAs": "Eingeloggt als",
+            "NotLoggedIn": "nicht eingeloggt.",
+            "SavingYourStats": "Speichern Ihrer Stats...",
+            "SavedStats": "Sie haben Ihre Statistik erfolgreich gespeichert!",
+            "GettingProfile": "Profil erhalten...",
+            "SettingStats": "Setzen der Stats...",
+
+            "GettingOfficialBackgrounds": "offizielle Hintergründe zu bekommen...",
+            "AddOfficialBackgrounds": "Hinzufügen von offiziellen Hintergründen...",
+            "GettingComBackgrounds": "Community-Hintergründe erhalten...",
+            "AddComBackgrounds": "Hinzufügen von Community-Hintergründen...",
+            "CustomBackgroundUrl": "Benutzerdefinierte Hintergrund-URL",
+            "UseBackground": "Hintergrund speichern",
+            "SavedBackground": "Ihren benutzerdefinierten Hintergrund erfolgreich gespeichert!"
+        },
+        "English": {
+            "Error": "Error",
+            "Loading": "Loading...",
+            "Skip": "skip for now.",
+            "Login": "Login with {0}", 
+            "Save": "Save", 
+            "Dashboard": "Dashboard",
+            "Launch": "Launch",
+            "Customization": "Customization",
+            "CustomBackground": "Custom Background",
+            "Settings": "Settings",
+            "NavigateTo": "navigated to {0}",
+            "Success": "Success",
+            "Redirect": "You'll be redirected in 2 seconds.",
+            "KeyUsed": "You have successfully used your key.",
+            "KeyNoValid": "The key entered is not valid.",
+            "EnterKey": "Please provide a key.",
+            "KeyExpired": "Your key has expired. Get a new one.",
+            "Continue": "Continue",
+            "GetKey": "Get a Key",
+            "KeyWindow": "Welcome Back.",
+            "KeyWindowDescription": "Are you Athena+? Well click Continue, No key needed!",
+
+            "Location": "Fortnite Location",
+            "LocationDescription": "Find your Fortnite installation path here!",
+            "LauncherSettings": "Launcher Settings",
+            "LauncherSettingsDescription": "You can change the settings of your launcher here!",
+            "CloseFortnite": "Close Fortnite",
+            "VerifyFortnite": "Verify Fortnite",
+            "DeleteCache": "Delete Cache",
+            "DevInventory": "Dev Inventory",
+            "FullAnticheatBypass": "Full Anticheat-Bypass",
+
+            "AccountSettings": "Account settings",
+            "AccountSettingsDescription": "Switch or log out of your account!",
+            "SwitchAccount": "switch Account",
+            "LogOut": "Log out",
+
+            "LanguageSettings": "Language Settings",
+            "LanguageSettingsDescription": "Switch your Launcher Language!",
+
+            "LaunchLogin": "Login",
+            "LoginSuccess": "You have successfully logged in as {0}",
+            "LaunchGame": "Launch your game!",
+            "DownloadingAssets": "Downloading assets...",
+            "KillFortnite": "Killing Fortnite...",
+            "CopyingFiles": "Copying files...",
+            "ReplacingDevInventory": "Replacing the dev inventory...",
+            "LaunchingGame": "Your game will be started!",
+            "WaitingForGameInput": "Waiting for game input...",
+            "WaitingForClose": "Waiting for the game to close!",
+
+            "DashboardWhy": "Why should I use Athena Hybrid?",
+            "DashboardUpdateLogs": "Update Log",
+
+            "ReasonsToUse": [
+                {
+                    "Icon": "Desktop24",
+                    "Title": "Clean and Modern UI",
+                    "Description": "Athena Hybrid has one of the most modern UI's."
+                },
+                {
+                    "Icon": "ChatBubblesQuestion24",
+                    "Title": "Fast Support",
+                    "Description": "Athena's Discord has Fast Support."
+                },
+                {
+                    "Icon": "DataHistogram24",
+                    "Title": "Many Customization",
+                    "Description": "Athena has many options for Customization."
+                },
+                {
+                    "Icon": "Accessibility24",
+                    "Title": "Cosmetics",
+                    "Description": "use the cosmetics ingame!"
+                }
+            ],
+            "updateLogs": [
+            ],
+
+            "Battlestars": "Battlestars",
+            "CurrentRankBr": "current Rank (Build)",
+            "CurrentRankZb": "current Rank (No Build)",
+            "HighestRankBr": "highest Rank (Build)",
+            "HighestRankZb": "highest Rank (Null Bauen)",
+            "RankPercentageBr": "Rank % (Build)",
+            "RankPercentageZb": "Rank % (No Build)",
+            "LoggedInAs": "Logged in as",
+            "NotLoggedIn": "not logged in.",
+            "SavingYourStats": "Saving your stats...",
+            "SavedStats": "You have successfully saved your stats!",
+            "GettingProfile": "getting Profile...",
+            "SettingStats": "setting Stats...",
+
+            "GettingOfficialBackgrounds": "getting official backgrounds...",
+            "AddOfficialBackgrounds": "adding official backgrounds...",
+            "GettingComBackgrounds": "getting community backgrounds...",
+            "AddComBackgrounds": "adding community backgrounds...",
+            "CustomBackgroundUrl": "Custom Background URL",
+            "UseBackground": "save Background",
+            "SavedBackground": "successfully saved your custom background!"
+        },
+        "Italiano": {
+            "Error": "Errore",
+            "Loading": "Caricamento...",
+            "Skip": "per il momento, saltate.",
+            "Login": "Accesso con {0}", 
+            "Save": "Risparmiare", 
+            "Dashboard": "Cruscotto",
+            "Launch": "Lancio",
+            "Customization": "Personalizzazione",
+            "CustomBackground": "Sfondo personalizzato",
+            "Settings": "Impostazioni",
+            "NavigateTo": "navigato verso {0}",
+            "Success": "Il successo",
+            "Redirect": "Sarete reindirizzati in 2 secondi.",
+            "KeyUsed": "La chiave è stata utilizzata con successo.",
+            "KeyNoValid": "La chiave inserita non è valida.",
+            "EnterKey": "Si prega di fornire una chiave.",
+            "KeyExpired": "La chiave è scaduta. Procuratene una nuova.",
+            "Continue": "Continua",
+            "GetKey": "Ottenere una chiave",
+            "KeyWindow": "Bentornati.",
+            "KeyWindowDescription": "Sei Athena+? Cliccate su Continua, non è necessaria alcuna chiave!",
+
+            "Location": "Posizione di Fortnite",
+            "LocationDescription": "Trova il tuo percorso di installazione di Fortnite qui!",
+            "LauncherSettings": "Impostazioni del Launcher",
+            "LauncherSettingsDescription": "Qui potete modificare le impostazioni del vostro launcher!",
+            "CloseFortnite": "Chiudere Fortnite",
+            "VerifyFortnite": "Verifica Fortnite",
+            "DeleteCache": "Cancellare la cache",
+            "DevInventory": "Inventario dei prodotti",
+            "FullAnticheatBypass": "Anticheat-Bypass completo",
+
+            "AccountSettings": "Impostazioni dell'account",
+            "AccountSettingsDescription": "Cambia o esci dal tuo account!",
+            "SwitchAccount": "interruttore Conto",
+            "LogOut": "Disconnettersi",
+
+            "LanguageSettings": "Impostazioni della lingua",
+            "LanguageSettingsDescription": "Cambiate la lingua del vostro Launcher!",
+
+            "LaunchLogin": "Accesso",
+            "LoginSuccess": "L'accesso è avvenuto con successo come ",
+            "LaunchGame": "Lanciate il vostro gioco!",
+            "DownloadingAssets": "Scaricare le risorse...",
+            "KillFortnite": "Uccidere Fortnite...",
+            "CopyingFiles": "Copia dei file...",
+            "ReplacingDevInventory": "Sostituzione dell'inventario dev...",
+            "LaunchingGame": "La partita sarà avviata!",
+            "WaitingForGameInput": "In attesa di un input per il gioco...",
+            "WaitingForClose": "In attesa della chiusura del gioco!",
+
+            "DashboardWhy": "Perché dovrei usare Athena Hybrid?",
+            "DashboardUpdateLogs": "Registro degli aggiornamenti",
+
+            "ReasonsToUse": [
+                {
+                    "Icon": "Desktop24",
+                    "Title": "Interfaccia utente pulita e moderna",
+                    "Description": "Athena Hybrid ha un'interfaccia utente tra le più moderne."
+                },
+                {
+                    "Icon": "ChatBubblesQuestion24",
+                    "Title": "Supporto veloce",
+                    "Description": "Il Discorso di Athena ha un supporto veloce."
+                },
+                {
+                    "Icon": "DataHistogram24",
+                    "Title": "Molte personalizzazioni",
+                    "Description": "Athena offre molte opzioni di personalizzazione."
+                },
+                {
+                    "Icon": "Accessibility24",
+                    "Title": "Cosmetici",
+                    "Description": "utilizzare i cosmetici in gioco!"
+                }
+            ],
+            "updateLogs": [
+
+            ],
+
+            "Battlestars": "Battlestars",
+            "CurrentRankBr": "Classifica attuale (Build)",
+            "CurrentRankZb": "corrente Rang (No Build)",
+            "HighestRankBr": "Rang più alto (costruzione)",
+            "HighestRankZb": "Rang più alto (Null Bauen)",
+            "RankPercentageBr": "Classifica % (Build)",
+            "RankPercentageZb": "Classifica % (No Build)",
+            "LoggedInAs": "Collegato come",
+            "NotLoggedIn": "non è stato effettuato l'accesso.",
+            "SavingYourStats": "Salvataggio delle statistiche...",
+            "SavedStats": "Le statistiche sono state salvate con successo!",
+            "GettingProfile": "ottenere il profilo...",
+            "SettingStats": "impostazione delle statistiche...",
+
+            "GettingOfficialBackgrounds": "ottenere sfondi ufficiali...",
+            "AddOfficialBackgrounds": "aggiunta di sfondi ufficiali...",
+            "GettingComBackgrounds": "ottenere gli sfondi della comunità...",
+            "AddComBackgrounds": "aggiunta di sfondi comunitari...",
+            "CustomBackgroundUrl": "URL di sfondo personalizzato",
+            "UseBackground": "salvare lo sfondo",
+            "SavedBackground": "salvato con successo lo sfondo personalizzato!"
+        },
+        "Français": {
+            "Error": "Erreur",
+            "Loading": "Chargement...",
+            "Skip": "pour l'instant.",
+            "Login": "Se connecter avec {0}", 
+            "Save": "Économiser", 
+            "Dashboard": "Tableau de bord",
+            "Launch": "Lancement",
+            "Customization": "Personnalisation",
+            "CustomBackground": "Arrière-plan personnalisé",
+            "Settings": "Paramètres",
+            "NavigateTo": "a navigué vers {0}",
+            "Success": "Succès",
+            "Redirect": "Vous serez redirigé dans 2 secondes.",
+            "KeyUsed": "Vous avez utilisé votre clé avec succès",
+            "KeyNoValid": "La clé introduite n'est pas valide.",
+            "EnterKey": "Veuillez fournir une clé.",
+            "KeyExpired": "Votre clé a expiré. Obtenez-en une nouvelle.",
+            "Continue": "Continuer",
+            "GetKey": "Obtenir une clé",
+            "KeyWindow": "Bienvenue à nouveau.",
+            "KeyWindowDescription": "Êtes-vous Athena+ ? Cliquez sur Continuer, aucune clé n'est nécessaire !",
+    
+            "Location": "Localisation de Fortnite",
+            "LocationDescription": "Trouvez votre chemin d'installation de Fortnite ici !",
+            "LauncherSettings": "Paramètres du lanceur",
+            "LauncherSettingsDescription": "Vous pouvez modifier les paramètres de votre lanceur ici !",
+            "CloseFortnite": "Fermer Fortnite",
+            "VerifyFortnite": "Vérifier Fortnite",
+            "DeleteCache": "Supprimer le cache",
+            "DevInventory": "Inventaire de développement",
+            "FullAnticheatBypass": "Anticheat-Bypass complet",
+    
+            "AccountSettings": "Paramètres du compte",
+            "AccountSettingsDescription": "Changez de compte ou déconnectez-vous !",
+            "SwitchAccount": "Compte de commutation",
+            "LogOut": "Déconnexion",
+    
+            "LanguageSettings": "Paramètres linguistiques",
+            "LanguageSettingsDescription": "Changez la langue de votre lanceur !",
+    
+            "LaunchLogin": "Connexion",
+            "LoginSuccess": "Vous vous êtes connecté avec succès en tant que {0}",
+            "LaunchGame": "Lancez votre jeu !",
+            "DownloadingAssets": "Téléchargement des actifs...",
+            "KillFortnite": "Tuer Fortnite...",
+            "CopyingFiles": "Copier des fichiers...",
+            "ReplacingDevInventory": "Remplacement de l'inventaire dev...",
+            "LaunchingGame": "Votre jeu va commencer !",
+            "WaitingForGameInput": "En attente de l'entrée du jeu...",
+            "WaitingForClose": "En attendant la fin du jeu !",
+    
+            "DashboardWhy": "Pourquoi utiliser Athena Hybrid ?",
+            "DashboardUpdateLogs": "Journal des mises à jour",
+    
+            "ReasonsToUse": [
+                {
+                    "Icon": "Desktop24",
+                    "Title": "Une interface utilisateur propre et moderne",
+                    "Description": "Athena Hybrid possède l'une des interfaces utilisateur les plus modernes."
+                },
+                {
+                    "Icon": "ChatBubblesQuestion24",
+                    "Title": "Soutien rapide.",
+                    "Description": "Le Discord d'Athena dispose d'un support rapide."
+                },
+                {
+                    "Icon": "DataHistogram24",
+                    "Title": "Nombreuses personnalisations",
+                    "Description": "Athena offre de nombreuses possibilités de personnalisation."
+                },
+                {
+                    "Icon": "Accessibility24",
+                    "Title": "CosmeCosmétiquestics",
+                    "Description": "utiliser les cosmétiques dans le jeu !"
+                }
+            ],
+            "updateLogs": [
+
+            ],
+    
+            "Battlestars": "Battlestars",
+            "CurrentRankBr": "Rang actuel (Build)",
+            "CurrentRankZb": "courant Rang (No Build)",
+            "HighestRankBr": "le plus haut Rang (Build)",
+            "HighestRankZb": "le plus haut Rang (Null Bauen)",
+            "RankPercentageBr": "Rang % (Build)",
+            "RankPercentageZb": "Rang % (No Build)",
+            "LoggedInAs": "Connecté en tant que",
+            "NotLoggedIn": "non connecté.",
+            "SavingYourStats": "Sauvegarder vos statistiques...",
+            "SavedStats": "Vous avez sauvegardé vos statistiques avec succès !",
+            "GettingProfile": "obtenir un profil...",
+            "SettingStats": "en mettant en place des Stats...",
+    
+            "GettingOfficialBackgrounds": "obtenir des informations officielles...",
+            "AddOfficialBackgrounds": "l'ajout d'arrière-plans officiels...",
+            "GettingComBackgrounds": "obtenir les antécédents de la communauté...",
+            "AddComBackgrounds": "ajouter des antécédents communautaires...",
+            "CustomBackgroundUrl": "URL de l'arrière-plan personnalisé",
+            "UseBackground": "Sauvegarder l'arrière-plan",
+            "SavedBackground": "Vous avez sauvegardé avec succès votre arrière-plan personnalisé !"
+        },
+        "Español": {
+            "Error": "Error",
+            "Loading": "Cargando...",
+            "Skip": "saltar por ahora.",
+            "Login": "Iniciar sesión con {0}", 
+            "Save": "Guardar", 
+            "Dashboard": "Cuadro de mandos",
+            "Launch": "Lanzamiento",
+            "Customization": "Personalización",
+            "CustomBackground": "Fondo personalizado",
+            "Settings": "Ajustes",
+            "NavigateTo": "navegado a {0}",
+            "Success": "Éxito",
+            "Redirect": "Serás redirigido en 2 segundos.",
+            "KeyUsed": "Ha utilizado correctamente su llave.",
+            "KeyNoValid": "La clave introducida no es válida.",
+            "EnterKey": "Por favor, proporcione una llave.",
+            "KeyExpired": "Tu clave ha caducado. Consigue una nueva.",
+            "Continue": "Continúe en",
+            "GetKey": "Obtener una llave",
+            "KeyWindow": "Bienvenido de nuevo.",
+            "KeyWindowDescription": "¿Eres Athena+? Pues haz clic en Continuar, ¡no necesitas llave!",
+    
+            "Location": "Localización de Fortnite",
+            "LocationDescription": "¡Encuentra tu ruta de instalación de Fortnite aquí!",
+            "LauncherSettings": "Configuración del lanzador",
+            "LauncherSettingsDescription": "Aquí puedes cambiar la configuración de tu lanzador.",
+            "CloseFortnite": "Cerrar Fortnite",
+            "VerifyFortnite": "Verificar Fortnite",
+            "DeleteCache": "Borrar caché",
+            "DevInventory": "Inventario",
+            "FullAnticheatBypass": "Anticheat-Bypass completo",
+    
+            "AccountSettings": "Configuración de la cuenta",
+            "AccountSettingsDescription": "Cambie o cierre la sesión de su cuenta",
+            "SwitchAccount": "cambiar Cuenta",
+            "LogOut": "Cerrar sesión",
+    
+            "LanguageSettings": "Ajustes de idioma",
+            "LanguageSettingsDescription": "Cambia el idioma de tu Launcher",
+    
+            "LaunchLogin": "Inicio de sesión",
+            "LoginSuccess": "Ha iniciado sesión correctamente como {0}",
+            "LaunchGame": "¡Lanza tu juego!",
+            "DownloadingAssets": "Descarga de activos...",
+            "KillFortnite": "Matando a Fortnite...",
+            "CopyingFiles": "Copiar archivos...",
+            "ReplacingDevInventory": "Reemplazando el inventario dev...",
+            "LaunchingGame": "¡Su juego se iniciará!",
+            "WaitingForGameInput": "Esperando la entrada del juego...",
+            "WaitingForClose": "¡Esperando a que se cierre el juego!",
+    
+            "DashboardWhy": "¿Por qué utilizar Athena Hybrid?",
+            "DashboardUpdateLogs": "Registro de actualización",
+    
+            "ReasonsToUse": [
+                {
+                    "Icon": "Desktop24",
+                    "Title": "Interfaz de usuario limpia y moderna",
+                    "Description": "Athena Hybrid tiene una de las interfaces de usuario más modernas."
+                },
+                {
+                    "Icon": "ChatBubblesQuestion24",
+                    "Title": "Asistencia rápida",
+                    "Description": "La Discordia de Atenea tiene Soporte Rápido."
+                },
+                {
+                    "Icon": "DataHistogram24",
+                    "Title": "Muchas personalizaciones",
+                    "Description": "Athena tiene muchas opciones de personalización."
+                },
+                {
+                    "Icon": "Accessibility24",
+                    "Title": "Cosméticos",
+                    "Description": "utiliza los cosméticos dentro del juego"
+                }
+            ],
+            "updateLogs": [
+
+            ],
+    
+            "Battlestars": "Battlestars",
+            "CurrentRankBr": "Rango actual (Build)",
+            "CurrentRankZb": "Rango actual (Sin construir)",
+            "HighestRankBr": "Rang más alto (Build)",
+            "HighestRankZb": "Rang más alto (Sin construir)",
+            "RankPercentageBr": "Rango % (Construir)",
+            "RankPercentageZb": "Rango % (Sin construir)",
+            "LoggedInAs": "Conectado como",
+            "NotLoggedIn": "no conectado.",
+            "SavingYourStats": "Guardando tus estadísticas...",
+            "SavedStats": "¡Has guardado correctamente tus estadísticas!",
+            "GettingProfile": "obteniendo Perfil...",
+            "SettingStats": "estableciendo estadísticas...",
+    
+            "GettingOfficialBackgrounds": "obtener antecedentes oficiales...",
+            "AddOfficialBackgrounds": "añadir fondos oficiales...",
+            "GettingComBackgrounds": "obteniendo fondos comunitarios...",
+            "AddComBackgrounds": "añadir fondos comunitarios...",
+            "CustomBackgroundUrl": "URL de fondo personalizada",
+            "UseBackground": "guardar Fondo",
+            "SavedBackground": "¡has guardado correctamente tu fondo personalizado!"
+        },
+        "Русский": {
+            "Error": "Ошибка",
+            "Loading": "Загрузка...",
+            "Skip": "пока пропустите.",
+            "Login": "Войдите в систему с помощью {0}", 
+            "Save": "Сохранить", 
+            "Dashboard": "Приборная панель",
+            "Launch": "Запуск",
+            "Customization": "Настройка",
+            "CustomBackground": "Пользовательский фон",
+            "Settings": "Настройки",
+            "NavigateTo": "перешел к {0}",
+            "Success": "Успех",
+            "Redirect": "Вы будете перенаправлены через 2 секунды.",
+            "KeyUsed": "Вы успешно использовали свой ключ.",
+            "KeyNoValid": "Введенный ключ недействителен.",
+            "EnterKey": "Пожалуйста, предоставьте ключ.",
+            "KeyExpired": "Срок действия вашего ключа истек. Получите новый.",
+            "Continue": "Продолжить",
+            "GetKey": "Получить ключ",
+            "KeyWindow": "С возвращением.",
+            "KeyWindowDescription": "Вы Афина+? Тогда нажмите кнопку Продолжить, ключ не нужен!",
+    
+            "Location": "Местонахождение Fortnite",
+            "LocationDescription": "Найдите свой путь установки Fortnite здесь!",
+            "LauncherSettings": "Настройки запуска",
+            "LauncherSettingsDescription": "Здесь вы можете изменить настройки вашей пусковой установки!",
+            "CloseFortnite": "Закрыть Fortnite",
+            "VerifyFortnite": "Проверить Fortnite",
+            "DeleteCache": "Удалить кэш",
+            "DevInventory": "Инвентаризация",
+            "FullAnticheatBypass": "Полный античит-байпас",
+    
+            "AccountSettings": "Настройки учетной записи",
+            "AccountSettingsDescription": "Переключитесь или выйдите из своей учетной записи!",
+            "SwitchAccount": "переключатель Счет",
+            "LogOut": "Выйти из системы",
+    
+            "LanguageSettings": "Настройки языка",
+            "LanguageSettingsDescription": "Переключите язык запуска!",
+    
+            "LaunchLogin": "Вход в систему",
+            "LoginSuccess": "Вы успешно вошли в систему под именем {0}",
+            "LaunchGame": "Запустите свою игру!",
+            "DownloadingAssets": "Загрузка активов...",
+            "KillFortnite": "Убийство в Fortnite...",
+            "CopyingFiles": "Копирование файлов...",
+            "ReplacingDevInventory": "Замена инвентаря разработчиков...",
+            "LaunchingGame": "Ваша игра начнется!",
+            "WaitingForGameInput": "Ждем ввода игры...",
+            "WaitingForClose": "Ждем окончания игры!",
+    
+            "DashboardWhy": "Почему я должен использовать Athena Hybrid?",
+            "DashboardUpdateLogs": "Журнал обновлений",
+    
+            "ReasonsToUse": [
+                {
+                    "Icon": "Desktop24",
+                    "Title": "Чистый и современный пользовательский интерфейс",
+                    "Description": "Athena Hybrid имеет один из самых современных пользовательских интерфейсов."
+                },
+                {
+                    "Icon": "ChatBubblesQuestion24",
+                    "Title": "Быстрая поддержка",
+                    "Description": "Дискорд Афины имеет быструю поддержку."
+                },
+                {
+                    "Icon": "DataHistogram24",
+                    "Title": "Множество настроек",
+                    "Description": "Athena имеет множество возможностей для персонализации."
+                },
+                {
+                    "Icon": "Accessibility24",
+                    "Title": "Косметика",
+                    "Description": "используйте косметику в игре!"
+                }
+            ],
+            "updateLogs": [
+
+            ],
+
+            "Battlestars": "Battlestars",
+            "CurrentRankBr": "Текущий ранг (строение)",
+            "CurrentRankZb": "Текущий звонок (без строительства)",
+            "HighestRankBr": "Высший ранг (сборка)",
+            "HighestRankZb": "Самый высокий Ранг (без постройки)",
+            "RankPercentageBr": "Ранг % (Построение)",
+            "RankPercentageZb": "Рейтинг % (Без строительства)",
+            "LoggedInAs": "Вошел в систему как",
+            "NotLoggedIn": "не вошел в систему.",
+            "SavingYourStats": "Сохранение статистики...",
+            "SavedStats": "Вы успешно сохранили статистику!",
+            "GettingProfile": "получить профиль...",
+            "SettingStats": "Статистика настроек...",
+    
+            "GettingOfficialBackgrounds": "получение официального фона...",
+            "AddOfficialBackgrounds": "добавление официальных фонов...",
+            "GettingComBackgrounds": "получить информацию о сообществе...",
+            "AddComBackgrounds": "добавление фона сообщества...",
+            "CustomBackgroundUrl": "URL-адрес пользовательского фона",
+            "UseBackground": "сохранить фон",
+            "SavedBackground": "успешно сохранили ваш пользовательский фон!"
+        }
+    }
+}

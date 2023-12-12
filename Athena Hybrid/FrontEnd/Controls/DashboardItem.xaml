@@ -77,7 +77,7 @@
             <Grid>
                 <ui:SymbolIcon x:Name="HeaderIcon" Symbol="ChartMultiple20" Margin="0,7,0,0" VerticalAlignment="Top" Height="23" Width="17"/>
                 <Label FontFamily="{StaticResource MontserratBold}" HorizontalContentAlignment="Center" x:Name="HeaderText" Content="Fast Loading time" Foreground="White" Margin="10,29,10,35" FontWeight="Bold"/>
-                <TextBlock FontFamily="{StaticResource MontserratMedium}" x:Name="SubtitleText" Text="Onizuka has a fast loading time, aswell with swapping!" TextWrapping="Wrap" Margin="13,47,4,2" Foreground="#FF908B8B" FontSize="9" />
+                <TextBlock TextAlignment="Center" FontFamily="{StaticResource MontserratMedium}" x:Name="SubtitleText" Text="Onizuka has a fast loading time, aswell with swapping!" TextWrapping="Wrap" Margin="13,47,4,2" Foreground="#FF908B8B" FontSize="9" />
             </Grid>
         </Border>
     </Grid>

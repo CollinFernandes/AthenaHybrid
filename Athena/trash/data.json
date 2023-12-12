@@ -16,9 +16,14 @@
             "Icon": "DataHistogram24",
             "Title": "Many Customization",
             "Description": "Athena has many options for Customization."
+        },
+        {
+            "Icon": "Accessibility24",
+            "Title": "Cosmetics",
+            "Description": "use the cosmetics ingame!"
         }
     ],
     "updateLogs": [
-
+        
     ]
 }

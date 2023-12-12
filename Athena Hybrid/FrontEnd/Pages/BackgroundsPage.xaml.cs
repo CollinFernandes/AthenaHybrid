@@ -91,6 +91,8 @@ namespace Athena_Hybrid.FrontEnd.Pages
             await Task.Run(async () => {
                 this.Dispatcher.Invoke(() =>
                 {
+                    TextBoxPath.Text = LanguageService.getTranslation("CustomBackgroundUrl");
+                    UseBackground.Content = LanguageService.getTranslation("UseBackground");
                     loadingGrid.Visibility = Visibility.Visible;
                     mainGrid.Visibility = Visibility.Hidden;
                     Storyboard s1 = (Storyboard)TryFindResource("loadingGridIn");
@@ -111,7 +113,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
                         UseBackground.IsEnabled = true;
                     });
                 }
-                animLabel("getting official backgrounds...");
+                animLabel(Config.languageData["Translations"][Settings.Default.Language]["GettingOfficialBackgrounds"].ToString());
                 await Task.Delay(1000);
                 var officialBackgroundsData = HostingService.officialBackgrounds();
                 Config.officialBackgrounds = await HostingService.GetOfficialBackgrounds();
@@ -123,19 +125,19 @@ namespace Athena_Hybrid.FrontEnd.Pages
                         var item = backgroundBox.Items.Add(backgroundItem.Label);
                     }
                 });
-                animLabel("adding official backgrounds...");
+                animLabel(Config.languageData["Translations"][Settings.Default.Language]["AddOfficialBackgrounds"].ToString());
                 await Task.Delay(1000);
             });
-            animLabel("getting community backgrounds...");
+            animLabel(Config.languageData["Translations"][Settings.Default.Language]["GettingComBackgrounds"].ToString());
             await Task.Delay(1000);
             var publicBackgroundsData = HostingService.publicBackgrounds();
             Config.publicBackgrounds = await HostingService.GetPublicBackgrounds();
             publicBackgrounds.Children.Clear();
-            animLabel("adding community backgrounds...");
+            animLabel(Config.languageData["Translations"][Settings.Default.Language]["AddComBackgrounds"].ToString());
             await Task.Delay(1000);
             foreach (backgroundModel item in Config.publicBackgrounds)
             {
-                FrontEnd.Controls.BackgroundItem item1 = new FrontEnd.Controls.BackgroundItem(item.Url, item.Creator);
+                FrontEnd.Controls.BackgroundItem item1 = new Controls.BackgroundItem(item.Url, item.Creator);
                 publicBackgrounds.Children.Add(item1);
                 item1.MouseDown += async delegate {
                     await Task.Run(() => {
@@ -146,16 +148,13 @@ namespace Athena_Hybrid.FrontEnd.Pages
                     });
                 };
             }
-            if (Settings.Default.bIsLoggedIn)
-            {
-                Storyboard s1 = (Storyboard)TryFindResource("loadingGridOut");
-                s1.Begin();
-                await Task.Delay(600);
-                loadingGrid.Visibility = Visibility.Hidden;
-                mainGrid.Visibility = Visibility.Visible;
-                Storyboard s2 = (Storyboard)TryFindResource("mainGridIn");
-                s2.Begin();
-            }
+            Storyboard s1 = (Storyboard)TryFindResource("loadingGridOut");
+            s1.Begin();
+            await Task.Delay(600);
+            loadingGrid.Visibility = Visibility.Hidden;
+            mainGrid.Visibility = Visibility.Visible;
+            Storyboard s2 = (Storyboard)TryFindResource("mainGridIn");
+            s2.Begin();
         }
 
         private async void backgroundBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -165,7 +164,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
                 await Task.Run(() => {
                     Dispatcher.Invoke(() => {
                         previewImage.Source = new BitmapImage(
-                            new Uri($"http://localhost:1337/cdn/images/{Config.officialBackgrounds[backgroundBox.SelectedIndex].Label}.JPG"));
+                            new Uri($"https://frostchanger.de:3012/cdn/images/{Config.officialBackgrounds[backgroundBox.SelectedIndex].Label}.JPG"));
                     });
                 });
             } catch { }
@@ -201,7 +200,8 @@ namespace Athena_Hybrid.FrontEnd.Pages
             if (previewImage.Source.ToString() != null || previewImage.Source.ToString().Contains("https//") || previewImage.Source.ToString().Contains("http//"))
             {
                 CustomizationService.changeStat(Settings.Default.epicId, StatEnum.lobby, previewImage.Source.ToString().Replace(" ", "%20"));
-                showNotification("Saved!", "successfully saved your custom background!");
+                showNotification(Config.languageData["Translations"][Settings.Default.Language]["Success"].ToString(),
+                    Config.languageData["Translations"][Settings.Default.Language]["SavedBackground"].ToString());
             }
         }
 

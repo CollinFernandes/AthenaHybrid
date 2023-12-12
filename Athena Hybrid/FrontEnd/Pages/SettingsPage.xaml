@@ -74,7 +74,7 @@
                     <ui:NavigationItem FontFamily="{StaticResource MontserratMedium}" Content="Settings" Icon="Settings24" PageType="{x:Type Pages:SettingsMainPage}"/>
                 </ui:NavigationFluent.Items>
             </ui:NavigationFluent>
-
+            <Label Content="A FrostChanger.de Original." Margin="3,323,729,-4" Grid.Row="1" Grid.ColumnSpan="2"/>
             <Grid
                 Grid.Row="0"
                 Grid.RowSpan="2"

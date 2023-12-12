@@ -6,6 +6,7 @@ using Athena_Hybrid.FrontEnd.Controls;
 using Athena_Hybrid.Properties;
 using Microsoft.VisualBasic;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -17,6 +18,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Transactions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -47,10 +49,10 @@ namespace Athena_Hybrid.FrontEnd.Pages
                 s4.Begin();
                 if (Settings.Default.bIsLoggedIn )
                 {
-                    PrimaryButton.Content = "Launch";
+                    PrimaryButton.Content = LanguageService.getTranslation("LaunchGame");
                 } else
                 {
-                    PrimaryButton.Content = "Login";
+                    PrimaryButton.Content = LanguageService.getTranslation("LaunchLogin");
                 }
             } catch (Exception ex)
             {
@@ -61,26 +63,27 @@ namespace Athena_Hybrid.FrontEnd.Pages
         private async void PrimaryButton_Click(object sender, RoutedEventArgs e)
         {
             FortniteAuthService auth = new FortniteAuthService();
-            switch ((sender as Button).Content)
+            string launch = LanguageService.getTranslation("LaunchGame");
+            string login = LanguageService.getTranslation("LaunchLogin");
+            if ((sender as Button).Content == launch)
             {
-                case "Login":
-                    #region Login
-                    string token;
-                    string f = await auth.DeviceAuthorization(auth.GetDeviceCode());
-                    auth.GetDeviceAuths(f);
-                    token = auth.GetToken();
-                    Settings.Default.bIsLoggedIn = true;
-                    Settings.Default.Save();
-                    await showNotification("Logged In", $"You successfully logged in as {Settings.Default.FnUsername}");
-                    PrimaryButton.Content = "Launch";
-                    #endregion
-                    break;
-                case "Launch":
-                    #region Launch Game
-                    launchGame();
-                    await showNotification("Launching", $"Launching your Game!");
-                    #endregion
-                    break;
+                #region Launch Game
+                launchGame();
+                await showNotification(LanguageService.getTranslation("Loading"), LanguageService.getTranslation("LaunchingGame"));
+                #endregion
+            }
+            else if ((sender as Button).Content == login)
+            {
+                #region Login
+                string token;
+                string f = await auth.DeviceAuthorization(auth.GetDeviceCode());
+                auth.GetDeviceAuths(f);
+                token = auth.GetToken();
+                Settings.Default.bIsLoggedIn = true;
+                Settings.Default.Save();
+                PrimaryButton.Content = "Launch";
+                await showNotification("Logged In", $"You successfully logged in as {Settings.Default.FnUsername}");
+                #endregion
             }
         }
 
@@ -110,7 +113,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
             Storyboard s2 = (Storyboard)TryFindResource("loadingGridIn");
             s2.Begin();
             await Task.Delay(700);
-            animLabel("downloading Assets...");
+            animLabel(LanguageService.getTranslation("DownloadingAssets"));
             await Task.Delay(1000);
             FilesModelResponse filesResponse = JsonConvert.DeserializeObject<FilesModelResponse>(await new HttpClient().GetStringAsync(Config.filesAPI));
             var config = await ConfigService.GetConfig();
@@ -119,11 +122,11 @@ namespace Athena_Hybrid.FrontEnd.Pages
             Directory.SetCurrentDirectory(Win64);
 
             await LaunchUtils.downloadFiles();
-            animLabel("killing Fortnite...");
+            animLabel(LanguageService.getTranslation("KillFortnite"));
             await Task.Delay(1000);
 
             LaunchUtils.killFortnite();
-            animLabel("copying Files...");
+            animLabel(LanguageService.getTranslation("CopyingFiles"));
             await Task.Delay(1000);
 
             if (Settings.Default.bFACB)
@@ -139,7 +142,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
 
             if (Settings.Default.bIsDevInventory)
             {
-                animLabel("replacing dev Inventory...");
+                animLabel(LanguageService.getTranslation("ReplacingDevInventory"));
                 await Task.Delay(1000);
                 if (filesResponse.DevInventory)
                 {
@@ -152,7 +155,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
                     LogService.Write("couldn't replace the dev inventory because its deactivated.");
             }
 
-            animLabel("launching Game...");
+            animLabel(LanguageService.getTranslation("LaunchingGame"));
             await Task.Delay(1000);
             FortniteAuthService fortniteAuth = new FortniteAuthService();
 
@@ -169,13 +172,17 @@ namespace Athena_Hybrid.FrontEnd.Pages
             EasyAntiCheat.Suspend();
 
             Process FortniteClient = Process.Start("FortniteClient-Win64-Shipping.exe", args);
-            animLabel("waiting for game Input...");
+            animLabel(LanguageService.getTranslation("WaitingForGameInput"));
             await Task.Delay(1000);
             while (true)
             {
                 try
                 {
-                    FortniteClient.WaitForInputIdle();
+                    await Task.Run(() => {
+                        Dispatcher.Invoke(() => {
+                            FortniteClient.WaitForInputIdle();
+                        });
+                    });
                     break;
                 }
                 catch { }
@@ -185,7 +192,7 @@ namespace Athena_Hybrid.FrontEnd.Pages
             LaunchUtils.injectFile(filesResponse.files[0].fileName, FortniteClient);
             LaunchUtils.injectFile(filesResponse.files[4].fileName, EasyAntiCheat);
 
-            animLabel("waiting for game to close!");
+            animLabel(LanguageService.getTranslation("WaitingForClose"));
             await Task.Delay(1000);
             await FortniteClient.WaitForExitAsync();
             Storyboard s3 = (Storyboard)TryFindResource("loadingGridOut");
